@@ -165,19 +165,49 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       </header>
 
-      {/* Article hero image */}
-      {data.category && (
-        <div style={{ maxWidth: "672px", margin: "0 auto", padding: "0 24px" }}>
-          <img
-            src={`/images/${data.category}.jpg`}
-            alt={data.title}
-            style={{ width: "100%", height: "280px", objectFit: "cover", display: "block", marginTop: "32px" }}
-          />
-          <p style={{ fontSize: "11px", color: "#6B6B6B", marginTop: "6px", fontFamily: "var(--font-inter)" }}>
-            Photo via <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" style={{ color: "#6B6B6B" }}>Unsplash</a>
-          </p>
-        </div>
-      )}
+      {/* Article hero image — slug-specific first, category fallback */}
+      {data.category && (() => {
+        const fs2 = require("fs");
+        const slugImg = `/images/articles/${slug}.jpg`;
+        const slugImgPath = require("path").join(process.cwd(), "public", slugImg);
+        const imgSrc = fs2.existsSync(slugImgPath)
+          ? slugImg
+          : `/images/${data.category}.jpg`;
+
+        // Pull photographer credit from image-log.json if available
+        let creditName = "";
+        let creditUrl = "https://unsplash.com";
+        try {
+          const logPath = "/home/sean/ren/content/image-log.json";
+          if (fs2.existsSync(logPath)) {
+            const log = JSON.parse(fs2.readFileSync(logPath, "utf-8"));
+            const entry = (log.images || []).find(
+              (e: { used_for?: string; photographer?: string; photo_url?: string }) =>
+                e.used_for === `article:${slug}`
+            );
+            if (entry) {
+              creditName = entry.photographer || "";
+              creditUrl = entry.photo_url || (entry.source === "pexels" ? "https://www.pexels.com" : "https://unsplash.com");
+            }
+          }
+        } catch {}
+
+        return (
+          <div style={{ maxWidth: "672px", margin: "0 auto", padding: "0 24px" }}>
+            <img
+              src={imgSrc}
+              alt={data.title}
+              style={{ width: "100%", height: "300px", objectFit: "cover", display: "block", marginTop: "32px" }}
+            />
+            <p style={{ fontSize: "11px", color: "#6B6B6B", marginTop: "6px", fontFamily: "var(--font-inter)" }}>
+              {creditName
+                ? <>Photo: <a href={creditUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#6B6B6B" }}>{creditName} / Unsplash</a></>
+                : <>Photo via <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" style={{ color: "#6B6B6B" }}>Unsplash</a></>
+              }
+            </p>
+          </div>
+        );
+      })()}
 
       {/* Article body */}
       <div className="px-6 py-14">
