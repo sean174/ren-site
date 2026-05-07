@@ -288,10 +288,12 @@ export default function HomePage() {
               On the Calendar
             </h4>
             {[
-              { m: "May", d: "15", label: "Deadline", title: "Q1 estimated tax payments due" },
-              { m: "Oct", d: "15", label: "Event", title: "Medicare open enrollment begins" },
+              { m: "Jun", d: "16", label: "Deadline", title: "Q2 estimated tax payments due" },
+              { m: "Sep", d: "15", label: "Deadline", title: "Q3 estimated tax payments due" },
+              { m: "Oct", d: "15", label: "Event",    title: "Medicare open enrollment begins" },
               { m: "Dec", d: "7",  label: "Deadline", title: "Last day to change Medicare plans" },
               { m: "Dec", d: "31", label: "Deadline", title: "RMD deadline for age 73+" },
+              { m: "Jan", d: "15", label: "Deadline", title: "Q4 estimated tax payments due (2026)" },
             ].map(item => (
               <div key={item.title} style={{ display: "flex", gap: "12px", alignItems: "flex-start", padding: "10px 0", borderTop: "1px solid rgba(15,42,68,0.12)" }}>
                 <div style={{ background: "#0F2A44", color: "#F4EFE6", padding: "4px 8px", textAlign: "center" as const, minWidth: "40px" }}>
