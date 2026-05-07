@@ -217,7 +217,7 @@ export default function HomePage() {
                 />
               </div>
               <p style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", color: "#6B6B6B", marginBottom: "24px" }}>
-                <strong>{CATEGORY_LABELS[lead.category]}</strong> · Photo via <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" style={{ color: "#6B6B6B" }}>Unsplash</a>
+                <strong>{CATEGORY_LABELS[lead.category]}</strong> · Photo via <a href="https://pexels.com" target="_blank" rel="noopener noreferrer" style={{ color: "#6B6B6B" }}>Pexels</a>
               </p>
 
               {/* Secondary stories */}
@@ -285,17 +285,17 @@ export default function HomePage() {
               Free · No spam · Unsubscribe anytime
             </p>
           </div>
-
-          {/* Key Dates */}
-          <div style={{ borderTop: "3px solid #0F2A44", paddingTop: "16px" }}>
-            <KeyDates />
-          </div>
-
-          {/* Washington Watch */}
-          <div style={{ borderTop: "3px solid #0F2A44", paddingTop: "16px" }}>
-            <LegislationWatch />
-          </div>
         </aside>
+      </section>
+
+      {/* ── Key Dates + Washington Watch (full-width band) ─────────────── */}
+      <section style={{ background: "#FBF8F2", borderTop: "1px solid rgba(15,42,68,0.18)", padding: "28px 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px" }}>
+        <div style={{ borderTop: "3px solid #0F2A44", paddingTop: "16px" }}>
+          <KeyDates />
+        </div>
+        <div style={{ borderTop: "3px solid #0F2A44", paddingTop: "16px" }}>
+          <LegislationWatch />
+        </div>
       </section>
 
       {/* ── Section: Medicare ────────────────────────────────────────────── */}
@@ -382,10 +382,10 @@ export default function HomePage() {
         <div style={{ color: "#F4EFE6" }}>
           <h2 style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "1.5rem", margin: "0 0 16px" }}>Who We Are</h2>
           <p style={{ fontSize: "1rem", lineHeight: 1.8, marginBottom: "14px", color: "rgba(244,239,230,0.9)" }}>
-            Retirement Education Network is a content company built for Americans 59 and older. We research the most current and trusted guidance on the topics that matter most in retirement, then share it in plain language you can use.
+            Retirement Education Network is an independent content publisher built for Americans 59 and older. We research the rules, deadlines, and decisions that matter most in retirement, then explain them in plain language you can actually use.
           </p>
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "rgba(244,239,230,0.9)" }}>
-            We do not give personal financial advice. We do not meet with readers, take appointments, or manage anyone&apos;s money. What we are is a trusted source for staying informed. We bring you the information. You take it from there, ideally with a professional you trust.
+            We do not give personal financial advice or take appointments. We publish educational content, and we license that content to financial professionals who want to share it with their clients. If you ever receive our materials through an advisor, that is why.
           </p>
         </div>
         <div style={{ color: "#F4EFE6" }}>
@@ -394,7 +394,7 @@ export default function HomePage() {
             Retirement is one of the biggest financial chapters of your life, and the rules change every year. Most people get their information from headlines, sales pitches, or whoever called them last. You deserve better.
           </p>
           <p style={{ fontSize: "1rem", lineHeight: 1.8, marginTop: "14px", color: "rgba(244,239,230,0.9)" }}>
-            Fifty-nine and a half is the age when new options open up. That is when it becomes clear that the plan that got you here may need to change. Our job is to keep you current and confident in the questions you ask.
+            Fifty-nine and a half is when new options open up. That is when it becomes clear that the plan that got you here may need to change. Our job is to keep you current and confident in the questions you ask.
           </p>
         </div>
       </section>

@@ -57,41 +57,38 @@ export default function RateWatch() {
     color: "#E89A7A",
   };
 
-  if (error || !data) {
-    // Static fallback — shows last known values while loading or on error
-    return (
-      <div style={bar}>
-        <span style={{ ...label }}>Rate Watch</span>
-        <span style={{ color: "rgba(244,239,230,0.4)", fontSize: "10px" }}>Loading market data...</span>
-      </div>
-    );
-  }
+  // Always show something — use live data if available, fallback to last-known values
+  const fedFundsVal  = data?.fedFunds?.value  ?? 4.33;
+  const treasuryVal  = data?.treasury10yr?.value ?? 4.42;
+  const cpiYoy       = data?.cpi?.yoy  ?? "2.4";
+  const cpiLabel     = data?.cpi?.label ?? "Mar 2025";
+  const isLive       = !!data && !error;
 
   return (
-    <div style={bar} title={`Updated ${new Date(data.updatedAt).toLocaleTimeString()}`}>
+    <div style={bar} title={isLive ? `Updated ${new Date(data!.updatedAt).toLocaleTimeString()}` : "Showing last known rates"}>
       <span style={{ ...label, marginLeft: "16px" }}>Rate Watch</span>
       <div style={sep} />
 
-      {data.fedFunds && (
+      {data?.fedFunds !== undefined && (
         <>
           <span style={label}>Fed Funds Rate</span>
-          <span style={val}>{data.fedFunds.value.toFixed(2)}%</span>
+          <span style={val}>{fedFundsVal.toFixed(2)}%</span>
           <div style={sep} />
         </>
       )}
 
-      {data.treasury10yr && (
+      {data?.treasury10yr !== undefined && (
         <>
           <span style={label}>10-Yr Treasury</span>
-          <span style={val}>{data.treasury10yr.value.toFixed(2)}%</span>
+          <span style={val}>{treasuryVal.toFixed(2)}%</span>
           <div style={sep} />
         </>
       )}
 
-      {data.cpi && (
+      {(
         <>
-          <span style={label}>CPI ({data.cpi.label})</span>
-          <span style={val}>{data.cpi.yoy}% YoY</span>
+          <span style={label}>CPI ({cpiLabel})</span>
+          <span style={val}>{cpiYoy}% YoY</span>
         </>
       )}
 
