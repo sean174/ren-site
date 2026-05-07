@@ -48,7 +48,7 @@ export default function TermsPage() {
           </p>
 
           {/* 1 */}
-          <h2>1. Nature of the Site — Educational Content Only</h2>
+          <h2>1. Nature of the Site: Educational Content Only</h2>
 
           <div className="callout">
             <p>
@@ -63,7 +63,7 @@ export default function TermsPage() {
             {SITE_NAME} is an independent educational media publication. We publish articles, guides, and
             commentary about Social Security, Medicare, retirement income, estate planning, tax planning,
             and related topics. Our content is intended to help Americans understand general rules,
-            concepts, and publicly available information — not to provide personalized guidance for
+            concepts, and publicly available information, not to provide personalized guidance for
             individual circumstances.
           </p>
           <p>
@@ -93,8 +93,8 @@ export default function TermsPage() {
           {/* 3 */}
           <h2>3. Intellectual Property</h2>
           <p>
-            All content on this Site — including articles, text, graphics, logos, images, and the
-            selection and arrangement thereof — is the property of {SITE_NAME} or its content suppliers
+            All content on this Site, including articles, text, graphics, logos, images, and the
+            selection and arrangement thereof, is the property of {SITE_NAME} or its content suppliers
             and is protected by applicable copyright, trademark, and other intellectual property laws.
           </p>
           <p>You may:</p>
@@ -153,7 +153,7 @@ export default function TermsPage() {
           <p>
             We do not warrant that: (a) the Site will be uninterrupted or error-free; (b) content is
             current, accurate, or complete; (c) the Site is free of viruses or other harmful components.
-            Government benefit amounts, tax figures, and regulatory rules change frequently — always
+            Government benefit amounts, tax figures, and regulatory rules change frequently. Always
             verify with the relevant agency.
           </p>
 
@@ -163,8 +163,8 @@ export default function TermsPage() {
             TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, {SITE_NAME.toUpperCase()} AND ITS
             OWNERS, OFFICERS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL,
             SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OF THE
-            SITE OR ITS CONTENT — INCLUDING ANY FINANCIAL DECISIONS MADE IN RELIANCE ON INFORMATION
-            PUBLISHED HERE — EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+            SITE OR ITS CONTENT, INCLUDING ANY FINANCIAL DECISIONS MADE IN RELIANCE ON INFORMATION
+            PUBLISHED HERE, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
           </p>
           <p>
             OUR TOTAL LIABILITY FOR ANY CLAIM ARISING FROM YOUR USE OF THE SITE SHALL NOT EXCEED
@@ -189,7 +189,7 @@ export default function TermsPage() {
           <p>
             Your use of the Site is also governed by our{" "}
             <a href="/privacy">Privacy Policy</a>, which is incorporated into these Terms by reference.
-            The Privacy Policy describes how we collect, use, and share information — including our use of
+            The Privacy Policy describes how we collect, use, and share information, including our use of
             the Meta Pixel and your rights as a California resident.
           </p>
 

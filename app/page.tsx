@@ -208,7 +208,7 @@ export default function HomePage() {
               <div style={{ position: "relative", marginBottom: "8px" }}>
                 <img
                   src={`/images/${lead.category}.jpg`}
-                  alt={`${CATEGORY_LABELS[lead.category]} — Retirement Education Network`}
+                  alt={`${CATEGORY_LABELS[lead.category]} | Retirement Education Network`}
                   style={{ width: "100%", height: "280px", objectFit: "cover", display: "block" }}
                 />
               </div>
@@ -274,7 +274,7 @@ export default function HomePage() {
               The Weekly <small style={{ fontFamily: "var(--font-inter),sans-serif", fontWeight: 500, fontSize: "10px", letterSpacing: "0.1em", color: "rgba(244,239,230,0.6)" }}>by REN</small>
             </h4>
             <p style={{ fontSize: "0.85rem", lineHeight: 1.65, margin: "0 0 14px", color: "rgba(244,239,230,0.85)" }}>
-              One letter, every Thursday. The week in retirement — written for readers, not advisors.
+              One letter, every Thursday. The week in retirement, written for readers, not advisors.
             </p>
             <EmailForm />
             <p style={{ fontSize: "10px", color: "rgba(244,239,230,0.5)", margin: "8px 0 0", letterSpacing: "0.04em" }}>
@@ -350,7 +350,7 @@ export default function HomePage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "20px" }}>
           {[
             { n: "01", val: "$2,000", desc: "New annual out-of-pocket cap on Part D prescription costs, effective 2026" },
-            { n: "02", val: "$185",   desc: "Standard Part B monthly premium in 2026 — up from $174.70 in 2024" },
+            { n: "02", val: "$185",   desc: "Standard Part B monthly premium in 2026, up from $174.70 in 2024" },
             { n: "03", val: "Dec 7",  desc: "Last day to change Medicare plans during fall open-enrollment window" },
           ].map(item => (
             <div key={item.n}>
@@ -397,7 +397,7 @@ export default function HomePage() {
             Retirement Education Network is a content company built for Americans 59 and older. We research the most current and trusted guidance on the topics that matter most in retirement, then share it in plain language you can use.
           </p>
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "rgba(244,239,230,0.9)" }}>
-            We do not give personal financial advice. We do not meet with readers, take appointments, or manage anyone&apos;s money. What we are is a trusted source for staying informed. We bring you the information — you take it from there, ideally with a professional you trust.
+            We do not give personal financial advice. We do not meet with readers, take appointments, or manage anyone&apos;s money. What we are is a trusted source for staying informed. We bring you the information. You take it from there, ideally with a professional you trust.
           </p>
         </div>
         <div style={{ color: "#F4EFE6" }}>
@@ -406,7 +406,7 @@ export default function HomePage() {
             Retirement is one of the biggest financial chapters of your life, and the rules change every year. Most people get their information from headlines, sales pitches, or whoever called them last. You deserve better.
           </p>
           <p style={{ fontSize: "1rem", lineHeight: 1.8, marginTop: "14px", color: "rgba(244,239,230,0.9)" }}>
-            Fifty-nine and a half is the age when new options open up — and when it becomes clear that the plan that got you here may need to change. Our job is to keep you current and confident in the questions you ask.
+            Fifty-nine and a half is the age when new options open up. That is when it becomes clear that the plan that got you here may need to change. Our job is to keep you current and confident in the questions you ask.
           </p>
         </div>
       </section>

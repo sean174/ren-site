@@ -67,7 +67,7 @@ export default function PrivacyPage() {
           <h3>A. Information You Provide</h3>
           <ul>
             <li>
-              <strong>Email address</strong> — when you subscribe to our newsletter or email updates. We
+              <strong>Email address</strong>: when you subscribe to our newsletter or email updates. We
               collect only your email address unless you voluntarily provide additional information.
             </li>
           </ul>
@@ -88,7 +88,7 @@ export default function PrivacyPage() {
           <p>
             This Site uses the <strong>Meta Pixel</strong> (also called the Facebook Pixel), a tracking
             code provided by Meta Platforms, Inc. The Meta Pixel collects data about your activity on this
-            Site — including pages visited and actions taken — and transmits that data to Meta. Meta uses
+            Site, including pages visited and actions taken, and transmits that data to Meta. Meta uses
             this data to:
           </p>
           <ul>
@@ -144,25 +144,25 @@ export default function PrivacyPage() {
           <p>We do not sell your personal information. We may share information in the following circumstances:</p>
           <ul>
             <li>
-              <strong>Email service providers</strong> — We use a third-party email platform to send
+              <strong>Email service providers</strong>: We use a third-party email platform to send
               newsletters. That provider processes email addresses on our behalf and is contractually
               prohibited from using them for any other purpose.
             </li>
             <li>
-              <strong>Meta Platforms, Inc.</strong> — The Meta Pixel transmits browsing data to Meta, as
+              <strong>Meta Platforms, Inc.</strong>: The Meta Pixel transmits browsing data to Meta, as
               described in Section 2(C). This is considered "sharing" under California law. You may opt
               out using the methods listed above or the link in Section 7(B).
             </li>
             <li>
-              <strong>Analytics providers</strong> — Aggregated, non-identifiable usage data is processed
+              <strong>Analytics providers</strong>: Aggregated, non-identifiable usage data is processed
               by analytics services such as Google Analytics.
             </li>
             <li>
-              <strong>Legal requirements</strong> — We may disclose information if required by law,
+              <strong>Legal requirements</strong>: We may disclose information if required by law,
               subpoena, court order, or to protect our legal rights.
             </li>
             <li>
-              <strong>Business transfer</strong> — In the event of a merger, acquisition, or sale of
+              <strong>Business transfer</strong>: In the event of a merger, acquisition, or sale of
               assets, personal information may be transferred to the successor entity.
             </li>
           </ul>
@@ -203,7 +203,7 @@ export default function PrivacyPage() {
           </p>
 
           {/* 7 */}
-          <h2>7. California Residents — Your Privacy Rights</h2>
+          <h2>7. California Residents: Your Privacy Rights</h2>
           <p>
             This section applies to residents of California and supplements the rest of this Privacy Policy.
           </p>
@@ -223,7 +223,7 @@ export default function PrivacyPage() {
             policies regarding DNT.
           </p>
 
-          <h3>B. California Consumer Privacy Act / CPRA — Opt-Out of Sharing</h3>
+          <h3>B. California Consumer Privacy Act / CPRA: Opt-Out of Sharing</h3>
           <p>
             Although REN is a small business that may not meet all CCPA/CPRA applicability thresholds, we
             voluntarily provide the following rights as a matter of good practice:

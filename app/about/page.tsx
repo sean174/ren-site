@@ -46,7 +46,7 @@ export default function AboutPage() {
         >
           We're a content company built for Americans 59 and older. Our job is to
           translate the most important retirement rules, deadlines, and decisions
-          into plain language — and keep you current as things change.
+          into plain language and keep you current as things change.
         </p>
       </section>
 
@@ -79,8 +79,7 @@ export default function AboutPage() {
             marginBottom: "20px",
           }}
         >
-          Retirement is one of the most consequential financial periods of your life —
-          and the rules change every year. Medicare premiums shift. Tax brackets adjust.
+          Retirement is one of the most consequential financial periods of your life, and the rules change every year. Medicare premiums shift. Tax brackets adjust.
           RMD ages move. Social Security strategies evolve. Most people find out about
           these changes through headlines, mailers, or whoever called them last.
         </p>
@@ -107,7 +106,7 @@ export default function AboutPage() {
             color: "#3A3A3A",
           }}
         >
-          Fifty-nine and a half is the age when new doors open — and when the plan that
+          Fifty-nine and a half is the age when new doors open. The plan that
           got you here may need to be reconsidered. We want to help you ask better
           questions and walk into those conversations better prepared.
         </p>
@@ -131,7 +130,7 @@ export default function AboutPage() {
             marginBottom: "32px",
           }}
         >
-          What We Are — and What We're Not
+          What We Are and What We're Not
         </h2>
         <div
           style={{
@@ -157,7 +156,7 @@ export default function AboutPage() {
             {[
               "An independent educational publication",
               "A source of plain-language explanations",
-              "Current — we track rule changes as they happen",
+              "Current: we track rule changes as they happen",
               "Free to read, always",
             ].map((item) => (
               <div
@@ -297,7 +296,7 @@ export default function AboutPage() {
         >
           We do not publish opinion pieces or market predictions. We do not take
           advertising from financial product companies. Our content decisions are
-          made editorially — based on what readers need to know — not based on what
+          made editorially, based on what readers need to know, not on what
           sponsors want promoted.
         </p>
         <p

@@ -15,7 +15,7 @@ const CATEGORY_LABELS: Record<string, string> = {
 
 const CATEGORY_DECKS: Record<string, string> = {
   "safe-money": "Protecting your retirement savings from market risk, inflation, and sequence-of-returns danger.",
-  "long-term-care": "Planning for the care you may need — and how to pay for it without depleting your estate.",
+  "long-term-care": "Planning for the care you may need, and how to pay for it without depleting your estate.",
   "medicare": "Understanding your coverage options, costs, and enrollment rules at every stage of retirement.",
   "social-security": "Maximizing the benefit you've earned over a lifetime of work.",
   "wills-and-trusts": "Ensuring your assets go where you intend and your family is protected.",
