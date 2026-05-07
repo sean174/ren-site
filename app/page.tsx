@@ -321,8 +321,7 @@ export default function HomePage() {
           </div>
           <div style={{ background: "#FBF8F2", padding: "0 32px 28px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "20px" }}>
             {medicareArticles.map(a => (
-                <a key={a.slug} href={`/articles/${a.slug}`} style={{ textDecoration: "none", display: "block", borderTop: "2px solid rgba(15,42,68,0.15)" }}>
-                <img src={`/images/${a.category}.jpg`} alt={a.title} style={{ width: "100%", height: "100px", objectFit: "cover", display: "block", marginBottom: "10px" }} />
+                <a key={a.slug} href={`/articles/${a.slug}`} style={{ textDecoration: "none", display: "block", borderTop: "2px solid rgba(15,42,68,0.15)", paddingTop: "10px" }}>
                 <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase" as const, color: "#B5432F", marginBottom: "5px" }}>
                   {CATEGORY_LABELS[a.category]}
                 </div>
@@ -374,8 +373,7 @@ export default function HomePage() {
           </div>
           <div style={{ background: "#FBF8F2", padding: "0 32px 28px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "20px" }}>
             {moneyArticles.map(a => (
-                <a key={a.slug} href={`/articles/${a.slug}`} style={{ textDecoration: "none", display: "block", borderTop: "2px solid rgba(15,42,68,0.15)" }}>
-                <img src={`/images/${a.category}.jpg`} alt={a.title} style={{ width: "100%", height: "100px", objectFit: "cover", display: "block", marginBottom: "10px" }} />
+                <a key={a.slug} href={`/articles/${a.slug}`} style={{ textDecoration: "none", display: "block", borderTop: "2px solid rgba(15,42,68,0.15)", paddingTop: "10px" }}>
                 <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase" as const, color: "#B5432F", marginBottom: "5px" }}>
                   {CATEGORY_LABELS[a.category]}
                 </div>
