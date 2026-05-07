@@ -46,14 +46,16 @@ async function fetchCPIYoY(): Promise<{ yoy: string; label: string } | null> {
 }
 
 export async function GET() {
-  const [fedFunds, treasury10yr, cpi] = await Promise.all([
+  // CD1NRNJ = 1-Year CD Rate (National Average, FRED)
+  const [fedFunds, treasury10yr, cpi, cd1yr] = await Promise.all([
     fetchFREDSeries("FEDFUNDS"),
     fetchFREDSeries("DGS10"),
     fetchCPIYoY(),
+    fetchFREDSeries("CD1NRNJ"),
   ]);
 
   return NextResponse.json(
-    { fedFunds, treasury10yr, cpi, updatedAt: new Date().toISOString() },
+    { fedFunds, treasury10yr, cpi, cd1yr, updatedAt: new Date().toISOString() },
     { headers: { "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400" } }
   );
 }
