@@ -3,7 +3,7 @@ const CATEGORIES = [
   { title: "Long-Term Care",  slug: "long-term-care",   desc: "What care costs, what Medicare covers (and doesn't), and how to plan ahead." },
   { title: "Medicare",        slug: "medicare",          desc: "Parts A, B, C, and D explained. Enrollment windows, penalties, and tradeoffs." },
   { title: "Social Security", slug: "social-security",  desc: "When to claim, spousal benefits, the earnings test, and the breakeven math." },
-  { title: "Trusts & Wills",  slug: "trusts-and-wills", desc: "Probate, living trusts, pour-over wills, and beneficiary designation mistakes." },
+  { title: "Wills & Trusts",  slug: "wills-and-trusts", desc: "Probate, living trusts, pour-over wills, and beneficiary designation mistakes." },
   { title: "Tax Planning",    slug: "tax-planning",     desc: "RMDs, Roth conversions, IRMAA surcharges, and the early-retirement tax window." },
 ];
 
