@@ -218,7 +218,7 @@ export default function HomePage() {
 
               {/* Secondary stories */}
               {secondary.length > 0 && (
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", borderTop: "1px solid rgba(15,42,68,0.18)", paddingTop: "20px", marginTop: "auto" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", borderTop: "1px solid rgba(15,42,68,0.18)", paddingTop: "20px", marginTop: "24px" }}>
                   {secondary.map(s => (
                     <div key={s.slug}>
                       <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: "#B5432F", marginBottom: "6px" }}>
