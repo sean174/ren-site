@@ -45,7 +45,6 @@ export default function HomePage() {
 
   return (
     <>
-    <RateWatch />
     <main style={{ background: "var(--color-ivory, #F4EFE6)", minHeight: "100vh" }}>
       <div style={{
         background: "var(--color-navy, #0F2A44)",
@@ -186,6 +185,8 @@ export default function HomePage() {
           <span><strong style={{ color: "#0F2A44", marginRight: "6px" }}>Update</strong> RMD age confirmed at 73 under SECURE 2.0</span>
         </div>
       </div>
+
+      <RateWatch />
 
       {/* ── Front Page Grid ───────────────────────────────────────────────── */}
       <section style={{ background: "#FBF8F2", padding: "28px 32px 32px", display: "grid", gridTemplateColumns: "2.2fr 1fr", gap: "32px" }}>

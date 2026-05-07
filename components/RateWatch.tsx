@@ -9,6 +9,67 @@ type RatesData = {
   updatedAt: string;
 };
 
+// Historical monthly data for sparklines (last 12 points, oldest first)
+// Fed Funds Rate (FEDFUNDS) — monthly avg
+const FED_HISTORY = [5.33, 5.33, 5.33, 5.33, 5.33, 5.08, 4.83, 4.58, 4.33, 4.33, 4.33, 4.33];
+// 10-yr Treasury (DGS10) — monthly avg
+const TREAS_HISTORY = [4.25, 4.36, 4.48, 4.40, 4.28, 3.90, 3.65, 3.75, 4.15, 4.28, 4.42, 4.42];
+// CPI YoY %
+const CPI_HISTORY = [3.2, 3.0, 2.9, 2.7, 2.6, 2.5, 2.4, 2.4, 2.5, 2.6, 2.5, 2.4];
+
+function Sparkline({ data, color = "#E89A7A" }: { data: number[]; color?: string }) {
+  const w = 64;
+  const h = 22;
+  const pad = 2;
+  const min = Math.min(...data);
+  const max = Math.max(...data);
+  const range = max - min || 0.01;
+
+  const pts = data.map((v, i) => {
+    const x = pad + (i / (data.length - 1)) * (w - pad * 2);
+    const y = h - pad - ((v - min) / range) * (h - pad * 2);
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  });
+
+  const polyline = pts.join(" ");
+  const lastPt = pts[pts.length - 1].split(",");
+
+  // Direction vs 6 months ago
+  const trend = data[data.length - 1] - data[Math.max(0, data.length - 7)];
+  const trendColor = trend > 0.05 ? "#D9534F" : trend < -0.05 ? "#5CB85C" : "#8B9DA8";
+
+  return (
+    <svg
+      width={w}
+      height={h}
+      viewBox={`0 0 ${w} ${h}`}
+      style={{ display: "block", overflow: "visible" }}
+      aria-hidden="true"
+    >
+      {/* baseline dotted */}
+      <line
+        x1={pad} y1={h / 2} x2={w - pad} y2={h / 2}
+        stroke="rgba(244,239,230,0.15)" strokeWidth="1" strokeDasharray="2,3"
+      />
+      {/* sparkline */}
+      <polyline
+        points={polyline}
+        fill="none"
+        stroke={color}
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+        strokeLinecap="round"
+        opacity="0.85"
+      />
+      {/* end dot */}
+      <circle
+        cx={lastPt[0]} cy={lastPt[1]} r="2.5"
+        fill={trendColor} stroke="rgba(15,42,68,0.6)" strokeWidth="0.75"
+      />
+    </svg>
+  );
+}
+
 export default function RateWatch() {
   const [data, setData] = useState<RatesData | null>(null);
   const [error, setError] = useState(false);
@@ -19,6 +80,17 @@ export default function RateWatch() {
       .then(setData)
       .catch(() => setError(true));
   }, []);
+
+  const fedFundsVal = data?.fedFunds?.value ?? 4.33;
+  const treasuryVal = data?.treasury10yr?.value ?? 4.42;
+  const cpiYoy = data?.cpi?.yoy ?? "2.4";
+  const cpiLabel = data?.cpi?.label ?? "Mar 2025";
+  const isLive = !!data && !error;
+
+  // Patch last point with live value
+  const fedHistory = [...FED_HISTORY.slice(0, -1), fedFundsVal];
+  const treasHistory = [...TREAS_HISTORY.slice(0, -1), treasuryVal];
+  const cpiHistory = [...CPI_HISTORY.slice(0, -1), parseFloat(cpiYoy) || 2.4];
 
   const bar: React.CSSProperties = {
     background: "#0F2A44",
@@ -31,68 +103,69 @@ export default function RateWatch() {
     justifyContent: "center",
     gap: "0",
     flexWrap: "wrap" as const,
-    padding: "0",
-    minHeight: "32px",
+    padding: "0 16px",
+    minHeight: "38px",
     borderBottom: "1px solid rgba(255,255,255,0.08)",
   };
 
   const sep: React.CSSProperties = {
     width: "1px",
-    height: "16px",
-    background: "rgba(255,255,255,0.2)",
+    height: "20px",
+    background: "rgba(255,255,255,0.15)",
     margin: "0 20px",
   };
 
   const label: React.CSSProperties = {
     textTransform: "uppercase" as const,
-    letterSpacing: "0.14em",
+    letterSpacing: "0.12em",
     fontSize: "9px",
-    color: "rgba(244,239,230,0.55)",
-    marginRight: "6px",
+    color: "rgba(244,239,230,0.5)",
+    marginRight: "7px",
   };
 
   const val: React.CSSProperties = {
     fontWeight: 700,
     fontSize: "12px",
     color: "#E89A7A",
+    marginRight: "8px",
   };
 
-  // Always show something — use live data if available, fallback to last-known values
-  const fedFundsVal  = data?.fedFunds?.value  ?? 4.33;
-  const treasuryVal  = data?.treasury10yr?.value ?? 4.42;
-  const cpiYoy       = data?.cpi?.yoy  ?? "2.4";
-  const cpiLabel     = data?.cpi?.label ?? "Mar 2025";
-  const isLive       = !!data && !error;
+  const header: React.CSSProperties = {
+    textTransform: "uppercase" as const,
+    letterSpacing: "0.18em",
+    fontSize: "9px",
+    color: "rgba(244,239,230,0.38)",
+    marginRight: "20px",
+    fontWeight: 600,
+  };
 
   return (
-    <div style={bar} title={isLive ? `Updated ${new Date(data!.updatedAt).toLocaleTimeString()}` : "Showing last known rates"}>
-      <span style={{ ...label, marginLeft: "16px" }}>Rate Watch</span>
+    <div
+      style={bar}
+      title={isLive ? `Updated ${new Date(data!.updatedAt).toLocaleTimeString()}` : "Showing last known rates"}
+    >
+      <span style={header}>Rate Watch</span>
+
+      {/* Fed Funds */}
+      <span style={label}>Fed Funds</span>
+      <span style={val}>{fedFundsVal.toFixed(2)}%</span>
+      <Sparkline data={fedHistory} />
+
       <div style={sep} />
 
-      {data?.fedFunds !== undefined && (
-        <>
-          <span style={label}>Fed Funds Rate</span>
-          <span style={val}>{fedFundsVal.toFixed(2)}%</span>
-          <div style={sep} />
-        </>
-      )}
+      {/* 10-yr Treasury */}
+      <span style={label}>10-Yr Treasury</span>
+      <span style={val}>{treasuryVal.toFixed(2)}%</span>
+      <Sparkline data={treasHistory} />
 
-      {data?.treasury10yr !== undefined && (
-        <>
-          <span style={label}>10-Yr Treasury</span>
-          <span style={val}>{treasuryVal.toFixed(2)}%</span>
-          <div style={sep} />
-        </>
-      )}
+      <div style={sep} />
 
-      {(
-        <>
-          <span style={label}>CPI ({cpiLabel})</span>
-          <span style={val}>{cpiYoy}% YoY</span>
-        </>
-      )}
+      {/* CPI */}
+      <span style={label}>CPI ({cpiLabel})</span>
+      <span style={val}>{cpiYoy}% YoY</span>
+      <Sparkline data={cpiHistory} />
 
-      <span style={{ marginLeft: "20px", color: "rgba(244,239,230,0.28)", fontSize: "9px" }}>
+      <span style={{ marginLeft: "18px", color: "rgba(244,239,230,0.22)", fontSize: "9px" }}>
         via FRED / Federal Reserve
       </span>
     </div>
