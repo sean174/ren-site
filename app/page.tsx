@@ -2,6 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import EmailForm from "@/components/EmailForm";
+import RateWatch from "@/components/RateWatch";
+import LegislationWatch from "@/components/LegislationWatch";
+import KeyDates from "@/components/KeyDates";
 
 const ARTICLES_DIR = path.join(process.cwd(), "content/articles");
 
@@ -42,7 +45,8 @@ export default function HomePage() {
 
   return (
     <>
-      {/* ── Utility Bar ─────────────────────────────────────────────────── */}
+    <RateWatch />
+    <main style={{ background: "var(--color-ivory, #F4EFE6)", minHeight: "100vh" }}>
       <div style={{
         background: "var(--color-navy, #0F2A44)",
         color: "rgba(244,239,230,0.85)",
@@ -282,30 +286,14 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Calendar */}
-          <div>
-            <h4 style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#0F2A44", margin: "0 0 12px" }}>
-              On the Calendar
-            </h4>
-            {[
-              { m: "Jun", d: "16", label: "Deadline", title: "Q2 estimated tax payments due" },
-              { m: "Sep", d: "15", label: "Deadline", title: "Q3 estimated tax payments due" },
-              { m: "Oct", d: "15", label: "Event",    title: "Medicare open enrollment begins" },
-              { m: "Dec", d: "7",  label: "Deadline", title: "Last day to change Medicare plans" },
-              { m: "Dec", d: "31", label: "Deadline", title: "RMD deadline for age 73+" },
-              { m: "Jan", d: "15", label: "Deadline", title: "Q4 estimated tax payments due (2026)" },
-            ].map(item => (
-              <div key={item.title} style={{ display: "flex", gap: "12px", alignItems: "flex-start", padding: "10px 0", borderTop: "1px solid rgba(15,42,68,0.12)" }}>
-                <div style={{ background: "#0F2A44", color: "#F4EFE6", padding: "4px 8px", textAlign: "center" as const, minWidth: "40px" }}>
-                  <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "9px", letterSpacing: "0.1em", textTransform: "uppercase" as const, opacity: 0.7 }}>{item.m}</div>
-                  <div style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontSize: "1.1rem", fontWeight: 700, lineHeight: 1 }}>{item.d}</div>
-                </div>
-                <div>
-                  <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "10px", color: "#B5432F", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase" as const, marginBottom: "2px" }}>{item.label}</div>
-                  <p style={{ fontSize: "0.875rem", color: "#3A3A3A", margin: 0, lineHeight: 1.4, fontFamily: "var(--font-source-serif),Georgia,serif" }}>{item.title}</p>
-                </div>
-              </div>
-            ))}
+          {/* Key Dates */}
+          <div style={{ borderTop: "3px solid #0F2A44", paddingTop: "16px" }}>
+            <KeyDates />
+          </div>
+
+          {/* Washington Watch */}
+          <div style={{ borderTop: "3px solid #0F2A44", paddingTop: "16px" }}>
+            <LegislationWatch />
           </div>
         </aside>
       </section>
@@ -443,6 +431,7 @@ export default function HomePage() {
         }
         nav a:hover { border-bottom-color: #B5432F !important; }
       `}</style>
+    </main>
     </>
   );
 }
