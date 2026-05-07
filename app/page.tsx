@@ -1,10 +1,10 @@
 const CATEGORIES = [
-  { title: "Safe Money",      slug: "safe-money",        desc: "Principal protection, fixed rates, and the difference between guaranteed and safe." },
-  { title: "Long-Term Care",  slug: "long-term-care",    desc: "What care costs, what Medicare covers (and doesn't), and how to plan ahead." },
-  { title: "Medicare",        slug: "medicare",           desc: "Parts A, B, C, and D explained. Enrollment windows, penalties, and tradeoffs." },
-  { title: "Social Security", slug: "social-security",   desc: "When to claim, spousal benefits, the earnings test, and the breakeven math." },
-  { title: "Trusts & Wills",  slug: "trusts-and-wills",  desc: "Probate, living trusts, pour-over wills, and beneficiary designation mistakes." },
-  { title: "Tax Planning",    slug: "tax-planning",      desc: "RMDs, Roth conversions, IRMAA surcharges, and the early-retirement tax window." },
+  { title: "Safe Money",      slug: "safe-money",       desc: "Principal protection, fixed rates, and the difference between guaranteed and safe." },
+  { title: "Long-Term Care",  slug: "long-term-care",   desc: "What care costs, what Medicare covers (and doesn't), and how to plan ahead." },
+  { title: "Medicare",        slug: "medicare",          desc: "Parts A, B, C, and D explained. Enrollment windows, penalties, and tradeoffs." },
+  { title: "Social Security", slug: "social-security",  desc: "When to claim, spousal benefits, the earnings test, and the breakeven math." },
+  { title: "Trusts & Wills",  slug: "trusts-and-wills", desc: "Probate, living trusts, pour-over wills, and beneficiary designation mistakes." },
+  { title: "Tax Planning",    slug: "tax-planning",     desc: "RMDs, Roth conversions, IRMAA surcharges, and the early-retirement tax window." },
 ];
 
 const DISCLAIMER =
@@ -17,7 +17,6 @@ export default function HomePage() {
     <>
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="bg-ivory px-6 py-24 flex flex-col items-center text-center gap-8">
-        {/* REN mark */}
         <div className="w-16 h-16 text-navy opacity-80">
           <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3" aria-label="Retirement Education Network mark" role="img">
             <circle cx="50" cy="50" r="46"/>
@@ -28,23 +27,38 @@ export default function HomePage() {
         </div>
 
         <h1
-          className="text-navy text-4xl md:text-5xl font-bold leading-tight max-w-3xl"
+          className="text-navy font-bold leading-tight max-w-3xl"
           style={{ fontFamily: "var(--font-source-serif)", fontSize: "clamp(2rem, 5vw, 3.25rem)" }}
         >
           Smart Retirement Information for Americans 59 and Older
         </h1>
 
-        <p className="text-charcoal text-xl leading-relaxed max-w-2xl" style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.25rem)" }}>
+        <p
+          className="text-charcoal leading-relaxed max-w-2xl"
+          style={{ fontSize: "clamp(1.125rem, 2.5vw, 1.25rem)", lineHeight: "1.75" }}
+        >
           Clear, current, and trustworthy content on the topics that matter most in your retirement years.
         </p>
       </section>
 
+      {/* ── Mission Statement ────────────────────────────────────────────── */}
+      <section className="bg-paper px-6 py-14 border-t border-navy/10">
+        <div className="max-w-2xl mx-auto text-center">
+          <p
+            className="text-charcoal leading-loose"
+            style={{ fontFamily: "var(--font-source-serif)", fontSize: "clamp(1.125rem, 2.5vw, 1.25rem)", lineHeight: "1.9" }}
+          >
+            Fifty-nine and a half is the magic age when new options open up to you. It is also the age when it becomes clear that the plan that got you here may need to change for a plan to get you the rest of the way. Our mission is simple: to give you the clearest, most current information on the choices in front of you, so you can make the next chapter of your retirement the best one yet.
+          </p>
+        </div>
+      </section>
+
       {/* ── Category Cards ───────────────────────────────────────────────── */}
-      <section className="bg-paper px-6 py-16">
+      <section className="bg-ivory px-6 py-16">
         <div className="max-w-5xl mx-auto">
           <h2
-            className="text-navy text-2xl font-bold mb-10 text-center"
-            style={{ fontFamily: "var(--font-source-serif)" }}
+            className="text-navy font-bold mb-10 text-center"
+            style={{ fontFamily: "var(--font-source-serif)", fontSize: "clamp(1.4rem, 3vw, 1.75rem)" }}
           >
             Explore by Topic
           </h2>
@@ -53,15 +67,15 @@ export default function HomePage() {
               <a
                 key={cat.slug}
                 href={`/${cat.slug}`}
-                className="block border border-navy/20 bg-ivory p-6 hover:border-navy transition-colors duration-150 group"
+                className="block border border-navy/20 bg-paper p-7 hover:border-navy transition-colors duration-150 group"
               >
                 <h3
-                  className="text-navy text-lg font-semibold mb-2 group-hover:underline"
-                  style={{ fontFamily: "var(--font-source-serif)" }}
+                  className="text-navy font-semibold mb-3 group-hover:underline"
+                  style={{ fontFamily: "var(--font-source-serif)", fontSize: "1.125rem" }}
                 >
                   {cat.title}
                 </h3>
-                <p className="text-charcoal text-sm leading-relaxed" style={{ fontSize: "1rem" }}>
+                <p className="text-charcoal leading-relaxed" style={{ fontSize: "1rem", lineHeight: "1.7" }}>
                   {cat.desc}
                 </p>
               </a>
@@ -74,33 +88,39 @@ export default function HomePage() {
       <section className="bg-navy px-6 py-20">
         <div className="max-w-3xl mx-auto text-ivory">
           <h2
-            className="text-3xl font-bold mb-8"
+            className="font-bold mb-8"
             style={{ fontFamily: "var(--font-source-serif)", fontSize: "clamp(1.6rem, 4vw, 2.25rem)" }}
           >
             Who We Are
           </h2>
 
-          <p className="leading-relaxed mb-5" style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", lineHeight: "1.8" }}>
+          <p className="mb-5" style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", lineHeight: "1.85" }}>
             Retirement Education Network is a content company built for Americans 59 and older. We research the most current and trusted advice on the topics that matter most in retirement, then share it in plain language you can use.
           </p>
-          <p className="leading-relaxed mb-10" style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", lineHeight: "1.8" }}>
+          <p className="mb-12" style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", lineHeight: "1.85" }}>
             Our team tracks the latest updates on taxes, Social Security, Medicare, Roth conversions, estate planning, and market trends. We pull from credible sources and expert research to bring you content that is honest, clear, and timely.
           </p>
 
-          <h3 className="text-xl font-semibold mb-4 text-ivory/90" style={{ fontFamily: "var(--font-source-serif)" }}>
+          <h3
+            className="font-semibold mb-4 text-ivory/90"
+            style={{ fontFamily: "var(--font-source-serif)", fontSize: "1.25rem" }}
+          >
             What we do not do
           </h3>
-          <p className="leading-relaxed mb-5" style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", lineHeight: "1.8" }}>
+          <p className="mb-5" style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", lineHeight: "1.85" }}>
             We do not give personal financial advice. We do not meet with readers, take appointments, or manage anyone's money. We are not advisors, accountants, or attorneys.
           </p>
-          <p className="leading-relaxed mb-10" style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", lineHeight: "1.8" }}>
+          <p className="mb-12" style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", lineHeight: "1.85" }}>
             What we are is a trusted source for staying informed. We bring you the information. You take it from there — ideally with a professional you trust.
           </p>
 
-          <h3 className="text-xl font-semibold mb-4 text-ivory/90" style={{ fontFamily: "var(--font-source-serif)" }}>
+          <h3
+            className="font-semibold mb-4 text-ivory/90"
+            style={{ fontFamily: "var(--font-source-serif)", fontSize: "1.25rem" }}
+          >
             Why this matters
           </h3>
-          <p className="leading-relaxed" style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", lineHeight: "1.8" }}>
+          <p style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", lineHeight: "1.85" }}>
             Retirement is one of the biggest financial chapters of your life, and the rules change every year. Most people get their information from headlines, sales pitches, or whoever called them last. You deserve better. Our job is to keep you current and confident in the questions you ask.
           </p>
         </div>
@@ -108,7 +128,7 @@ export default function HomePage() {
 
       {/* ── Disclaimer ───────────────────────────────────────────────────── */}
       <section className="bg-paper px-6 py-8 border-t border-navy/10">
-        <p className="text-center text-charcoal/60 text-sm max-w-3xl mx-auto leading-relaxed">
+        <p className="text-center text-charcoal/50 max-w-3xl mx-auto leading-relaxed" style={{ fontSize: "0.875rem" }}>
           {DISCLAIMER}
         </p>
       </section>
