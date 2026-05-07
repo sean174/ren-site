@@ -209,7 +209,6 @@ export default function HomePage() {
                 <img
                   src={`/images/${lead.category}.jpg`}
                   alt={`${CATEGORY_LABELS[lead.category]} — Retirement Education Network`}
-                  onError={(e) => { (e.target as HTMLImageElement).src = "/images/homepage-lead.jpg"; }}
                   style={{ width: "100%", height: "280px", objectFit: "cover", display: "block" }}
                 />
               </div>
