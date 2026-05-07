@@ -165,6 +165,20 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       </header>
 
+      {/* Article hero image */}
+      {data.category && (
+        <div style={{ maxWidth: "672px", margin: "0 auto", padding: "0 24px" }}>
+          <img
+            src={`/images/${data.category}.jpg`}
+            alt={data.title}
+            style={{ width: "100%", height: "280px", objectFit: "cover", display: "block", marginTop: "32px" }}
+          />
+          <p style={{ fontSize: "11px", color: "#6B6B6B", marginTop: "6px", fontFamily: "var(--font-inter)" }}>
+            Photo via <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" style={{ color: "#6B6B6B" }}>Unsplash</a>
+          </p>
+        </div>
+      )}
+
       {/* Article body */}
       <div className="px-6 py-14">
         <div

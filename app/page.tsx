@@ -204,14 +204,17 @@ export default function HomePage() {
               <p style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 300, fontStyle: "italic", fontSize: "1.2rem", lineHeight: 1.5, color: "#3A3A3A", margin: "0 0 18px", maxWidth: "640px" }}>
                 {lead.excerpt}
               </p>
-              {/* Image placeholder */}
-              <div style={{
-                height: "280px",
-                background: "linear-gradient(180deg, rgba(15,42,68,0.04) 0%, rgba(15,42,68,0.12) 100%), repeating-linear-gradient(135deg, rgba(15,42,68,0.04) 0 8px, rgba(15,42,68,0.08) 8px 16px), #EAE3D6",
-                marginBottom: "8px",
-              }} />
+              {/* Lead image */}
+              <div style={{ position: "relative", marginBottom: "8px" }}>
+                <img
+                  src={`/images/${lead.category}.jpg`}
+                  alt={`${CATEGORY_LABELS[lead.category]} — Retirement Education Network`}
+                  onError={(e) => { (e.target as HTMLImageElement).src = "/images/homepage-lead.jpg"; }}
+                  style={{ width: "100%", height: "280px", objectFit: "cover", display: "block" }}
+                />
+              </div>
               <p style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", color: "#6B6B6B", marginBottom: "24px" }}>
-                <strong>Illustration</strong> — {CATEGORY_LABELS[lead.category]} · Retirement Education Network
+                <strong>{CATEGORY_LABELS[lead.category]}</strong> · Photo via <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" style={{ color: "#6B6B6B" }}>Unsplash</a>
               </p>
 
               {/* Secondary stories */}
@@ -319,8 +322,8 @@ export default function HomePage() {
           </div>
           <div style={{ background: "#FBF8F2", padding: "0 32px 28px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "20px" }}>
             {medicareArticles.map(a => (
-              <a key={a.slug} href={`/articles/${a.slug}`} style={{ textDecoration: "none", display: "block", borderTop: "2px solid rgba(15,42,68,0.15)" }}>
-                <div style={{ height: "100px", background: "linear-gradient(135deg, rgba(15,42,68,0.06) 0%, rgba(15,42,68,0.12) 100%), #EAE3D6", marginBottom: "10px" }} />
+                <a key={a.slug} href={`/articles/${a.slug}`} style={{ textDecoration: "none", display: "block", borderTop: "2px solid rgba(15,42,68,0.15)" }}>
+                <img src={`/images/${a.category}.jpg`} alt={a.title} style={{ width: "100%", height: "100px", objectFit: "cover", display: "block", marginBottom: "10px" }} />
                 <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase" as const, color: "#B5432F", marginBottom: "5px" }}>
                   {CATEGORY_LABELS[a.category]}
                 </div>
@@ -372,8 +375,8 @@ export default function HomePage() {
           </div>
           <div style={{ background: "#FBF8F2", padding: "0 32px 28px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "20px" }}>
             {moneyArticles.map(a => (
-              <a key={a.slug} href={`/articles/${a.slug}`} style={{ textDecoration: "none", display: "block", borderTop: "2px solid rgba(15,42,68,0.15)" }}>
-                <div style={{ height: "100px", background: "linear-gradient(135deg, rgba(15,42,68,0.04) 0%, rgba(15,42,68,0.1) 100%), #EAE3D6", marginBottom: "10px" }} />
+                <a key={a.slug} href={`/articles/${a.slug}`} style={{ textDecoration: "none", display: "block", borderTop: "2px solid rgba(15,42,68,0.15)" }}>
+                <img src={`/images/${a.category}.jpg`} alt={a.title} style={{ width: "100%", height: "100px", objectFit: "cover", display: "block", marginBottom: "10px" }} />
                 <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase" as const, color: "#B5432F", marginBottom: "5px" }}>
                   {CATEGORY_LABELS[a.category]}
                 </div>
