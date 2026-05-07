@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import EmailForm from "@/components/EmailForm";
 
 const ARTICLES_DIR = path.join(process.cwd(), "content/articles");
 
@@ -273,30 +274,7 @@ export default function HomePage() {
             <p style={{ fontSize: "0.85rem", lineHeight: 1.65, margin: "0 0 14px", color: "rgba(244,239,230,0.85)" }}>
               One letter, every Thursday. The week in retirement — written for readers, not advisors.
             </p>
-            <form onSubmit={(e) => e.preventDefault()} style={{ display: "flex", flexDirection: "column" as const, gap: "8px" }}>
-              <input
-                type="email"
-                placeholder="your@email.com"
-                style={{
-                  padding: "9px 12px", fontSize: "0.9rem",
-                  border: "1px solid rgba(244,239,230,0.25)",
-                  background: "rgba(244,239,230,0.1)",
-                  color: "#F4EFE6", outline: "none", width: "100%",
-                }}
-              />
-              <button
-                type="submit"
-                style={{
-                  background: "#F4EFE6", color: "#0F2A44",
-                  border: "none", padding: "9px", fontSize: "0.85rem",
-                  fontFamily: "var(--font-inter),sans-serif",
-                  fontWeight: 700, letterSpacing: "0.12em",
-                  textTransform: "uppercase" as const, cursor: "pointer", width: "100%",
-                }}
-              >
-                Subscribe
-              </button>
-            </form>
+            <EmailForm />
             <p style={{ fontSize: "10px", color: "rgba(244,239,230,0.5)", margin: "8px 0 0", letterSpacing: "0.04em" }}>
               Free · No spam · Unsubscribe anytime
             </p>
