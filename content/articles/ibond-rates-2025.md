@@ -1,7 +1,7 @@
 ---
 title: "I-Bond Rates in 2025: How the Fed's Decisions Shaped Returns for Conservative Savers"
 category: "safe-money"
-date: "2025-07-01"
+date: "2024-11-01"
 excerpt: "Series I savings bond rates remained in the 3.98–4.03% range through 2025, offering inflation-protected returns with a fixed component that rewarded buyers who locked in rates earlier in the year."
 ---
 

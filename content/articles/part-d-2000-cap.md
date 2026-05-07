@@ -1,7 +1,7 @@
 ---
 title: "The Part D $2,000 Out-of-Pocket Cap: What It Means for Your Prescriptions in 2026"
 category: "medicare"
-date: "2025-09-15"
+date: "2024-04-01"
 excerpt: "Starting in 2025, Medicare Part D beneficiaries pay no more than $2,000 out of pocket for covered prescriptions in a calendar year—a landmark change from the Inflation Reduction Act."
 ---
 

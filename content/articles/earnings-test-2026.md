@@ -1,7 +1,7 @@
 ---
 title: "The 2026 Social Security Earnings Test: What Changes If You Work While Collecting"
 category: "social-security"
-date: "2025-12-10"
+date: "2025-10-24"
 excerpt: "If you claim Social Security before full retirement age and continue working, the earnings test limits apply—and the 2026 thresholds have been updated in ways that affect how much you can earn before benefits are reduced."
 ---
 

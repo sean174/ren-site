@@ -1,7 +1,7 @@
 ---
 title: "SECURE 2.0 Inherited IRA Rules: What Beneficiaries Must Do in 2025 and Beyond"
 category: "wills-and-trusts"
-date: "2025-06-05"
+date: "2024-07-19"
 excerpt: "After multiple years of penalty waivers and regulatory delay, the inherited IRA rules stemming from the SECURE Act are now fully in force—and 2025 is the first year that non-compliance carries real consequences."
 ---
 

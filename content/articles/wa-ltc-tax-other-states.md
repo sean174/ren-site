@@ -1,7 +1,7 @@
 ---
 title: "After Washington State's Long-Term Care Tax, Other States Are Watching—and Moving"
 category: "long-term-care"
-date: "2025-08-20"
+date: "2024-11-05"
 excerpt: "Washington's WA Cares Fund became the nation's first state-run long-term care insurance program—and as its implementation continues, other states are advancing similar legislation with lessons learned from the pioneer."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Genworth 2024 Cost of Care Survey: Nursing Home and Home Care Costs Reach New Highs"
 category: "long-term-care"
-date: "2025-05-30"
+date: "2025-03-04"
 excerpt: "The Genworth and CareScout 2024 Cost of Care Survey found that long-term care costs rose across every care category, with private nursing home rooms and assisted living facilities seeing the sharpest increases."
 ---
 

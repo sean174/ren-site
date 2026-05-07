@@ -1,7 +1,7 @@
 ---
 title: "Social Security COLA 2025: The 2.5% Adjustment and What It Means for Your Check"
 category: "social-security"
-date: "2025-05-20"
+date: "2024-10-10"
 excerpt: "The 2025 cost-of-living adjustment came in at 2.5 percent—the smallest in four years—raising the average retirement benefit by about $49 per month starting in January."
 ---
 

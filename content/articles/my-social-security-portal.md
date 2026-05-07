@@ -1,7 +1,7 @@
 ---
 title: "SSA Upgrades Its Online Portal: What Retirees Should Know About the New My Social Security"
 category: "social-security"
-date: "2025-08-05"
+date: "2024-07-12"
 excerpt: "The Social Security Administration overhauled its homepage and tightened identity verification requirements in 2025—changes that affect how beneficiaries access their accounts and manage benefits online."
 ---
 

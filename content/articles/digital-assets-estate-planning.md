@@ -1,7 +1,7 @@
 ---
 title: "Digital Assets in Estate Planning: Crypto, Online Accounts, and What Retirees Often Miss"
 category: "wills-and-trusts"
-date: "2025-12-01"
+date: "2024-11-15"
 excerpt: "From cryptocurrency wallets to email accounts and cloud photo libraries, digital assets present unique estate planning challenges—and most retirees have not addressed them in their plans."
 ---
 

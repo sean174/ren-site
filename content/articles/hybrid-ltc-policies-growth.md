@@ -1,7 +1,7 @@
 ---
 title: "Hybrid Life/LTC Policies Are Growing Fast: Here's What's Behind the Surge"
 category: "long-term-care"
-date: "2025-10-01"
+date: "2025-01-30"
 excerpt: "As traditional long-term care insurance continues to shrink, hybrid policies that combine life insurance or an annuity with long-term care benefits have become the fastest-growing solution in the space."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "SECURE 2.0 RMD Clarifications: What the IRS Finally Confirmed in 2025"
 category: "tax-planning"
-date: "2025-07-20"
+date: "2024-07-19"
 excerpt: "After years of interim guidance and waived penalties, the IRS finalized inherited IRA rules in mid-2024 and made clear that 2025 is the year they actually take effect—here is what beneficiaries and planners need to know."
 ---
 

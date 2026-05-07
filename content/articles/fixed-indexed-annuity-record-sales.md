@@ -1,7 +1,7 @@
 ---
 title: "Fixed Indexed Annuity Sales Hit Record in 2024: What the Surge Tells Us"
 category: "safe-money"
-date: "2025-06-25"
+date: "2025-01-28"
 excerpt: "Fixed indexed annuity sales reached $126.9 billion in 2024, part of a broader record year for annuities—and the numbers reveal something real about how retirees are thinking about risk."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "CD Rates After the Fed Cuts: How Retirees Should Think About Locking In Now"
 category: "safe-money"
-date: "2025-10-15"
+date: "2024-09-18"
 excerpt: "After the Federal Reserve cut rates in October 2025, top certificate of deposit rates remained above 4% in some terms—but the window for locking in elevated yields is narrowing."
 ---
 

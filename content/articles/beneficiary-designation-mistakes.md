@@ -1,7 +1,7 @@
 ---
 title: "The #1 Estate Planning Mistake: Why Beneficiary Designations Override Everything Else"
 category: "wills-and-trusts"
-date: "2025-09-10"
+date: "2024-10-01"
 excerpt: "Your will does not control who inherits your retirement accounts, life insurance, or bank accounts with payable-on-death designations—and the mismatch between documents and designations is the most common and costly estate planning error."
 ---
 

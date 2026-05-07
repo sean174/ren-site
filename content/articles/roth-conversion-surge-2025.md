@@ -1,7 +1,7 @@
 ---
 title: "Roth Conversion Demand Surged in 2025: What's Driving It and What to Know"
 category: "tax-planning"
-date: "2025-09-01"
+date: "2024-10-29"
 excerpt: "A combination of TCJA sunset concerns, rising pre-tax balances, and awareness of future RMD burdens pushed Roth conversion activity to elevated levels in 2025—here is the case for and the cautions about the strategy."
 ---
 

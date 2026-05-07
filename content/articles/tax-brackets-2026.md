@@ -1,7 +1,7 @@
 ---
 title: "The 2026 Tax Brackets: What Inflation Adjustments Mean for Retirees"
 category: "tax-planning"
-date: "2025-11-20"
+date: "2025-10-09"
 excerpt: "On October 9, 2025, the IRS announced inflation-adjusted tax parameters for 2026—including a standard deduction of $32,200 for married couples and modestly wider brackets that provide modest relief for retirees on fixed income."
 ---
 

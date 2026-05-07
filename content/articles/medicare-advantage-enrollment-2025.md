@@ -1,7 +1,7 @@
 ---
 title: "Medicare Advantage Hits Record Enrollment: What the Shift Means for Beneficiaries"
 category: "medicare"
-date: "2025-06-10"
+date: "2025-07-28"
 excerpt: "More than half of all Medicare beneficiaries are now enrolled in Medicare Advantage plans, a milestone that is reshaping how care is delivered—and how retirees navigate their coverage."
 ---
 
