@@ -187,7 +187,7 @@ export default function HomePage() {
       <section style={{ background: "#FBF8F2", padding: "28px 32px 32px", display: "grid", gridTemplateColumns: "2.2fr 1fr", gap: "32px" }}>
 
         {/* Lead story */}
-        <div style={{ borderRight: "1px solid rgba(15,42,68,0.18)", paddingRight: "32px" }}>
+        <div style={{ borderRight: "1px solid rgba(15,42,68,0.18)", paddingRight: "32px", display: "flex", flexDirection: "column" as const }}>
           {lead && (
             <>
               <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "#B5432F", marginBottom: "10px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -218,7 +218,7 @@ export default function HomePage() {
 
               {/* Secondary stories */}
               {secondary.length > 0 && (
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", borderTop: "1px solid rgba(15,42,68,0.18)", paddingTop: "20px" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", borderTop: "1px solid rgba(15,42,68,0.18)", paddingTop: "20px", marginTop: "auto" }}>
                   {secondary.map(s => (
                     <div key={s.slug}>
                       <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: "#B5432F", marginBottom: "6px" }}>
