@@ -151,6 +151,7 @@ export default function RateWatch() {
 
   return (
     <div
+      className="ren-rate-bar"
       style={bar}
       title={isLive ? `Updated ${new Date(data!.updatedAt).toLocaleTimeString()}` : "Showing last known rates"}
     >

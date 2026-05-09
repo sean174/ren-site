@@ -225,7 +225,7 @@ export default async function ArticlePage({ params }: Props) {
     <article style={{ background: "#FBF8F2" }}>
 
       {/* ── ARTICLE HEADER ───────────────────────────────────────────────── */}
-      <div style={{
+      <div className="ren-article-header" style={{
         padding: "32px 32px 22px",
         display: "grid",
         gridTemplateColumns: "1fr 220px",
@@ -340,7 +340,7 @@ export default async function ArticlePage({ params }: Props) {
         </div>
 
         {/* Right: key info sidebar */}
-        <div style={{ paddingTop: "4px" }}>
+        <div className="ren-article-sidebar" style={{ paddingTop: "4px" }}>
           <div style={{
             fontFamily: "var(--font-inter),sans-serif",
             fontSize: "10px",
@@ -385,7 +385,7 @@ export default async function ArticlePage({ params }: Props) {
 
       {/* ── HERO IMAGE ───────────────────────────────────────────────────── */}
       {imgSrc && (
-        <div style={{ margin: "0 32px" }}>
+        <div className="ren-article-hero" style={{ margin: "0 32px" }}>
           <img
             src={imgSrc}
             alt={data.title}
@@ -417,7 +417,7 @@ export default async function ArticlePage({ params }: Props) {
       )}
 
       {/* ── 3-COLUMN ARTICLE BODY ────────────────────────────────────────── */}
-      <div style={{
+      <div className="ren-article-body" style={{
         padding: "36px 32px 36px",
         display: "grid",
         gridTemplateColumns: "160px 1fr 220px",
@@ -425,7 +425,7 @@ export default async function ArticlePage({ params }: Props) {
       }}>
 
         {/* LEFT: sticky TOC */}
-        <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "10px", color: "#6B6B6B" }}>
+        <div className="ren-article-toc" style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "10px", color: "#6B6B6B" }}>
           <div style={{ position: "sticky", top: "20px" }}>
             {toc.length > 0 && (
               <>
@@ -495,7 +495,7 @@ export default async function ArticlePage({ params }: Props) {
         />
 
         {/* RIGHT: related + newsletter */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
+        <div className="ren-article-rail" style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
 
           {/* Related articles */}
           {related.length > 0 && (

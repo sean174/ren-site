@@ -47,7 +47,7 @@ export default function HomePage() {
   return (
     <>
     <main style={{ background: "var(--color-ivory, #F4EFE6)", minHeight: "100vh" }}>
-      <div style={{
+      <div className="ren-topbar" style={{
         background: "var(--color-navy, #0F2A44)",
         color: "rgba(244,239,230,0.85)",
         fontFamily: "var(--font-inter), sans-serif",
@@ -83,7 +83,7 @@ export default function HomePage() {
       </div>
 
       {/* ── Masthead ─────────────────────────────────────────────────────── */}
-      <header style={{
+      <header className="ren-masthead" style={{
         background: "#FBF8F2",
         padding: "24px 32px 20px",
         borderBottom: "3px double #0F2A44",
@@ -92,7 +92,7 @@ export default function HomePage() {
         alignItems: "center",
         gap: "24px",
       }}>
-        <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", letterSpacing: "0.04em", color: "#6B6B6B", lineHeight: 1.7 }}>
+        <div className="ren-masthead-meta-left" style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", letterSpacing: "0.04em", color: "#6B6B6B", lineHeight: 1.7 }}>
           <strong style={{ fontWeight: 700, color: "#0F2A44", textTransform: "uppercase" as const, letterSpacing: "0.18em", fontSize: "10px", display: "block" }}>
             Educational · Independent · Free
           </strong>
@@ -100,7 +100,7 @@ export default function HomePage() {
         </div>
 
         {/* Nameplate */}
-        <div style={{ display: "flex", alignItems: "center", gap: "18px", justifyContent: "center" }}>
+        <div className="ren-masthead-nameplate" style={{ display: "flex", alignItems: "center", gap: "18px", justifyContent: "center" }}>
           <svg width="56" height="56" viewBox="0 0 100 100" fill="none" stroke="#0F2A44" strokeWidth="2.5" aria-hidden="true">
             <circle cx="50" cy="50" r="46" />
             <line x1="14" y1="58" x2="86" y2="58" strokeLinecap="square" />
@@ -109,7 +109,7 @@ export default function HomePage() {
           </svg>
           <div style={{ width: "1px", height: "64px", background: "rgba(15,42,68,0.35)" }} />
           <div style={{ display: "flex", flexDirection: "column" as const, gap: "4px", alignItems: "center", textAlign: "center" as const }}>
-            <div style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "60px", lineHeight: 0.9, letterSpacing: "-0.015em", color: "#0F2A44" }}>
+            <div style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "60px", lineHeight: 0.9, letterSpacing: "-0.015em", color: "#0F2A44" }} className="ren-nameplate-text">
               REN
             </div>
             <div style={{ fontFamily: "var(--font-inter),sans-serif", fontWeight: 600, fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase" as const, color: "#3A3A3A" }}>
@@ -118,7 +118,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", letterSpacing: "0.04em", color: "#6B6B6B", lineHeight: 1.7, textAlign: "right" as const }}>
+        <div className="ren-masthead-meta-right" style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", letterSpacing: "0.04em", color: "#6B6B6B", lineHeight: 1.7, textAlign: "right" as const }}>
           <strong style={{ fontWeight: 700, color: "#0F2A44", textTransform: "uppercase" as const, letterSpacing: "0.18em", fontSize: "10px", display: "block" }}>
             America&apos;s Retirement Resource
           </strong>
@@ -127,7 +127,7 @@ export default function HomePage() {
       </header>
 
       {/* ── Primary Nav ──────────────────────────────────────────────────── */}
-      <nav style={{
+      <nav className="ren-primary-nav" style={{
         background: "#FBF8F2",
         padding: "12px 32px",
         borderBottom: "1px solid rgba(15,42,68,0.18)",
@@ -190,10 +190,10 @@ export default function HomePage() {
       <RateWatch />
 
       {/* ── Front Page Grid ───────────────────────────────────────────────── */}
-      <section style={{ background: "#FBF8F2", padding: "28px 32px 32px", display: "grid", gridTemplateColumns: "2.2fr 1fr", gap: "32px" }}>
+      <section className="ren-front-grid" style={{ background: "#FBF8F2", padding: "28px 32px 32px", display: "grid", gridTemplateColumns: "2.2fr 1fr", gap: "32px" }}>
 
         {/* Lead story */}
-        <div style={{ borderRight: "1px solid rgba(15,42,68,0.18)", paddingRight: "32px", display: "flex", flexDirection: "column" as const }}>
+        <div className="ren-lead-story" style={{ borderRight: "1px solid rgba(15,42,68,0.18)", paddingRight: "32px", display: "flex", flexDirection: "column" as const }}>
           {lead && (
             <>
               <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "#B5432F", marginBottom: "10px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -224,7 +224,7 @@ export default function HomePage() {
 
               {/* Secondary stories */}
               {secondary.length > 0 && (
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", borderTop: "1px solid rgba(15,42,68,0.18)", paddingTop: "20px", marginTop: "24px" }}>
+                <div className="ren-secondary-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", borderTop: "1px solid rgba(15,42,68,0.18)", paddingTop: "20px", marginTop: "24px" }}>
                   {secondary.map(s => (
                     <div key={s.slug}>
                       <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: "#B5432F", marginBottom: "6px" }}>
@@ -250,7 +250,7 @@ export default function HomePage() {
         </div>
 
         {/* Rail / Sidebar */}
-        <aside style={{ display: "flex", flexDirection: "column" as const, gap: "28px" }}>
+        <aside className="ren-sidebar" style={{ display: "flex", flexDirection: "column" as const, gap: "28px" }}>
 
           {/* Most Read */}
           <div>
@@ -294,7 +294,7 @@ export default function HomePage() {
       <EbookBanner />
 
       {/* ── Key Dates + Washington Watch (full-width band) ─────────────── */}
-      <section style={{ background: "#FBF8F2", borderTop: "1px solid rgba(15,42,68,0.18)", padding: "28px 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px" }}>
+      <section className="ren-two-col-band" style={{ background: "#FBF8F2", borderTop: "1px solid rgba(15,42,68,0.18)", padding: "28px 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px" }}>
         <div style={{ borderTop: "3px solid #0F2A44", paddingTop: "16px" }}>
           <KeyDates />
         </div>
@@ -306,7 +306,7 @@ export default function HomePage() {
       {/* ── Section: Medicare ────────────────────────────────────────────── */}
       {medicareArticles.length > 0 && (
         <>
-          <div style={{ padding: "0 32px", borderTop: "1px solid rgba(15,42,68,0.18)", background: "#FBF8F2", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <div className="ren-section-header" style={{ padding: "0 32px", borderTop: "1px solid rgba(15,42,68,0.18)", background: "#FBF8F2", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <h2 style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "1.1rem", color: "#0F2A44", padding: "14px 0", margin: 0, borderLeft: "4px solid #B5432F", paddingLeft: "14px" }}>
               Medicare
             </h2>
@@ -314,7 +314,7 @@ export default function HomePage() {
               All Medicare →
             </a>
           </div>
-          <div style={{ background: "#FBF8F2", padding: "0 32px 28px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "20px" }}>
+          <div className="ren-article-grid" style={{ background: "#FBF8F2", padding: "0 32px 28px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "20px" }}>
             {medicareArticles.map(a => (
                 <a key={a.slug} href={`/articles/${a.slug}`} style={{ textDecoration: "none", display: "block", borderTop: "2px solid rgba(15,42,68,0.15)", paddingTop: "10px" }}>
                 <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase" as const, color: "#B5432F", marginBottom: "5px" }}>
@@ -331,7 +331,7 @@ export default function HomePage() {
       )}
 
       {/* ── Explainer Strip ───────────────────────────────────────────────── */}
-      <section style={{ background: "#EAE3D6", padding: "28px 32px", display: "grid", gridTemplateColumns: "1fr 2fr", gap: "32px", alignItems: "center", borderTop: "1px solid rgba(15,42,68,0.18)", borderBottom: "1px solid rgba(15,42,68,0.18)" }}>
+      <section className="ren-explainer" style={{ background: "#EAE3D6", padding: "28px 32px", display: "grid", gridTemplateColumns: "1fr 2fr", gap: "32px", alignItems: "center", borderTop: "1px solid rgba(15,42,68,0.18)", borderBottom: "1px solid rgba(15,42,68,0.18)" }}>
         <div>
           <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "#B5432F", marginBottom: "8px" }}>
             Key Numbers
@@ -340,7 +340,7 @@ export default function HomePage() {
             3 things to know about Medicare in 2026
           </h2>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "20px" }}>
+        <div className="ren-explainer-numbers" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "20px" }}>
           {[
             { n: "01", val: "$2,000", desc: "New annual out-of-pocket cap on Part D prescription costs, effective 2026" },
             { n: "02", val: "$185",   desc: "Standard Part B monthly premium in 2026, up from $174.70 in 2024" },
@@ -358,7 +358,7 @@ export default function HomePage() {
       {/* ── Section: Money & Planning ────────────────────────────────────── */}
       {moneyArticles.length > 0 && (
         <>
-          <div style={{ padding: "0 32px", background: "#FBF8F2", display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid rgba(15,42,68,0.18)" }}>
+          <div className="ren-section-header" style={{ padding: "0 32px", background: "#FBF8F2", display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid rgba(15,42,68,0.18)" }}>
             <h2 style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "1.1rem", color: "#0F2A44", padding: "14px 0 14px 14px", margin: 0, borderLeft: "4px solid #B5432F" }}>
               Money &amp; Planning
             </h2>
@@ -366,7 +366,7 @@ export default function HomePage() {
               All Money →
             </a>
           </div>
-          <div style={{ background: "#FBF8F2", padding: "0 32px 28px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "20px" }}>
+          <div className="ren-article-grid" style={{ background: "#FBF8F2", padding: "0 32px 28px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "20px" }}>
             {moneyArticles.map(a => (
                 <a key={a.slug} href={`/articles/${a.slug}`} style={{ textDecoration: "none", display: "block", borderTop: "2px solid rgba(15,42,68,0.15)", paddingTop: "10px" }}>
                 <div style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase" as const, color: "#B5432F", marginBottom: "5px" }}>
@@ -383,7 +383,7 @@ export default function HomePage() {
       )}
 
       {/* ── Who We Are ───────────────────────────────────────────────────── */}
-      <section style={{ background: "#0F2A44", padding: "40px 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px", borderTop: "1px solid rgba(15,42,68,0.3)" }}>
+      <section className="ren-about-grid" style={{ background: "#0F2A44", padding: "40px 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px", borderTop: "1px solid rgba(15,42,68,0.3)" }}>
         <div style={{ color: "#F4EFE6" }}>
           <h2 style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "1.5rem", margin: "0 0 16px" }}>Who We Are</h2>
           <p style={{ fontSize: "1rem", lineHeight: 1.8, marginBottom: "14px", color: "rgba(244,239,230,0.9)" }}>
@@ -405,7 +405,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Footer / Disclaimer ───────────────────────────────────────────── */}
-      <footer style={{ background: "#0A1E33", padding: "24px 32px", borderTop: "1px solid rgba(244,239,230,0.1)" }}>
+      <footer className="ren-footer" style={{ background: "#0A1E33", padding: "24px 32px", borderTop: "1px solid rgba(244,239,230,0.1)" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "14px" }}>
           <svg width="28" height="28" viewBox="0 0 100 100" fill="none" stroke="#F4EFE6" strokeWidth="3" opacity={0.7} aria-hidden="true">
             <circle cx="50" cy="50" r="46" />
@@ -420,7 +420,7 @@ export default function HomePage() {
         <p style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", color: "rgba(244,239,230,0.5)", lineHeight: 1.75, maxWidth: "720px", margin: "0 0 12px" }}>
           {DISCLAIMER}
         </p>
-        <div style={{ display: "flex", gap: "20px", alignItems: "center", fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", color: "rgba(244,239,230,0.4)", flexWrap: "wrap" as const }}>
+        <div className="ren-footer-links" style={{ display: "flex", gap: "20px", alignItems: "center", fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", color: "rgba(244,239,230,0.4)", flexWrap: "wrap" as const }}>
           <span>© 2026 Retirement Education Network · Educational · Independent · Free</span>
           <a href="/privacy" style={{ color: "inherit", textDecoration: "none" }}>Privacy Policy</a>
           <a href="/terms" style={{ color: "inherit", textDecoration: "none" }}>Terms</a>

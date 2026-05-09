@@ -34,3 +34,272 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* ─── Mobile Responsive Overrides ───────────────────────────────────────── */
+
+/* Ensure images never overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal scroll */
+body, main {
+  overflow-x: hidden;
+}
+
+/* ── Hamburger Menu ────────────────────────────────────────────────────── */
+.ren-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.ren-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #F4EFE6;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+/* Mobile nav drawer */
+.ren-mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  background: #0F2A44;
+  padding: 0;
+  border-top: 1px solid rgba(244,239,230,0.1);
+}
+.ren-mobile-nav.open {
+  display: flex;
+}
+.ren-mobile-nav a {
+  padding: 14px 24px;
+  font-size: 13px;
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(244,239,230,0.85);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(244,239,230,0.08);
+}
+.ren-mobile-nav a:hover {
+  color: #F4EFE6;
+  background: rgba(255,255,255,0.05);
+}
+
+@media (max-width: 768px) {
+  /* ── Ticker / top bar ──────────────────────────────────────────────── */
+  .ren-topbar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 8px 16px !important;
+    gap: 4px !important;
+  }
+  .ren-topbar > div {
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  /* ── Masthead ─────────────────────────────────────────────────────── */
+  .ren-masthead {
+    grid-template-columns: 1fr !important;
+    padding: 16px !important;
+    gap: 12px !important;
+    text-align: center !important;
+  }
+  .ren-masthead-meta-left,
+  .ren-masthead-meta-right {
+    display: none !important;
+  }
+  .ren-masthead-nameplate {
+    justify-content: center !important;
+  }
+  .ren-masthead-nameplate .ren-nameplate-text {
+    font-size: 40px !important;
+  }
+
+  /* ── Primary nav ─────────────────────────────────────────────────── */
+  .ren-primary-nav {
+    display: none !important;
+  }
+
+  /* ── Rate watch bar ──────────────────────────────────────────────── */
+  .ren-rate-bar {
+    overflow-x: auto !important;
+    justify-content: flex-start !important;
+    padding: 6px 12px !important;
+    gap: 0 !important;
+    flex-wrap: nowrap !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .ren-rate-bar::-webkit-scrollbar { display: none; }
+
+  /* ── Ticker strip ────────────────────────────────────────────────── */
+  .ren-ticker {
+    flex-wrap: wrap !important;
+  }
+  .ren-ticker-content {
+    white-space: normal !important;
+    overflow-x: hidden !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+
+  /* ── Homepage front page grid ────────────────────────────────────── */
+  .ren-front-grid {
+    grid-template-columns: 1fr !important;
+    padding: 16px !important;
+    gap: 24px !important;
+  }
+  .ren-lead-story {
+    border-right: none !important;
+    padding-right: 0 !important;
+    border-bottom: 1px solid rgba(15,42,68,0.18) !important;
+    padding-bottom: 24px !important;
+  }
+  .ren-lead-story img {
+    height: 200px !important;
+  }
+  .ren-secondary-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* ── Sidebar rail ────────────────────────────────────────────────── */
+  .ren-sidebar {
+    border-top: 1px solid rgba(15,42,68,0.18) !important;
+    padding-top: 24px !important;
+  }
+
+  /* ── Two-column sections ─────────────────────────────────────────── */
+  .ren-two-col {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 20px 16px !important;
+  }
+
+  /* ── Key Dates / Legislation Watch ─────────────────────────────── */
+  .ren-two-col-band {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 20px 16px !important;
+  }
+
+  /* ── Article grid cards ───────────────────────────────────────────*/
+  .ren-article-grid {
+    padding: 0 16px 20px !important;
+  }
+
+  /* ── Explainer strip ─────────────────────────────────────────────── */
+  .ren-explainer {
+    grid-template-columns: 1fr !important;
+    padding: 20px 16px !important;
+    gap: 16px !important;
+  }
+  .ren-explainer-numbers {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* ── Who we are ──────────────────────────────────────────────────── */
+  .ren-about-grid {
+    grid-template-columns: 1fr !important;
+    padding: 28px 16px !important;
+    gap: 24px !important;
+  }
+
+  /* ── Section headers ─────────────────────────────────────────────── */
+  .ren-section-header {
+    padding: 0 16px !important;
+  }
+
+  /* ── Ebook banner ────────────────────────────────────────────────── */
+  .ren-ebook-banner {
+    grid-template-columns: 1fr !important;
+    padding: 24px 16px !important;
+    gap: 20px !important;
+    text-align: center !important;
+  }
+  .ren-ebook-form {
+    flex-direction: column !important;
+    max-width: 100% !important;
+  }
+  .ren-ebook-form input,
+  .ren-ebook-form button {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  /* ── Article page ─────────────────────────────────────────────────── */
+  .ren-article-header {
+    grid-template-columns: 1fr !important;
+    padding: 16px !important;
+    gap: 16px !important;
+  }
+  .ren-article-sidebar {
+    display: none !important;
+  }
+  .ren-article-hero {
+    margin: 0 !important;
+  }
+  .ren-article-hero img {
+    height: 220px !important;
+  }
+  .ren-article-body {
+    grid-template-columns: 1fr !important;
+    padding: 20px 16px !important;
+    gap: 24px !important;
+  }
+  .ren-article-toc {
+    display: none !important;
+  }
+  .ren-article-rail {
+    border-top: 1px solid rgba(15,42,68,0.18) !important;
+    padding-top: 24px !important;
+  }
+
+  /* ── Footer ──────────────────────────────────────────────────────── */
+  .ren-footer {
+    padding: 20px 16px !important;
+  }
+  .ren-footer-links {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  /* ── Nav hamburger ───────────────────────────────────────────────── */
+  .ren-hamburger {
+    display: flex !important;
+  }
+  .ren-nav-desktop {
+    display: none !important;
+  }
+  .ren-nav-wordmark span.ren-wordmark-text {
+    font-size: 13px !important;
+  }
+
+  /* ── General padding on section/header rows ──────────────────────── */
+  .ren-padded {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra tight on very small screens */
+  .ren-masthead-nameplate .ren-nameplate-text {
+    font-size: 32px !important;
+  }
+  .ren-article-hero img {
+    height: 170px !important;
+  }
+}

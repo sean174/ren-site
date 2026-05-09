@@ -29,6 +29,7 @@ export default function EbookBanner() {
 
   return (
     <section
+      className="ren-ebook-banner"
       style={{
         background: "#0F2A44",
         borderTop: "4px solid #E89A7A",
@@ -100,7 +101,7 @@ export default function EbookBanner() {
             Check your inbox. Your free guide is on the way.
           </div>
         ) : (
-          <form onSubmit={handleSubmit} style={{ display: "flex", gap: "10px", maxWidth: "420px", flexWrap: "wrap" }}>
+          <form onSubmit={handleSubmit} className="ren-ebook-form" style={{ display: "flex", gap: "10px", maxWidth: "420px", flexWrap: "wrap" }}>
             <input
               type="email"
               placeholder="your@email.com"
