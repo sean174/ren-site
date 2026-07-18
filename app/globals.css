@@ -217,6 +217,11 @@ body, main {
     gap: 24px !important;
   }
 
+  /* ── Consultation form name row ──────────────────────────────────── */
+  .ren-consult-names {
+    grid-template-columns: 1fr !important;
+  }
+
   /* ── Section headers ─────────────────────────────────────────────── */
   .ren-section-header {
     padding: 0 16px !important;

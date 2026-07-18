@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import EmailForm from "@/components/EmailForm";
-import RateWatch from "@/components/RateWatch";
 import LegislationWatch from "@/components/LegislationWatch";
 import KeyDates from "@/components/KeyDates";
 import EbookBanner from "@/components/EbookBanner";
@@ -30,8 +29,6 @@ function getAllArticles() {
     .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));
 }
 
-const DISCLAIMER = "Retirement Education Network provides educational content for informational purposes only. Nothing on this site constitutes financial, tax, legal, or investment advice. We do not recommend specific products, advisors, or strategies. Always consult a qualified professional before making any financial decision.";
-
 export default function HomePage() {
   const articles = getAllArticles();
   const lead = articles[0];
@@ -40,124 +37,8 @@ export default function HomePage() {
   const medicareArticles = articles.filter(a => a.category === "medicare").slice(0, 4);
   const moneyArticles = articles.filter(a => ["safe-money","tax-planning"].includes(a.category)).slice(0, 4);
 
-  const todayStr = new Date().toLocaleDateString("en-US", {
-    weekday: "long", year: "numeric", month: "long", day: "numeric"
-  });
-
   return (
-    <>
     <main style={{ background: "var(--color-ivory, #F4EFE6)", minHeight: "100vh" }}>
-      <div className="ren-topbar" style={{
-        background: "var(--color-navy, #0F2A44)",
-        color: "rgba(244,239,230,0.85)",
-        fontFamily: "var(--font-inter), sans-serif",
-        fontSize: "11px",
-        letterSpacing: "0.12em",
-        textTransform: "uppercase" as const,
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "8px 32px",
-        fontWeight: 500,
-      }}>
-        <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
-          <span>{todayStr}</span>
-          <a
-            href="https://www.congress.gov/congressional-record"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "#E89A7A", textDecoration: "none", display: "flex", alignItems: "center", gap: "7px" }}
-          >
-            <span style={{
-              width: "7px", height: "7px", borderRadius: "50%",
-              background: "#B5432F", display: "inline-block",
-              animation: "ren-pulse 1.8s infinite",
-            }} />
-            Live: Congressional Record
-          </a>
-        </div>
-        <div style={{ display: "flex", gap: "18px" }}>
-          <a href="/about" style={{ color: "inherit", textDecoration: "none" }}>About</a>
-          <a href="#newsletter" style={{ color: "inherit", textDecoration: "none" }}>Newsletter</a>
-        </div>
-      </div>
-
-      {/* ── Masthead ─────────────────────────────────────────────────────── */}
-      <header className="ren-masthead" style={{
-        background: "#FBF8F2",
-        padding: "24px 32px 20px",
-        borderBottom: "3px double #0F2A44",
-        display: "grid",
-        gridTemplateColumns: "1fr auto 1fr",
-        alignItems: "center",
-        gap: "24px",
-      }}>
-        <div className="ren-masthead-meta-left" style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", letterSpacing: "0.04em", color: "#6B6B6B", lineHeight: 1.7 }}>
-          <strong style={{ fontWeight: 700, color: "#0F2A44", textTransform: "uppercase" as const, letterSpacing: "0.18em", fontSize: "10px", display: "block" }}>
-            Educational · Independent · Free
-          </strong>
-          {todayStr}
-        </div>
-
-        {/* Nameplate */}
-        <div className="ren-masthead-nameplate" style={{ display: "flex", alignItems: "center", gap: "18px", justifyContent: "center" }}>
-          <svg width="56" height="56" viewBox="0 0 100 100" fill="none" stroke="#0F2A44" strokeWidth="2.5" aria-hidden="true">
-            <circle cx="50" cy="50" r="46" />
-            <line x1="14" y1="58" x2="86" y2="58" strokeLinecap="square" />
-            <path d="M22 58 A28 28 0 0 1 78 58" />
-            <path d="M32 58 A18 18 0 0 1 68 58" />
-          </svg>
-          <div style={{ width: "1px", height: "64px", background: "rgba(15,42,68,0.35)" }} />
-          <div style={{ display: "flex", flexDirection: "column" as const, gap: "4px", alignItems: "center", textAlign: "center" as const }}>
-            <div style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "60px", lineHeight: 0.9, letterSpacing: "-0.015em", color: "#0F2A44" }} className="ren-nameplate-text">
-              REN
-            </div>
-            <div style={{ fontFamily: "var(--font-inter),sans-serif", fontWeight: 600, fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase" as const, color: "#3A3A3A" }}>
-              Retirement Education Network
-            </div>
-          </div>
-        </div>
-
-        <div className="ren-masthead-meta-right" style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", letterSpacing: "0.04em", color: "#6B6B6B", lineHeight: 1.7, textAlign: "right" as const }}>
-          <strong style={{ fontWeight: 700, color: "#0F2A44", textTransform: "uppercase" as const, letterSpacing: "0.18em", fontSize: "10px", display: "block" }}>
-            America&apos;s Retirement Resource
-          </strong>
-          retirementeducationnetwork.com
-        </div>
-      </header>
-
-      {/* ── Primary Nav ──────────────────────────────────────────────────── */}
-      <nav className="ren-primary-nav" style={{
-        background: "#FBF8F2",
-        padding: "12px 32px",
-        borderBottom: "1px solid rgba(15,42,68,0.18)",
-        display: "flex",
-        justifyContent: "center",
-        gap: "32px",
-        fontFamily: "var(--font-inter),sans-serif",
-        fontWeight: 600,
-        fontSize: "11px",
-        letterSpacing: "0.18em",
-        textTransform: "uppercase" as const,
-      }}>
-        {[
-          ["Front Page", "/"],
-          ["Medicare", "/medicare"],
-          ["Social Security", "/social-security"],
-          ["Safe Money", "/safe-money"],
-          ["Wills & Trusts", "/wills-and-trusts"],
-          ["Tax Planning", "/tax-planning"],
-          ["Long-Term Care", "/long-term-care"],
-        ].map(([label, href]) => (
-          <a key={href} href={href} style={{
-            color: "#0F2A44", textDecoration: "none",
-            paddingBottom: "4px",
-            borderBottom: href === "/" ? "2px solid #0F2A44" : "2px solid transparent",
-          }}>
-            {label}
-          </a>
-        ))}
-      </nav>
 
       {/* ── Ticker ───────────────────────────────────────────────────────── */}
       <div style={{
@@ -186,8 +67,6 @@ export default function HomePage() {
           <span><strong style={{ color: "#0F2A44", marginRight: "6px" }}>Update</strong> RMD age confirmed at 73 under SECURE 2.0</span>
         </div>
       </div>
-
-      <RateWatch />
 
       {/* ── Front Page Grid ───────────────────────────────────────────────── */}
       <section className="ren-front-grid" style={{ background: "#FBF8F2", padding: "28px 32px 32px", display: "grid", gridTemplateColumns: "2.2fr 1fr", gap: "32px" }}>
@@ -280,7 +159,7 @@ export default function HomePage() {
               The Weekly <small style={{ fontFamily: "var(--font-inter),sans-serif", fontWeight: 500, fontSize: "10px", letterSpacing: "0.1em", color: "rgba(244,239,230,0.6)" }}>by REN</small>
             </h4>
             <p style={{ fontSize: "0.85rem", lineHeight: 1.65, margin: "0 0 14px", color: "rgba(244,239,230,0.85)" }}>
-              One letter, every Thursday. The week in retirement, written for readers, not advisors.
+              One letter, every Thursday. The week in retirement, written in plain English for real people.
             </p>
             <EmailForm />
             <p style={{ fontSize: "10px", color: "rgba(244,239,230,0.5)", margin: "8px 0 0", letterSpacing: "0.04em" }}>
@@ -288,6 +167,38 @@ export default function HomePage() {
             </p>
           </div>
         </aside>
+      </section>
+
+      {/* ── Consultation CTA band ─────────────────────────────────────────── */}
+      <section className="ren-explainer" style={{ background: "#EAE3D6", padding: "32px", display: "grid", gridTemplateColumns: "2fr 1fr", gap: "32px", alignItems: "center", borderTop: "1px solid rgba(15,42,68,0.18)", borderBottom: "1px solid rgba(15,42,68,0.18)" }}>
+        <div>
+          <h2 style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "1.5rem", color: "#0F2A44", margin: "0 0 10px", lineHeight: 1.25 }}>
+            Want to talk it through with a real person?
+          </h2>
+          <p style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "0.95rem", color: "#3A3A3A", margin: 0, lineHeight: 1.7, maxWidth: "620px" }}>
+            Reading is great, but sometimes you just want to ask someone your own questions. You can book a
+            free, no-pressure consultation with the Elevated Advisor team, a service of Walker Thomas LLC,
+            the same company behind Retirement Education Network. No cost, no obligation, and our educational
+            content is always free either way.
+          </p>
+        </div>
+        <div style={{ display: "flex", justifyContent: "flex-start" }}>
+          <a href="/consultation" style={{
+            background: "#0F2A44",
+            color: "#F4EFE6",
+            fontFamily: "var(--font-inter),sans-serif",
+            fontWeight: 700,
+            fontSize: "13px",
+            letterSpacing: "0.08em",
+            textTransform: "uppercase" as const,
+            padding: "14px 26px",
+            textDecoration: "none",
+            borderRadius: "3px",
+            whiteSpace: "nowrap" as const,
+          }}>
+            Book a Free Consultation
+          </a>
+        </div>
       </section>
 
       {/* ── Ebook opt-in banner ───────────────────────────────────────── */}
@@ -387,11 +298,27 @@ export default function HomePage() {
         <div style={{ color: "#F4EFE6" }}>
           <h2 style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "1.5rem", margin: "0 0 16px" }}>Who We Are</h2>
           <p style={{ fontSize: "1rem", lineHeight: 1.8, marginBottom: "14px", color: "rgba(244,239,230,0.9)" }}>
-            Retirement Education Network is an independent content publisher built for Americans 59 and older. We research the rules, deadlines, and decisions that matter most in retirement, then explain them in plain language you can actually use.
+            Retirement Education Network is an education service of Walker Thomas LLC, built for Americans 59 and older. We research the rules, deadlines, and decisions that matter most in retirement, then explain them in plain language you can actually use. Our content is for education only. It is not personal financial, tax, or legal advice.
           </p>
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "rgba(244,239,230,0.9)" }}>
-            We do not give personal financial advice or take appointments. We publish educational content, and we license that content to financial professionals who want to share it with their clients. If you ever receive our materials through an advisor, that is why.
+            Walker Thomas LLC also operates Elevated Advisor, a retirement planning service. If you would like to speak with a real person about your own situation, you can request a free consultation with the Elevated Advisor team. It is completely optional, and our educational content is always free either way.
           </p>
+          <a href="/consultation" style={{
+            display: "inline-block",
+            marginTop: "20px",
+            background: "#E89A7A",
+            color: "#0F2A44",
+            fontFamily: "var(--font-inter),sans-serif",
+            fontWeight: 700,
+            fontSize: "12px",
+            letterSpacing: "0.1em",
+            textTransform: "uppercase" as const,
+            padding: "12px 22px",
+            textDecoration: "none",
+            borderRadius: "3px",
+          }}>
+            Book a Free Consultation
+          </a>
         </div>
         <div style={{ color: "#F4EFE6" }}>
           <h2 style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "1.5rem", margin: "0 0 16px" }}>Why This Matters</h2>
@@ -403,40 +330,6 @@ export default function HomePage() {
           </p>
         </div>
       </section>
-
-      {/* ── Footer / Disclaimer ───────────────────────────────────────────── */}
-      <footer className="ren-footer" style={{ background: "#0A1E33", padding: "24px 32px", borderTop: "1px solid rgba(244,239,230,0.1)" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "14px" }}>
-          <svg width="28" height="28" viewBox="0 0 100 100" fill="none" stroke="#F4EFE6" strokeWidth="3" opacity={0.7} aria-hidden="true">
-            <circle cx="50" cy="50" r="46" />
-            <line x1="14" y1="58" x2="86" y2="58" strokeLinecap="square" />
-            <path d="M22 58 A28 28 0 0 1 78 58" />
-            <path d="M32 58 A18 18 0 0 1 68 58" />
-          </svg>
-          <span style={{ fontFamily: "var(--font-inter),sans-serif", fontWeight: 600, fontSize: "12px", letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "rgba(244,239,230,0.7)" }}>
-            Retirement Education Network
-          </span>
-        </div>
-        <p style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", color: "rgba(244,239,230,0.5)", lineHeight: 1.75, maxWidth: "720px", margin: "0 0 12px" }}>
-          {DISCLAIMER}
-        </p>
-        <div className="ren-footer-links" style={{ display: "flex", gap: "20px", alignItems: "center", fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", color: "rgba(244,239,230,0.4)", flexWrap: "wrap" as const }}>
-          <span>© 2026 Retirement Education Network · Educational · Independent · Free</span>
-          <a href="/privacy" style={{ color: "inherit", textDecoration: "none" }}>Privacy Policy</a>
-          <a href="/terms" style={{ color: "inherit", textDecoration: "none" }}>Terms</a>
-          <a href="/about" style={{ color: "inherit", textDecoration: "none" }}>About</a>
-        </div>
-      </footer>
-
-      <style>{`
-        @keyframes ren-pulse {
-          0% { box-shadow: 0 0 0 0 rgba(181,67,47,0.6); }
-          70% { box-shadow: 0 0 0 8px rgba(181,67,47,0); }
-          100% { box-shadow: 0 0 0 0 rgba(181,67,47,0); }
-        }
-        nav a:hover { border-bottom-color: #B5432F !important; }
-      `}</style>
     </main>
-    </>
   );
 }

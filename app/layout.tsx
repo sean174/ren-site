@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Source_Serif_4, Inter } from "next/font/google";
 import "./globals.css";
+import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
 
 const sourceSerif = Source_Serif_4({
@@ -35,6 +36,7 @@ export default function RootLayout({
       className={`${sourceSerif.variable} ${inter.variable} h-full`}
     >
       <body className="flex flex-col min-h-full bg-paper text-charcoal antialiased">
+        <SiteHeader />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

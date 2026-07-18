@@ -1,3 +1,11 @@
+import { COMPANY } from "@/lib/site";
+
+export const metadata = {
+  title: "About | Retirement Education Network",
+  description:
+    "Retirement Education Network is an education service of Walker Thomas LLC, built for Americans 59 and older.",
+};
+
 export default function AboutPage() {
   return (
     <main style={{ background: "var(--color-ivory, #F4EFE6)", minHeight: "100vh" }}>
@@ -44,13 +52,13 @@ export default function AboutPage() {
             color: "rgba(244,239,230,0.8)",
           }}
         >
-          We're a content company built for Americans 59 and older. Our job is to
-          translate the most important retirement rules, deadlines, and decisions
-          into plain language and keep you current as things change.
+          An education service of {COMPANY.legalEntity}, built for Americans 59 and older. We translate
+          the most important retirement rules, deadlines, and decisions into plain language and keep you
+          current as things change.
         </p>
       </section>
 
-      {/* ── Mission ──────────────────────────────────────────────────────── */}
+      {/* ── Who We Are ───────────────────────────────────────────────────── */}
       <section
         style={{
           maxWidth: "760px",
@@ -68,51 +76,42 @@ export default function AboutPage() {
             marginBottom: "20px",
           }}
         >
-          Why We Exist
+          Who We Are
         </h2>
-        <p
+        <p style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "17px", lineHeight: 1.8, color: "#3A3A3A", marginBottom: "20px" }}>
+          Retirement Education Network is an education service of {COMPANY.legalEntity}, built for
+          Americans 59 and older. We research the rules, deadlines, and decisions that matter most in
+          retirement, then explain them in plain language you can actually use. Our content is for
+          education only. It is not personal financial, tax, or legal advice.
+        </p>
+        <p style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "17px", lineHeight: 1.8, color: "#3A3A3A", margin: 0 }}>
+          {COMPANY.legalEntity} also operates Elevated Advisor, a retirement planning service. If you
+          would like to speak with a real person about your own situation, you can request a free
+          consultation with the Elevated Advisor team. It is completely optional, and our educational
+          content is always free either way.
+        </p>
+        <a
+          href="/consultation"
           style={{
+            display: "inline-block",
+            marginTop: "28px",
+            background: "#0F2A44",
+            color: "#F4EFE6",
             fontFamily: "var(--font-inter), sans-serif",
-            fontSize: "17px",
-            lineHeight: 1.8,
-            color: "#3A3A3A",
-            marginBottom: "20px",
+            fontWeight: 700,
+            fontSize: "13px",
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            padding: "13px 24px",
+            textDecoration: "none",
+            borderRadius: "3px",
           }}
         >
-          Retirement is one of the most consequential financial periods of your life, and the rules change every year. Medicare premiums shift. Tax brackets adjust.
-          RMD ages move. Social Security strategies evolve. Most people find out about
-          these changes through headlines, mailers, or whoever called them last.
-        </p>
-        <p
-          style={{
-            fontFamily: "var(--font-inter), sans-serif",
-            fontSize: "17px",
-            lineHeight: 1.8,
-            color: "#3A3A3A",
-            marginBottom: "20px",
-          }}
-        >
-          We built REN to be something different: a straightforward source of record
-          for retirement-age Americans who want to stay informed without wading through
-          sales pitches or decoding policy jargon. Every article we publish is written
-          in plain English, grounded in primary sources, and reviewed before it goes
-          live.
-        </p>
-        <p
-          style={{
-            fontFamily: "var(--font-inter), sans-serif",
-            fontSize: "17px",
-            lineHeight: 1.8,
-            color: "#3A3A3A",
-          }}
-        >
-          Fifty-nine and a half is the age when new doors open. The plan that
-          got you here may need to be reconsidered. We want to help you ask better
-          questions and walk into those conversations better prepared.
-        </p>
+          Request a Free Consultation
+        </a>
       </section>
 
-      {/* ── What We Are / Not ─────────────────────────────────────────────── */}
+      {/* ── Why We Exist ─────────────────────────────────────────────────── */}
       <section
         style={{
           maxWidth: "760px",
@@ -127,128 +126,28 @@ export default function AboutPage() {
             fontSize: "28px",
             fontWeight: 700,
             color: "#0F2A44",
-            marginBottom: "32px",
+            marginBottom: "20px",
           }}
         >
-          What We Are and What We're Not
+          Why We Exist
         </h2>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "32px",
-          }}
-        >
-          <div>
-            <p
-              style={{
-                fontFamily: "var(--font-inter), sans-serif",
-                fontSize: "11px",
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-                color: "#0F2A44",
-                fontWeight: 700,
-                marginBottom: "16px",
-              }}
-            >
-              We are
-            </p>
-            {[
-              "An independent educational publication",
-              "A source of plain-language explanations",
-              "Current: we track rule changes as they happen",
-              "Free to read, always",
-            ].map((item) => (
-              <div
-                key={item}
-                style={{
-                  display: "flex",
-                  gap: "12px",
-                  alignItems: "flex-start",
-                  marginBottom: "14px",
-                }}
-              >
-                <span
-                  style={{
-                    color: "#B5432F",
-                    fontWeight: 700,
-                    fontSize: "16px",
-                    lineHeight: 1.4,
-                    flexShrink: 0,
-                  }}
-                >
-                  ✓
-                </span>
-                <p
-                  style={{
-                    fontFamily: "var(--font-inter), sans-serif",
-                    fontSize: "16px",
-                    lineHeight: 1.6,
-                    color: "#3A3A3A",
-                    margin: 0,
-                  }}
-                >
-                  {item}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div>
-            <p
-              style={{
-                fontFamily: "var(--font-inter), sans-serif",
-                fontSize: "11px",
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-                color: "#0F2A44",
-                fontWeight: 700,
-                marginBottom: "16px",
-              }}
-            >
-              We are not
-            </p>
-            {[
-              "A financial advisory firm",
-              "A source of personalized advice",
-              "Affiliated with any insurance company or product",
-              "A lead generation service",
-            ].map((item) => (
-              <div
-                key={item}
-                style={{
-                  display: "flex",
-                  gap: "12px",
-                  alignItems: "flex-start",
-                  marginBottom: "14px",
-                }}
-              >
-                <span
-                  style={{
-                    color: "#0F2A44",
-                    fontWeight: 700,
-                    fontSize: "16px",
-                    lineHeight: 1.4,
-                    flexShrink: 0,
-                    opacity: 0.4,
-                  }}
-                >
-                  ✕
-                </span>
-                <p
-                  style={{
-                    fontFamily: "var(--font-inter), sans-serif",
-                    fontSize: "16px",
-                    lineHeight: 1.6,
-                    color: "#3A3A3A",
-                    margin: 0,
-                  }}
-                >
-                  {item}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <p style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "17px", lineHeight: 1.8, color: "#3A3A3A", marginBottom: "20px" }}>
+          Retirement is one of the most consequential financial periods of your life, and the rules change
+          every year. Medicare premiums shift. Tax brackets adjust. RMD ages move. Social Security
+          strategies evolve. Most people find out about these changes through headlines, mailers, or
+          whoever called them last.
+        </p>
+        <p style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "17px", lineHeight: 1.8, color: "#3A3A3A", marginBottom: "20px" }}>
+          We built REN to be something different: a straightforward source of record for retirement-age
+          Americans who want to stay informed without wading through sales pitches or decoding policy
+          jargon. Every article we publish is written in plain English, grounded in primary sources, and
+          reviewed before it goes live.
+        </p>
+        <p style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "17px", lineHeight: 1.8, color: "#3A3A3A", margin: 0 }}>
+          Fifty-nine and a half is the age when new doors open. The plan that got you here may need to be
+          reconsidered. We want to help you ask better questions and walk into those conversations better
+          prepared.
+        </p>
       </section>
 
       {/* ── Editorial Standards ───────────────────────────────────────────── */}
@@ -271,46 +170,51 @@ export default function AboutPage() {
         >
           Our Editorial Standards
         </h2>
-        <p
+        <p style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "17px", lineHeight: 1.8, color: "#3A3A3A", marginBottom: "20px" }}>
+          Every article on this site is grounded in primary sources: the Social Security Administration,
+          the IRS, the Centers for Medicare &amp; Medicaid Services, the Federal Reserve, and peer-reviewed
+          research institutions. We verify dates and figures before publishing and update articles when
+          official guidance changes.
+        </p>
+        <p style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "17px", lineHeight: 1.8, color: "#3A3A3A", margin: 0 }}>
+          Content is published under the REN Editorial Team byline. Our educational content and our optional
+          consultation service are kept clearly separate, and reading REN never obligates you to anything.
+          If you need personalized advice, you are always free to work with a qualified financial planner,
+          tax professional, or elder law attorney of your choosing, or to request a free consultation with
+          the Elevated Advisor team.
+        </p>
+      </section>
+
+      {/* ── Company / Contact ─────────────────────────────────────────────── */}
+      <section
+        style={{
+          maxWidth: "760px",
+          margin: "0 auto",
+          padding: "56px 32px",
+          borderBottom: "1px solid rgba(15,42,68,0.12)",
+        }}
+      >
+        <h2
           style={{
-            fontFamily: "var(--font-inter), sans-serif",
-            fontSize: "17px",
-            lineHeight: 1.8,
-            color: "#3A3A3A",
+            fontFamily: "var(--font-source-serif), Georgia, serif",
+            fontSize: "28px",
+            fontWeight: 700,
+            color: "#0F2A44",
             marginBottom: "20px",
           }}
         >
-          Every article on this site is grounded in primary sources: the Social Security
-          Administration, the IRS, the Centers for Medicare &amp; Medicaid Services,
-          the Federal Reserve, and peer-reviewed research institutions. We verify dates
-          and figures before publishing and update articles when official guidance changes.
+          The Company Behind REN
+        </h2>
+        <p style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "17px", lineHeight: 1.8, color: "#3A3A3A", marginBottom: "20px" }}>
+          Retirement Education Network and Elevated Advisor are both services of {COMPANY.legalEntity}. You
+          can reach us at any time:
         </p>
-        <p
-          style={{
-            fontFamily: "var(--font-inter), sans-serif",
-            fontSize: "17px",
-            lineHeight: 1.8,
-            color: "#3A3A3A",
-            marginBottom: "20px",
-          }}
-        >
-          We do not publish opinion pieces or market predictions. We do not take
-          advertising from financial product companies. Our content decisions are
-          made editorially, based on what readers need to know, not on what
-          sponsors want promoted.
-        </p>
-        <p
-          style={{
-            fontFamily: "var(--font-inter), sans-serif",
-            fontSize: "17px",
-            lineHeight: 1.8,
-            color: "#3A3A3A",
-          }}
-        >
-          Content is published under the REN Editorial Team byline. We do not represent
-          individual contributors as licensed professionals. If you need personalized
-          advice, we encourage you to work with a qualified financial planner,
-          tax professional, or elder law attorney.
+        <p style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "16px", lineHeight: 1.9, color: "#3A3A3A", margin: 0 }}>
+          <strong>{COMPANY.legalEntity}</strong><br />
+          {COMPANY.address.street}<br />
+          {COMPANY.address.city}, {COMPANY.address.state} {COMPANY.address.zip}<br />
+          Email: <a href={`mailto:${COMPANY.email}`} style={{ color: "#B5432F" }}>{COMPANY.email}</a><br />
+          Phone: <a href={COMPANY.phoneHref} style={{ color: "#B5432F" }}>{COMPANY.phone}</a>
         </p>
       </section>
 
@@ -352,11 +256,10 @@ export default function AboutPage() {
               margin: 0,
             }}
           >
-            Retirement Education Network provides educational content for informational
-            purposes only. Nothing on this site constitutes financial, tax, legal, or
-            investment advice. We do not recommend specific products, advisors, or
-            strategies. Always consult a qualified professional before making any
-            financial decision.
+            Retirement Education Network provides educational content for informational purposes only.
+            Nothing on this site constitutes financial, tax, legal, or investment advice. We do not
+            recommend specific products or strategies. Always consult a qualified professional before
+            making any financial decision.
           </p>
         </div>
       </section>
