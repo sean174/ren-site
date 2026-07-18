@@ -187,38 +187,6 @@ export default function HomePage() {
         </aside>
       </section>
 
-      {/* ── Consultation CTA band ─────────────────────────────────────────── */}
-      <section className="ren-explainer" style={{ background: "#EAE3D6", padding: "32px", display: "grid", gridTemplateColumns: "2fr 1fr", gap: "32px", alignItems: "center", borderTop: "1px solid rgba(15,42,68,0.18)", borderBottom: "1px solid rgba(15,42,68,0.18)" }}>
-        <div>
-          <h2 style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "1.5rem", color: "#0F2A44", margin: "0 0 10px", lineHeight: 1.25 }}>
-            Want to talk it through with a real person?
-          </h2>
-          <p style={{ fontFamily: "var(--font-inter),sans-serif", fontSize: "0.95rem", color: "#3A3A3A", margin: 0, lineHeight: 1.7, maxWidth: "620px" }}>
-            Reading is great, but sometimes you just want to ask someone your own questions. You can book a
-            free, no-pressure consultation with the Elevated Advisor team, a service of Walker Thomas LLC,
-            the same company behind Retirement Education Network. No cost, no obligation, and our educational
-            content is always free either way.
-          </p>
-        </div>
-        <div style={{ display: "flex", justifyContent: "flex-start" }}>
-          <a href="/consultation" style={{
-            background: "#0F2A44",
-            color: "#F4EFE6",
-            fontFamily: "var(--font-inter),sans-serif",
-            fontWeight: 700,
-            fontSize: "13px",
-            letterSpacing: "0.08em",
-            textTransform: "uppercase" as const,
-            padding: "14px 26px",
-            textDecoration: "none",
-            borderRadius: "3px",
-            whiteSpace: "nowrap" as const,
-          }}>
-            Book a Free Consultation
-          </a>
-        </div>
-      </section>
-
       {/* ── Ebook opt-in banner ───────────────────────────────────────── */}
       <EbookBanner />
 
