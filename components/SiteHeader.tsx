@@ -84,7 +84,6 @@ export default function SiteHeader() {
         <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
           <a href="/about" style={{ color: "inherit", textDecoration: "none" }}>About</a>
           <a href="/contact" style={{ color: "inherit", textDecoration: "none" }}>Contact</a>
-          <a href="/#newsletter" style={{ color: "inherit", textDecoration: "none" }}>Newsletter</a>
           <a href="/consultation" style={ctaBtn}>Book a Free Consultation</a>
         </div>
       </div>

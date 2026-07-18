@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import EmailForm from "@/components/EmailForm";
 import LegislationWatch from "@/components/LegislationWatch";
 import KeyDates from "@/components/KeyDates";
 import EbookBanner from "@/components/EbookBanner";
@@ -153,17 +152,36 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Email opt-in */}
-          <div id="newsletter" style={{ background: "#0F2A44", padding: "20px", color: "#F4EFE6" }}>
+          {/* Consultation CTA */}
+          <div style={{ background: "#0F2A44", padding: "20px", color: "#F4EFE6" }}>
             <h4 style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "1rem", margin: "0 0 4px", display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
-              The Weekly <small style={{ fontFamily: "var(--font-inter),sans-serif", fontWeight: 500, fontSize: "10px", letterSpacing: "0.1em", color: "rgba(244,239,230,0.6)" }}>by REN</small>
+              Free Consultation <small style={{ fontFamily: "var(--font-inter),sans-serif", fontWeight: 500, fontSize: "10px", letterSpacing: "0.1em", color: "rgba(244,239,230,0.6)" }}>optional</small>
             </h4>
             <p style={{ fontSize: "0.85rem", lineHeight: 1.65, margin: "0 0 14px", color: "rgba(244,239,230,0.85)" }}>
-              One letter, every Thursday. The week in retirement, written in plain English for real people.
+              Want to talk through your own situation with a real person? Book a free, no-pressure call with the Elevated Advisor team.
             </p>
-            <EmailForm />
+            <a
+              href="/consultation"
+              style={{
+                display: "block",
+                textAlign: "center" as const,
+                textDecoration: "none",
+                background: "#F4EFE6",
+                color: "#0F2A44",
+                padding: "11px",
+                fontSize: "0.85rem",
+                fontFamily: "var(--font-inter),sans-serif",
+                fontWeight: 700,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase" as const,
+                width: "100%",
+                boxSizing: "border-box" as const,
+              }}
+            >
+              Book a Free Consultation
+            </a>
             <p style={{ fontSize: "10px", color: "rgba(244,239,230,0.5)", margin: "8px 0 0", letterSpacing: "0.04em" }}>
-              Free · No spam · Unsubscribe anytime
+              Free · No obligation · Always optional
             </p>
           </div>
         </aside>

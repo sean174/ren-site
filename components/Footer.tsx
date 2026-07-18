@@ -70,7 +70,6 @@ export default function Footer() {
                 ["About", "/about"],
                 ["Contact", "/contact"],
                 ["Book a Consultation", "/consultation"],
-                ["Newsletter", "/#newsletter"],
                 ["Terms & Conditions", "/terms"],
                 ["Privacy Policy", "/privacy"],
               ].map(([label, href]) => (
