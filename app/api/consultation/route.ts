@@ -28,6 +28,9 @@ export async function POST(req: Request) {
     if (!email || !email.includes("@")) {
       return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
     }
+    if (!consent) {
+      return NextResponse.json({ error: "Please check the box to agree to be contacted before submitting." }, { status: 400 });
+    }
 
     const fullName = `${firstName} ${lastName}`;
     const submittedAt = new Date().toISOString();

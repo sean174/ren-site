@@ -13,6 +13,11 @@ export default function ConsultationForm() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (!consent) {
+      setErrorMsg("Please check the box to agree to be contacted before submitting.");
+      setStatus("error");
+      return;
+    }
     setStatus("loading");
     setErrorMsg("");
     try {
@@ -140,6 +145,7 @@ export default function ConsultationForm() {
           type="checkbox"
           checked={consent}
           onChange={(e) => setConsent(e.target.checked)}
+          required
           style={{ marginTop: "4px", width: "18px", height: "18px", flexShrink: 0, cursor: "pointer" }}
         />
         <span style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "13px", lineHeight: 1.65, color: "#3A3A3A" }}>
