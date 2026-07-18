@@ -7,14 +7,15 @@ export default function ConsultationForm() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [consent, setConsent] = useState(false);
+  const [callConsent, setCallConsent] = useState(false);
+  const [smsConsent, setSmsConsent] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!consent) {
-      setErrorMsg("Please check the box to agree to be contacted before submitting.");
+    if (!callConsent || !smsConsent) {
+      setErrorMsg("Please check both consent boxes to agree to be contacted before submitting.");
       setStatus("error");
       return;
     }
@@ -24,7 +25,7 @@ export default function ConsultationForm() {
       const res = await fetch("/api/consultation", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ firstName, lastName, email, phone, consent }),
+        body: JSON.stringify({ firstName, lastName, email, phone, callConsent, smsConsent }),
       });
       if (res.ok) {
         setStatus("success");
@@ -139,21 +140,36 @@ export default function ConsultationForm() {
         </p>
       </div>
 
-      {/* Consent checkbox — unchecked by default */}
+      {/* Phone call consent — separate box, unchecked by default */}
       <label style={{ display: "flex", gap: "12px", alignItems: "flex-start", cursor: "pointer" }}>
         <input
           type="checkbox"
-          checked={consent}
-          onChange={(e) => setConsent(e.target.checked)}
+          checked={callConsent}
+          onChange={(e) => setCallConsent(e.target.checked)}
           required
           style={{ marginTop: "4px", width: "18px", height: "18px", flexShrink: 0, cursor: "pointer" }}
         />
         <span style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "13px", lineHeight: 1.65, color: "#3A3A3A" }}>
-          By checking this box, I agree to receive phone calls and text messages from Elevated Advisor
-          (Walker Thomas LLC), including through automated technology, for appointment scheduling,
-          appointment reminders, and follow-ups about my request. Message frequency varies. Message and
-          data rates may apply. Reply HELP for help or STOP to cancel at any time. Consent is not a
-          condition of purchase. See our{" "}
+          By checking this box, I agree to receive phone calls from Elevated Advisor (Walker Thomas LLC),
+          including through automated technology, to schedule and follow up on my consultation request.
+          Consent is not a condition of purchase.
+        </span>
+      </label>
+
+      {/* SMS consent — separate box, unchecked by default */}
+      <label style={{ display: "flex", gap: "12px", alignItems: "flex-start", cursor: "pointer" }}>
+        <input
+          type="checkbox"
+          checked={smsConsent}
+          onChange={(e) => setSmsConsent(e.target.checked)}
+          required
+          style={{ marginTop: "4px", width: "18px", height: "18px", flexShrink: 0, cursor: "pointer" }}
+        />
+        <span style={{ fontFamily: "var(--font-inter), sans-serif", fontSize: "13px", lineHeight: 1.65, color: "#3A3A3A" }}>
+          By checking this box, I agree to receive text messages from Elevated Advisor (Walker Thomas LLC),
+          including through automated technology, for appointment scheduling, appointment reminders, and
+          follow-ups about my request. Message frequency varies. Message and data rates may apply. Reply
+          HELP for help or STOP to cancel at any time. Consent is not a condition of purchase. See our{" "}
           <a href="/terms" style={{ color: "#B5432F" }}>terms &amp; conditions</a> and{" "}
           <a href="/privacy" style={{ color: "#B5432F" }}>privacy policy</a>.
         </span>

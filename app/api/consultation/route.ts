@@ -20,7 +20,8 @@ export async function POST(req: Request) {
     const lastName = String(body.lastName ?? "").trim();
     const email = String(body.email ?? "").trim();
     const phone = String(body.phone ?? "").trim();
-    const consent = body.consent === true;
+    const callConsent = body.callConsent === true;
+    const smsConsent = body.smsConsent === true;
 
     if (!firstName || !lastName) {
       return NextResponse.json({ error: "Please enter your first and last name." }, { status: 400 });
@@ -28,8 +29,8 @@ export async function POST(req: Request) {
     if (!email || !email.includes("@")) {
       return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
     }
-    if (!consent) {
-      return NextResponse.json({ error: "Please check the box to agree to be contacted before submitting." }, { status: 400 });
+    if (!callConsent || !smsConsent) {
+      return NextResponse.json({ error: "Please check both consent boxes to agree to be contacted before submitting." }, { status: 400 });
     }
 
     const fullName = `${firstName} ${lastName}`;
@@ -41,7 +42,8 @@ export async function POST(req: Request) {
       `Name:  ${fullName}`,
       `Email: ${email}`,
       `Phone: ${phone || "(not provided)"}`,
-      `SMS/call consent given: ${consent ? "YES" : "no"}`,
+      `Phone call consent given: ${callConsent ? "YES" : "no"}`,
+      `SMS/text consent given: ${smsConsent ? "YES" : "no"}`,
       `Submitted: ${submittedAt}`,
     ].join("\n");
 
@@ -53,7 +55,8 @@ export async function POST(req: Request) {
           <tr><td style="font-weight:bold">Name</td><td>${escapeHtml(fullName)}</td></tr>
           <tr><td style="font-weight:bold">Email</td><td>${escapeHtml(email)}</td></tr>
           <tr><td style="font-weight:bold">Phone</td><td>${escapeHtml(phone || "(not provided)")}</td></tr>
-          <tr><td style="font-weight:bold">SMS/call consent</td><td>${consent ? "YES" : "no"}</td></tr>
+          <tr><td style="font-weight:bold">Phone call consent</td><td>${callConsent ? "YES" : "no"}</td></tr>
+          <tr><td style="font-weight:bold">SMS/text consent</td><td>${smsConsent ? "YES" : "no"}</td></tr>
           <tr><td style="font-weight:bold">Submitted</td><td>${submittedAt}</td></tr>
         </table>
       </div>
