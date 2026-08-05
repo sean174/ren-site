@@ -10,8 +10,67 @@ export const metadata: Metadata = {
 };
 
 const BOOK_CSS = `
-.bk-stage { max-width: 1020px; margin: 0 auto; padding: 24px 4px 8px; }
+html, body { height: 100%; overflow: hidden; }
+
+.bkv-root {
+  position: fixed; inset: 0;
+  background: #0B1E33;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.bkv-bar {
+  height: 44px; flex: 0 0 44px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 16px;
+  background: rgba(7,18,31,0.92);
+  color: rgba(244,239,230,0.85);
+  font-family: var(--font-inter), sans-serif;
+  z-index: 30;
+}
+.bkv-brand { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+.bkv-brand-mark {
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-weight: 700; font-size: 17px; color: #F4EFE6; letter-spacing: 0.04em;
+}
+.bkv-brand-title {
+  font-size: 12px; color: rgba(244,239,230,0.65);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.bkv-tool {
+  background: none; border: 1px solid rgba(244,239,230,0.3); color: rgba(244,239,230,0.85);
+  font-family: var(--font-inter), sans-serif; font-size: 11.5px;
+  padding: 6px 12px; border-radius: 3px; cursor: pointer; white-space: nowrap;
+}
+.bkv-tool:hover { border-color: #E89A7A; color: #E89A7A; }
+
+.bkv-stage {
+  flex: 1 1 auto; position: relative;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 0;
+}
+.bkv-scaler { flex: 0 0 auto; transform-origin: center center; }
 .bk-book { margin: 0 auto; }
+
+.bkv-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  z-index: 20;
+  width: 40px; height: 84px;
+  background: rgba(244,239,230,0.12);
+  border: none; color: #F4EFE6;
+  font-size: 30px; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+.bkv-arrow:hover { background: rgba(232,154,122,0.45); }
+.bkv-arrow-left { left: 8px; }
+.bkv-arrow-right { right: 8px; }
+
+.bkv-pager { font-size: 12px; color: rgba(244,239,230,0.85); letter-spacing: 0.06em; }
+.bkv-legal { font-size: 10px; color: rgba(244,239,230,0.4); flex: 1 1 0; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bkv-legal-right { text-align: right; }
+@media (max-width: 640px) { .bkv-legal-right { display: none; } .bkv-legal { font-size: 9px; } }
+
 .bk-page {
   background: #FEFCF7;
   color: #2A2A2A;
@@ -84,7 +143,7 @@ const BOOK_CSS = `
 .bk-chart-note { font-size: 10px; color: #6B6B6B; margin-top: 6px; }
 
 .bk-page.bk-cover { padding: 0; background: #0F2A44; }
-.bk-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bk-cover img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .bk-copyright { display: flex; flex-direction: column; justify-content: flex-end; }
 .bk-copyright p { font-family: var(--font-inter), sans-serif; font-size: 10px; line-height: 1.65; color: #55606B; margin: 0 0 9px; }
 
@@ -116,15 +175,6 @@ const BOOK_CSS = `
   position: absolute; top: 18px; left: 0; right: 0; text-align: center;
   font-family: var(--font-inter), sans-serif; font-size: 8.5px; letter-spacing: 0.22em; color: #A9A9A9;
 }
-
-.bk-controls { display: flex; align-items: center; justify-content: center; gap: 22px; margin-top: 18px; }
-.bk-nav {
-  background: #0F2A44; color: #F4EFE6; border: none; cursor: pointer;
-  font-family: var(--font-inter), sans-serif; font-size: 12px; font-weight: 700;
-  letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 18px; border-radius: 3px;
-}
-.bk-count { font-family: var(--font-inter), sans-serif; font-size: 12px; color: #6B6B6B; }
-.bk-hint { text-align: center; font-family: var(--font-inter), sans-serif; font-size: 11px; color: #9A9A9A; margin-top: 10px; }
 `;
 
 export default function BookPage() {
@@ -132,30 +182,9 @@ export default function BookPage() {
   const frontMatter = getBookFrontMatter();
 
   return (
-    <main style={{ background: "#EAE3D6", minHeight: "100vh", paddingBottom: "40px" }}>
+    <>
       <style dangerouslySetInnerHTML={{ __html: BOOK_CSS }} />
-      <div style={{ textAlign: "center", padding: "28px 16px 0" }}>
-        <p style={{
-          fontFamily: "var(--font-inter),sans-serif", fontSize: "10px", fontWeight: 700,
-          letterSpacing: "0.24em", textTransform: "uppercase", color: "#B5432F", margin: "0 0 6px",
-        }}>
-          Your Free Guide from the Retirement Education Network
-        </p>
-        <h1 style={{
-          fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700,
-          fontSize: "1.6rem", color: "#0F2A44", margin: 0,
-        }}>
-          Roth Conversion Do&apos;s &amp; Don&apos;ts
-        </h1>
-      </div>
       <BookFlipbook bodyHtml={bodyHtml} frontMatter={frontMatter} toc={BOOK_TOC} />
-      <p style={{
-        textAlign: "center", maxWidth: "560px", margin: "6px auto 0", padding: "0 16px",
-        fontFamily: "var(--font-inter),sans-serif", fontSize: "11px", lineHeight: 1.6, color: "#6B6B6B",
-      }}>
-        Educational purposes only. Not tax, financial, or legal advice. Talk to a qualified
-        professional about your situation before making any decisions.
-      </p>
-    </main>
+    </>
   );
 }

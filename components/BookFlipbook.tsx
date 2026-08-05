@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const PAGE_W = 460;
 const PAGE_H = 660;
+const BAR_H = 44; // top and bottom bars
 
 type TocEntry = { label: string; id: string };
 
@@ -16,13 +17,22 @@ export default function BookFlipbook({
   frontMatter: string[];
   toc: TocEntry[];
 }) {
-  const stageRef = useRef<HTMLDivElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
   const bookRef = useRef<HTMLDivElement>(null);
   const flipRef = useRef<any>(null);
   const idPageMapRef = useRef<Record<string, number>>({});
   const [pageInfo, setPageInfo] = useState({ current: 0, total: 0 });
   const [scale, setScale] = useState(1);
   const [portrait, setPortrait] = useState(false);
+  const portraitRef = useRef(false);
+
+  const toggleFullscreen = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    } else {
+      rootRef.current?.requestFullscreen?.().catch(() => {});
+    }
+  };
 
   useEffect(() => {
     let disposed = false;
@@ -60,7 +70,6 @@ export default function BookFlipbook({
       });
       const blocks = Array.from(source.children) as HTMLElement[];
 
-      // Hidden sizer with real page typography for measurement
       const sizer = document.createElement("div");
       sizer.className = "bk-page bk-text bk-sizer";
       sizer.style.cssText = `position:absolute;left:-9999px;top:0;width:${PAGE_W}px;height:auto;min-height:0;visibility:hidden;`;
@@ -68,7 +77,7 @@ export default function BookFlipbook({
       sizerInner.className = "bk-flow";
       sizer.appendChild(sizerInner);
       document.body.appendChild(sizer);
-      const LIMIT = PAGE_H - 96; // padding + folio line
+      const LIMIT = PAGE_H - 96;
 
       let current: HTMLElement | null = null;
       let currentFlow: HTMLElement | null = null;
@@ -106,7 +115,6 @@ export default function BookFlipbook({
         return false;
       };
 
-      // TOC page placeholder inserted after copyright; links resolved later.
       const tocPage = mkPage("bk-toc");
       tocPage.innerHTML =
         `<div class="bk-toc-head">Contents</div>` +
@@ -144,7 +152,6 @@ export default function BookFlipbook({
       }
       if (current) closeTextPage();
 
-      // ---- Back cover ----
       const back = mkPage("bk-backcover");
       back.setAttribute("data-density", "hard");
       back.innerHTML = `<div class="bk-back-inner"><div class="bk-back-mark">REN</div><div class="bk-back-name">Retirement Education Network</div><div class="bk-back-rule"></div><div class="bk-back-tag">Plain-language retirement education for Americans 59 and older.</div><div class="bk-back-url">retirementeducationnetwork.com</div></div>`;
@@ -153,7 +160,6 @@ export default function BookFlipbook({
       document.body.removeChild(sizer);
       idPageMapRef.current = idPageMap;
 
-      // folios
       pages.forEach((p, i) => {
         if (p.classList.contains("bk-text") || p.classList.contains("bk-toc")) {
           const folio = document.createElement("div");
@@ -167,7 +173,8 @@ export default function BookFlipbook({
         }
       });
 
-      const isPortrait = window.innerWidth < 1020;
+      const isPortrait = window.innerWidth < 760;
+      portraitRef.current = isPortrait;
       setPortrait(isPortrait);
 
       const flip = new PageFlip(bookRef.current, {
@@ -186,7 +193,6 @@ export default function BookFlipbook({
       setPageInfo({ current: 0, total: flip.getPageCount() });
       flip.on("flip", (e: any) => setPageInfo((s) => ({ ...s, current: e.data })));
 
-      // TOC clicks
       tocPage.querySelectorAll(".bk-toc-item").forEach((btn) => {
         btn.addEventListener("click", (ev) => {
           ev.stopPropagation();
@@ -202,19 +208,24 @@ export default function BookFlipbook({
       };
       window.addEventListener("keydown", onKey);
 
+      // Fill the viewport, Paperturn style: scale the fixed-size book so it
+      // consumes all available height between the slim bars.
       const fit = () => {
-        const stage = stageRef.current;
-        if (!stage) return;
-        const needW = (isPortrait ? 1 : 2) * PAGE_W;
-        const avail = stage.clientWidth - 8;
-        setScale(Math.min(1, avail / needW));
+        const vh = window.innerHeight;
+        const vw = window.innerWidth;
+        const availH = vh - BAR_H * 2 - 12;
+        const availW = vw - (portraitRef.current ? 16 : 96); // room for side arrows
+        const needW = (portraitRef.current ? 1 : 2) * PAGE_W;
+        setScale(Math.min(availH / PAGE_H, availW / needW, 1.8));
       };
       fit();
       window.addEventListener("resize", fit);
+      document.addEventListener("fullscreenchange", fit);
 
       return () => {
         window.removeEventListener("keydown", onKey);
         window.removeEventListener("resize", fit);
+        document.removeEventListener("fullscreenchange", fit);
       };
     }
 
@@ -230,29 +241,43 @@ export default function BookFlipbook({
   }, []);
 
   return (
-    <div ref={stageRef} className="bk-stage">
-      <div
-        className="bk-scaler"
-        style={{
-          transform: `scale(${scale})`,
-          transformOrigin: "top center",
-          height: `${PAGE_H * scale + 8}px`,
-        }}
-      >
-        <div ref={bookRef} className="bk-book" />
-      </div>
-      <div className="bk-controls">
-        <button className="bk-nav" onClick={() => flipRef.current?.flipPrev()} aria-label="Previous page">
-          &#8592; Previous
+    <div ref={rootRef} className="bkv-root">
+      <div className="bkv-bar bkv-top">
+        <div className="bkv-brand">
+          <span className="bkv-brand-mark">REN</span>
+          <span className="bkv-brand-title">Roth Conversion Do&apos;s &amp; Don&apos;ts</span>
+        </div>
+        <button className="bkv-tool" onClick={toggleFullscreen}>
+          <span aria-hidden="true">&#x26F6;</span> Full screen
         </button>
-        <span className="bk-count">
-          Page {pageInfo.current + 1} of {pageInfo.total}
+      </div>
+
+      <div className="bkv-stage">
+        <button className="bkv-arrow bkv-arrow-left" onClick={() => flipRef.current?.flipPrev()} aria-label="Previous page">
+          &#8249;
+        </button>
+        <div
+          className="bkv-scaler"
+          style={{
+            transform: `scale(${scale})`,
+            width: `${(portrait ? 1 : 2) * PAGE_W}px`,
+            height: `${PAGE_H}px`,
+          }}
+        >
+          <div ref={bookRef} className="bk-book" />
+        </div>
+        <button className="bkv-arrow bkv-arrow-right" onClick={() => flipRef.current?.flipNext()} aria-label="Next page">
+          &#8250;
+        </button>
+      </div>
+
+      <div className="bkv-bar bkv-bottom">
+        <span className="bkv-legal">Educational purposes only. Not tax, financial, or legal advice.</span>
+        <span className="bkv-pager">
+          {pageInfo.current + 1} / {pageInfo.total}
         </span>
-        <button className="bk-nav" onClick={() => flipRef.current?.flipNext()} aria-label="Next page">
-          Next &#8594;
-        </button>
+        <span className="bkv-legal bkv-legal-right">retirementeducationnetwork.com</span>
       </div>
-      <p className="bk-hint">Click or drag a page corner to turn it, use the arrow keys, or tap the buttons.</p>
     </div>
   );
 }
