@@ -3,7 +3,6 @@ import path from "path";
 import matter from "gray-matter";
 import LegislationWatch from "@/components/LegislationWatch";
 import KeyDates from "@/components/KeyDates";
-import EbookBanner from "@/components/EbookBanner";
 import EbookSidebarCard from "@/components/EbookSidebarCard";
 
 const ARTICLES_DIR = path.join(process.cwd(), "content/articles");
@@ -157,9 +156,6 @@ export default function HomePage() {
           <EbookSidebarCard />
         </aside>
       </section>
-
-      {/* ── Ebook opt-in banner ───────────────────────────────────────── */}
-      <EbookBanner />
 
       {/* ── Key Dates + Washington Watch (full-width band) ─────────────── */}
       <section className="ren-two-col-band" style={{ background: "#FBF8F2", borderTop: "1px solid rgba(15,42,68,0.18)", padding: "28px 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px" }}>

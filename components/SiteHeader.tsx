@@ -27,20 +27,6 @@ export default function SiteHeader() {
     day: "numeric",
   });
 
-  const ctaBtn: React.CSSProperties = {
-    background: "#B5432F",
-    color: "#F4EFE6",
-    fontFamily: "var(--font-inter), sans-serif",
-    fontWeight: 700,
-    fontSize: "10px",
-    letterSpacing: "0.14em",
-    textTransform: "uppercase",
-    padding: "7px 14px",
-    textDecoration: "none",
-    borderRadius: "2px",
-    whiteSpace: "nowrap",
-  };
-
   return (
     <>
       {/* ── Top bar ─────────────────────────────────────────────────────── */}
@@ -84,7 +70,6 @@ export default function SiteHeader() {
         <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
           <a href="/about" style={{ color: "inherit", textDecoration: "none" }}>About</a>
           <a href="/contact" style={{ color: "inherit", textDecoration: "none" }}>Contact</a>
-          <a href="/consultation" style={ctaBtn}>Book a Free Consultation</a>
         </div>
       </div>
 
@@ -200,7 +185,6 @@ export default function SiteHeader() {
         ))}
         <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
         <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
-        <a href="/consultation" onClick={() => setMenuOpen(false)} style={{ color: "#E89A7A" }}>Book a Free Consultation</a>
       </div>
 
       <style>{`
