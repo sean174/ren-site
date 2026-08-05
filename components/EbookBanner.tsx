@@ -1,32 +1,7 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
+import EbookOptinForm from "./EbookOptinForm";
 
 export default function EbookBanner() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!email) return;
-    setStatus("loading");
-    try {
-      const res = await fetch("/api/ebook-optin", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-      if (res.ok) {
-        setStatus("success");
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
-  }
-
   return (
     <section
       className="ren-ebook-banner"
@@ -88,63 +63,7 @@ export default function EbookBanner() {
           Five mistakes that can cost retirees six figures, and the simple checks that catch every one of them. Free, no strings attached.
         </p>
 
-        {status === "success" ? (
-          <div style={{
-            background: "rgba(46,125,82,0.18)",
-            border: "1px solid #2E7D52",
-            color: "#A8D5B5",
-            padding: "12px 16px",
-            fontFamily: "var(--font-inter), sans-serif",
-            fontSize: "0.88rem",
-            maxWidth: "400px",
-          }}>
-            Check your inbox. Your free guide is on the way.
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="ren-ebook-form" style={{ display: "flex", gap: "10px", maxWidth: "420px", flexWrap: "wrap" }}>
-            <input
-              type="email"
-              placeholder="your@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              style={{
-                flex: "1 1 200px",
-                padding: "10px 14px",
-                fontSize: "0.9rem",
-                border: "1px solid rgba(244,239,230,0.25)",
-                background: "rgba(244,239,230,0.08)",
-                color: "#F4EFE6",
-                outline: "none",
-                fontFamily: "var(--font-inter), sans-serif",
-              }}
-            />
-            <button
-              type="submit"
-              disabled={status === "loading"}
-              style={{
-                background: "#E89A7A",
-                color: "#0F2A44",
-                border: "none",
-                padding: "10px 20px",
-                fontSize: "0.82rem",
-                fontFamily: "var(--font-inter), sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                cursor: status === "loading" ? "wait" : "pointer",
-                whiteSpace: "nowrap",
-              }}
-            >
-              {status === "loading" ? "Sending..." : "Get the Free Guide"}
-            </button>
-            {status === "error" && (
-              <p style={{ width: "100%", fontSize: "11px", color: "#D9534F", margin: "4px 0 0" }}>
-                Something went wrong. Try again in a moment.
-              </p>
-            )}
-          </form>
-        )}
+        <EbookOptinForm />
 
         <p style={{
           fontFamily: "var(--font-inter), sans-serif",

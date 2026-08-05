@@ -34,19 +34,6 @@ export default function Footer() {
               Plain-language retirement education for Americans 59 and older.
               Not financial advice.
             </p>
-            <p style={{
-              fontFamily: "var(--font-inter), sans-serif",
-              fontSize: "12px",
-              lineHeight: 1.7,
-              color: "rgba(244,239,230,0.55)",
-              margin: "6px 0 0",
-            }}>
-              {COMPANY.legalEntity}<br />
-              {COMPANY.address.street}<br />
-              {COMPANY.address.city}, {COMPANY.address.state} {COMPANY.address.zip}<br />
-              <a href={`mailto:${COMPANY.email}`} style={{ color: "rgba(244,239,230,0.7)", textDecoration: "none" }}>{COMPANY.email}</a><br />
-              <a href={COMPANY.phoneHref} style={{ color: "rgba(244,239,230,0.7)", textDecoration: "none" }}>{COMPANY.phone}</a>
-            </p>
           </div>
 
           {/* Nav links */}

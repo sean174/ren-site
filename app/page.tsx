@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import LegislationWatch from "@/components/LegislationWatch";
 import KeyDates from "@/components/KeyDates";
 import EbookBanner from "@/components/EbookBanner";
+import EbookSidebarCard from "@/components/EbookSidebarCard";
 
 const ARTICLES_DIR = path.join(process.cwd(), "content/articles");
 
@@ -152,38 +153,8 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Consultation CTA */}
-          <div style={{ background: "#0F2A44", padding: "20px", color: "#F4EFE6" }}>
-            <h4 style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "1rem", margin: "0 0 4px", display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
-              Free Consultation <small style={{ fontFamily: "var(--font-inter),sans-serif", fontWeight: 500, fontSize: "10px", letterSpacing: "0.1em", color: "rgba(244,239,230,0.6)" }}>optional</small>
-            </h4>
-            <p style={{ fontSize: "0.85rem", lineHeight: 1.65, margin: "0 0 14px", color: "rgba(244,239,230,0.85)" }}>
-              Want to talk through your own situation with a real person? Book a free, no-pressure call with the Elevated Advisor team.
-            </p>
-            <a
-              href="/consultation"
-              style={{
-                display: "block",
-                textAlign: "center" as const,
-                textDecoration: "none",
-                background: "#F4EFE6",
-                color: "#0F2A44",
-                padding: "11px",
-                fontSize: "0.85rem",
-                fontFamily: "var(--font-inter),sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0.12em",
-                textTransform: "uppercase" as const,
-                width: "100%",
-                boxSizing: "border-box" as const,
-              }}
-            >
-              Book a Free Consultation
-            </a>
-            <p style={{ fontSize: "10px", color: "rgba(244,239,230,0.5)", margin: "8px 0 0", letterSpacing: "0.04em" }}>
-              Free · No obligation · Always optional
-            </p>
-          </div>
+          {/* Roth book opt-in */}
+          <EbookSidebarCard />
         </aside>
       </section>
 
@@ -279,34 +250,9 @@ export default function HomePage() {
         </>
       )}
 
-      {/* ── Who We Are ───────────────────────────────────────────────────── */}
-      <section className="ren-about-grid" style={{ background: "#0F2A44", padding: "40px 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px", borderTop: "1px solid rgba(15,42,68,0.3)" }}>
-        <div style={{ color: "#F4EFE6" }}>
-          <h2 style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "1.5rem", margin: "0 0 16px" }}>Who We Are</h2>
-          <p style={{ fontSize: "1rem", lineHeight: 1.8, marginBottom: "14px", color: "rgba(244,239,230,0.9)" }}>
-            Retirement Education Network is an education service of Walker Thomas LLC, built for Americans 59 and older. We research the rules, deadlines, and decisions that matter most in retirement, then explain them in plain language you can actually use. Our content is for education only. It is not personal financial, tax, or legal advice.
-          </p>
-          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "rgba(244,239,230,0.9)" }}>
-            Walker Thomas LLC also operates Elevated Advisor, a retirement planning service. If you would like to speak with a real person about your own situation, you can request a free consultation with the Elevated Advisor team. It is completely optional, and our educational content is always free either way.
-          </p>
-          <a href="/consultation" style={{
-            display: "inline-block",
-            marginTop: "20px",
-            background: "#E89A7A",
-            color: "#0F2A44",
-            fontFamily: "var(--font-inter),sans-serif",
-            fontWeight: 700,
-            fontSize: "12px",
-            letterSpacing: "0.1em",
-            textTransform: "uppercase" as const,
-            padding: "12px 22px",
-            textDecoration: "none",
-            borderRadius: "3px",
-          }}>
-            Book a Free Consultation
-          </a>
-        </div>
-        <div style={{ color: "#F4EFE6" }}>
+      {/* ── Why This Matters ─────────────────────────────────────────────── */}
+      <section className="ren-about-grid" style={{ background: "#0F2A44", padding: "40px 32px", display: "grid", gridTemplateColumns: "1fr", gap: "40px", borderTop: "1px solid rgba(15,42,68,0.3)" }}>
+        <div style={{ color: "#F4EFE6", maxWidth: "820px" }}>
           <h2 style={{ fontFamily: "var(--font-source-serif),Georgia,serif", fontWeight: 700, fontSize: "1.5rem", margin: "0 0 16px" }}>Why This Matters</h2>
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "rgba(244,239,230,0.9)" }}>
             Retirement is one of the biggest financial chapters of your life, and the rules change every year. Most people get their information from headlines, sales pitches, or whoever called them last. You deserve better.
