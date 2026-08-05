@@ -78,23 +78,23 @@ html, body { height: 100%; overflow: hidden; }
   border: 1px solid rgba(15,42,68,0.12);
 }
 .bk-page.bk-text, .bk-page.bk-toc, .bk-page.bk-copyright { padding: 44px 40px 52px; }
-.bk-flow { font-family: var(--font-inter), sans-serif; font-size: 13.5px; line-height: 1.62; }
+.bk-flow { font-family: var(--font-inter), sans-serif; font-size: 16px; line-height: 1.6; }
 .bk-flow p { margin: 0 0 11px; }
 .bk-flow h2 {
   font-family: var(--font-source-serif), Georgia, serif;
-  font-size: 19px; font-weight: 700; color: #0F2A44;
+  font-size: 23px; font-weight: 700; color: #0F2A44;
   margin: 18px 0 10px; line-height: 1.25;
 }
 .bk-flow h3 {
   font-family: var(--font-inter), sans-serif;
-  font-size: 13px; font-weight: 700; color: #0F2A44;
+  font-size: 15.5px; font-weight: 700; color: #0F2A44;
   margin: 14px 0 6px;
 }
 .bk-flow ul { margin: 0 0 11px; padding-left: 20px; }
 .bk-flow li { margin-bottom: 6px; }
 .bk-flow strong { color: #0F2A44; }
 .bk-flow table {
-  width: 100%; border-collapse: collapse; font-size: 11px; margin: 12px 0;
+  width: 100%; border-collapse: collapse; font-size: 13px; margin: 12px 0;
 }
 .bk-flow th {
   font-family: var(--font-inter), sans-serif; text-align: left;
@@ -105,7 +105,7 @@ html, body { height: 100%; overflow: hidden; }
 
 .bk-section-open {
   font-family: var(--font-source-serif), Georgia, serif;
-  font-size: 24px; font-weight: 700; color: #0F2A44;
+  font-size: 27px; font-weight: 700; color: #0F2A44;
   border-top: 4px solid #B5432F; padding-top: 14px;
   margin: 0 0 16px; line-height: 1.2;
 }
@@ -127,35 +127,35 @@ html, body { height: 100%; overflow: hidden; }
   border-left: 4px solid #E89A7A;
   padding: 6px 0 6px 16px; margin: 14px 0;
   font-family: var(--font-source-serif), Georgia, serif;
-  font-size: 17.5px; line-height: 1.4; font-weight: 600; color: #B5432F;
+  font-size: 21px; line-height: 1.4; font-weight: 600; color: #B5432F;
 }
 .bk-box {
   background: #F4EFE6; border: 1px solid rgba(15,42,68,0.18);
   border-top: 3px solid #0F2A44; padding: 14px 16px; margin: 14px 0;
-  font-size: 12.5px; line-height: 1.6;
+  font-size: 15px; line-height: 1.6;
 }
 .bk-chart { margin: 14px 0; }
 .bk-chart-title {
-  font-family: var(--font-inter), sans-serif; font-size: 10.5px; font-weight: 700;
+  font-family: var(--font-inter), sans-serif; font-size: 12.5px; font-weight: 700;
   letter-spacing: 0.14em; text-transform: uppercase; color: #0F2A44;
   border-bottom: 2px solid #0F2A44; padding-bottom: 5px; margin-bottom: 10px;
 }
-.bk-chart-note { font-size: 10px; color: #6B6B6B; margin-top: 6px; }
+.bk-chart-note { font-size: 12px; color: #6B6B6B; margin-top: 6px; }
 
 .bk-page.bk-cover { padding: 0; background: #0F2A44; }
 .bk-cover img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .bk-copyright { display: flex; flex-direction: column; justify-content: flex-end; }
-.bk-copyright p { font-family: var(--font-inter), sans-serif; font-size: 10px; line-height: 1.65; color: #55606B; margin: 0 0 9px; }
+.bk-copyright p { font-family: var(--font-inter), sans-serif; font-size: 12px; line-height: 1.65; color: #55606B; margin: 0 0 9px; }
 
 .bk-toc-head {
-  font-family: var(--font-source-serif), Georgia, serif; font-size: 26px; font-weight: 700;
-  color: #0F2A44; border-top: 4px solid #B5432F; padding-top: 14px; margin-bottom: 18px;
+  font-family: var(--font-source-serif), Georgia, serif; font-size: 24px; font-weight: 700;
+  color: #0F2A44; border-top: 4px solid #B5432F; padding-top: 12px; margin-bottom: 12px;
 }
 .bk-toc-item {
   display: block; width: 100%; text-align: left; background: none; border: none;
   border-bottom: 1px solid rgba(15,42,68,0.14); cursor: pointer;
-  font-family: var(--font-inter), sans-serif; font-size: 12.5px; color: #2A2A2A;
-  padding: 8px 2px;
+  font-family: var(--font-inter), sans-serif; font-size: 13.5px; color: #2A2A2A;
+  padding: 6px 2px;
 }
 .bk-toc-item:hover { color: #B5432F; }
 
@@ -169,7 +169,7 @@ html, body { height: 100%; overflow: hidden; }
 
 .bk-folio {
   position: absolute; bottom: 20px; left: 0; right: 0; text-align: center;
-  font-family: var(--font-inter), sans-serif; font-size: 10px; color: #8A8A8A;
+  font-family: var(--font-inter), sans-serif; font-size: 11px; color: #8A8A8A;
 }
 .bk-runhead {
   position: absolute; top: 18px; left: 0; right: 0; text-align: center;

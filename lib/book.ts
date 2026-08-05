@@ -108,7 +108,7 @@ export function getBookFrontMatter(): string[] {
 
 export const BOOK_TOC = [
   { label: "A Note Before You Begin", id: "a-note-before-you-begin" },
-  { label: "Introduction: What This Book Is, and What It Isn't", id: "introduction" },
+  { label: "Introduction: What This Book Is", id: "introduction" },
   { label: "The Roth Conversion in Plain English", id: "the-roth-conversion-in-plain-english" },
   { label: "Two Retirees, Two Regrets", id: "two-retirees-two-regrets" },
   { label: "1. The Decision You Cannot Take Back", id: "the-decision-you-cannot-take-back" },
@@ -118,8 +118,8 @@ export const BOOK_TOC = [
   { label: "5. The Regret You Leave Behind", id: "the-regret-you-leave-behind" },
   { label: "6. When Each Choice Is the Right One", id: "when-each-choice-is-the-right-one" },
   { label: "7. Seeing Your Picture Before You Decide", id: "seeing-your-picture-before-you-decide" },
-  { label: "8. The Conversation Most Retirees Wish They Had Sooner", id: "the-conversation-most-retirees-wish-they-had-sooner" },
-  { label: "Closing: How to Set Up Your Roth Reality Check", id: "how-to-set-up-your-roth-reality-check" },
+  { label: "8. The Conversation Retirees Wish They Had Sooner", id: "the-conversation-most-retirees-wish-they-had-sooner" },
+  { label: "Closing: Your Roth Reality Check", id: "how-to-set-up-your-roth-reality-check" },
   { label: "About the Retirement Education Network", id: "about-the-retirement-education-network" },
   { label: "Important Disclosures", id: "important-disclosures" },
 ];
