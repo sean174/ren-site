@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 
-// Leads flow into the same funnel as the ANOFE Roth book: the distributor
-// assigns an advisor, creates the GHL contact, and the ebook delivery + SMS
-// sequence take over from there.
+// REN leads go to the distributor's dedicated REN endpoint: own cohort
+// ("REN Website"), no advisor rotation, contact created in the Ebook
+// Delivery Channel sub tagged ren-roth-guide, which triggers the guide
+// delivery workflow there.
 const DISTRIBUTOR_URL =
   process.env.ROTH_DISTRIBUTOR_URL ||
-  "https://anofe-roth.elevatedadvisor.co/api/leads/distribute";
+  "https://anofe-roth.elevatedadvisor.co/api/leads/ren-optin";
 
 function normalizePhone(input: string): string | null {
   const digits = input.replace(/\D/g, "");
