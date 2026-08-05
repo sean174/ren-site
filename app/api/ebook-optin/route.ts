@@ -30,6 +30,9 @@ export async function POST(req: Request) {
     if (!phone) {
       return NextResponse.json({ error: "Please enter a valid US cell phone number." }, { status: 400 });
     }
+    if (body.consent !== true) {
+      return NextResponse.json({ error: "Please check the consent box to continue." }, { status: 400 });
+    }
 
     const secret = process.env.ROTH_DISTRIBUTOR_SECRET;
     if (!secret) {
@@ -49,6 +52,8 @@ export async function POST(req: Request) {
         email,
         phone,
         source: "ren-website-roth-ebook",
+        consent: true,
+        consent_at: new Date().toISOString(),
       }),
     });
 
