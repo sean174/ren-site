@@ -12,10 +12,18 @@ export default function BookFlipbook({
   bodyHtml,
   frontMatter,
   toc,
+  title = "Roth Conversion Do's & Don'ts",
+  coverSrc = "/images/book-cover.png",
+  coverSubtitle,
 }: {
   bodyHtml: string;
   frontMatter: string[];
   toc: TocEntry[];
+  /** Shown in the toolbar. Defaults to the Roth guide. */
+  title?: string;
+  /** Cover art. Pass null to render a typeset cover from title + coverSubtitle. */
+  coverSrc?: string | null;
+  coverSubtitle?: string;
 }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const bookRef = useRef<HTMLDivElement>(null);
@@ -54,7 +62,13 @@ export default function BookFlipbook({
       // ---- Cover ----
       const cover = mkPage("bk-cover");
       cover.setAttribute("data-density", "hard");
-      cover.innerHTML = `<img src="/images/book-cover.png" alt="Roth Conversion Do's and Don'ts" />`;
+      cover.innerHTML = coverSrc
+        ? `<img src="${coverSrc}" alt="${title}" />`
+        : `<div class="bk-cover-set">` +
+          `<span class="bk-cover-mark">Retirement Education Network</span>` +
+          `<span class="bk-cover-title">${title}</span>` +
+          (coverSubtitle ? `<span class="bk-cover-sub">${coverSubtitle}</span>` : "") +
+          `</div>`;
       pages.push(cover);
 
       // ---- Copyright page ----
@@ -168,7 +182,7 @@ export default function BookFlipbook({
           p.appendChild(folio);
           const head = document.createElement("div");
           head.className = "bk-runhead";
-          head.textContent = "ROTH CONVERSION DO'S & DON'TS";
+          head.textContent = title.toUpperCase();
           p.appendChild(head);
         }
       });
@@ -245,7 +259,7 @@ export default function BookFlipbook({
       <div className="bkv-bar bkv-top">
         <div className="bkv-brand">
           <span className="bkv-brand-mark">REN</span>
-          <span className="bkv-brand-title">Roth Conversion Do&apos;s &amp; Don&apos;ts</span>
+          <span className="bkv-brand-title">{title}</span>
         </div>
         <button className="bkv-tool" onClick={toggleFullscreen}>
           <span aria-hidden="true">&#x26F6;</span> Full screen
