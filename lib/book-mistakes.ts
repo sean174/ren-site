@@ -1,10 +1,15 @@
 import fs from "fs";
 import path from "path";
 
-// Source of truth is content/book-mistakes/manuscript.md. book-compiled.html is
-// generated from it with pandoc and committed, because the build environment has
-// no pandoc. After editing the manuscript run:
-//   pandoc content/book-mistakes/manuscript.md -f gfm -t html --wrap=none -o content/book-mistakes/book-compiled.html
+// Source of truth is elevated-advisor/books/7-big-retirement-mistakes/chapters/*.md.
+// No book source lives in this repo (Sean, 2026-08-08); book-compiled.html is generated
+// there and committed here, because the build environment has no pandoc. To regenerate,
+// from elevated-advisor/books/7-big-retirement-mistakes:
+//   awk 'FNR==1 && NR!=1 {print ""} {print}' chapters/*.md > MANUSCRIPT.md
+//   pandoc MANUSCRIPT.md -f gfm-tex_math_dollars -t html --wrap=none \
+//     -o ~/ren-site/content/book-mistakes/book-compiled.html
+// -tex_math_dollars is required. Pandoc 3.9 enables it for gfm and this book is full of
+// dollar amounts, so a plain -f gfm turns "$24,800 ... $2,480" into mangled inline math.
 //
 // Two manuscript conventions this file depends on:
 //   1. Each chapter is a single h1 followed by a one-line italic subtitle.
@@ -74,5 +79,5 @@ export const MISTAKES_TOC = [
   { label: "5. The Form That Overrides Your Will", id: "the-form-that-overrides-your-will" },
   { label: "6. The Accounts You Stopped Thinking About", id: "the-accounts-you-stopped-thinking-about" },
   { label: "7. The Asset You Spent a Lifetime Earning", id: "the-asset-you-spent-a-lifetime-earning" },
-  { label: "Closing: The Questions This Book Cannot Answer", id: "the-questions-this-book-cannot-answer" },
+  { label: "7 1/2. The Questions This Book Cannot Answer", id: "the-questions-this-book-cannot-answer" },
 ];
