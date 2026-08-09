@@ -6,7 +6,7 @@ import { BOOK_CSS } from "@/lib/book-css";
 export const metadata: Metadata = {
   title: "The 7 1/2 Retirement Mistakes | Retirement Education Network",
   description:
-    "Seven (and a half) quiet ways the retirement you spent a lifetime building gets drained away, and how to catch each one in time. A free guide from the Retirement Education Network.",
+    "The quiet mistakes that can hide in the retirement you spent a lifetime building, and how to catch them in time. A free guide from the Retirement Education Network.",
   robots: { index: false, follow: false },
 };
 
@@ -23,7 +23,7 @@ export default function MistakesBookPage() {
         toc={MISTAKES_TOC}
         title="The 7 1/2 Retirement Mistakes"
         coverSrc="/images/book-cover-mistakes.png"
-        coverSubtitle="Seven (and a half) quiet ways the retirement you spent a lifetime building gets drained away, and how to catch each one in time."
+        coverSubtitle="The quiet mistakes that can hide in the retirement you spent a lifetime building, and how to catch them in time."
       />
     </>
   );
