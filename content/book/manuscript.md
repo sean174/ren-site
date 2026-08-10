@@ -402,9 +402,9 @@ A separate 3.8 percent surtax on investment income switches on once your income 
 
 Each of these effects adds tax that does not show up on the bracket chart. Together, they form what financial planners call the tax torpedo. The shape of it is invisible until the year is over, and by then the conversion is permanent.
 
-The arithmetic of the worst case is worth walking through, because it is not a rare accident. It is a well-understood interaction with a specific number attached. A married couple sitting in the 12 percent bracket, drawing Social Security, holding appreciated investments, converts a slice of their IRA. Each converted dollar also makes 85 cents of Social Security taxable.<sup>18</sup> So each dollar is taxed at 12 percent, and so is the 85 cents it dragged in with it: 12 × 1.85, or 22.2 percent. Meanwhile the same stacking pushes long-term capital gains out of the zero percent rate and into the 15 percent rate, and that also applies to the dollar and the 85 cents alike: 15 × 1.85, or 27.75 percent.
+The arithmetic of the worst case is worth walking through, because it is not a rare accident. It is a well-understood interaction with a specific number attached. A married couple sitting in the 12 percent bracket, drawing Social Security, holding appreciated investments, converts a slice of their IRA. Each converted dollar also makes 85 cents of Social Security taxable.<sup>8</sup> So each dollar is taxed at 12 percent, and so is the 85 cents it dragged in with it: 12 × 1.85, or 22.2 percent. Meanwhile the same stacking pushes long-term capital gains out of the zero percent rate and into the 15 percent rate, and that also applies to the dollar and the 85 cents alike: 15 × 1.85, or 27.75 percent.
 
-Add those together and the marginal rate on the converted dollars is **49.95 percent**.<sup>8</sup> Not the effective rate on their whole return, which stays low. The rate on the money they just moved.
+Add those together and the marginal rate on the converted dollars is **49.95 percent**.<sup>9</sup> Not the effective rate on their whole return, which stays low. The rate on the money they just moved.
 
 They never changed brackets. The chart on their desk said 12 percent the entire time. The real cost of the decision was more than four times that, and if the year’s income also cleared a Medicare threshold, higher still.
 
@@ -428,17 +428,17 @@ That timing is worth sitting with. Robert’s very first conversion had already 
 
 Robert had never heard of IRMAA before the letter arrived.
 
-IRMAA is a surcharge added to Medicare Part B and Part D premiums when your income crosses certain thresholds. The standard Part B premium in 2026 is about \$202.90 per month for someone with income below the first threshold.<sup>9</sup> Above each threshold, it rises in steps. At the top tier, the same Part B coverage costs about \$689.90 per month. The Part D premiums work similarly, with surcharges added on top of whatever drug plan premium you already pay.
+IRMAA is a surcharge added to Medicare Part B and Part D premiums when your income crosses certain thresholds. The standard Part B premium in 2026 is about \$202.90 per month for someone with income below the first threshold.<sup>10</sup> Above each threshold, it rises in steps. At the top tier, the same Part B coverage costs about \$689.90 per month. The Part D premiums work similarly, with surcharges added on top of whatever drug plan premium you already pay.
 
 For a married couple, the surcharges apply to both spouses individually. Each spouse pays IRMAA based on the household’s income.
 
 Two features of IRMAA make it particularly dangerous for someone running a DIY Roth conversion.
 
-The first is the two-year lookback. Your Medicare premiums in any given year are based on your tax return from two years earlier. In 2026, your premiums are based on your 2024 income.<sup>10</sup> This means a conversion you do today does not affect your Medicare premium today. It affects your Medicare premium two years from now. By the time the surcharge arrives, you may have done two more conversions on top of the first one, each one queued up to trigger its own surcharge later. You cannot undo any of them.
+The first is the two-year lookback. Your Medicare premiums in any given year are based on your tax return from two years earlier. In 2026, your premiums are based on your 2024 income.<sup>11</sup> This means a conversion you do today does not affect your Medicare premium today. It affects your Medicare premium two years from now. By the time the surcharge arrives, you may have done two more conversions on top of the first one, each one queued up to trigger its own surcharge later. You cannot undo any of them.
 
 The second feature is the cliff structure. IRMAA does not phase in. It cliffs. One dollar below the threshold, you pay nothing extra. One dollar above it, you pay the full surcharge for that tier, for the entire year, for both spouses.
 
-In 2026, the first IRMAA threshold for a married couple sits at \$218,000 of modified adjusted gross income. A couple at \$218,001 pays about \$1,148 per spouse for the year, once the Part B and Part D surcharges are added together. That is roughly \$2,300 in extra premiums for a single dollar of income that crossed the line. Higher tiers cost more. At the top tier the two surcharges come to about \$6,900 per spouse per year.<sup>11</sup>
+In 2026, the first IRMAA threshold for a married couple sits at \$218,000 of modified adjusted gross income. A couple at \$218,001 pays about \$1,148 per spouse for the year, once the Part B and Part D surcharges are added together. That is roughly \$2,300 in extra premiums for a single dollar of income that crossed the line. Higher tiers cost more. At the top tier the two surcharges come to about \$6,900 per spouse per year.<sup>12</sup>
 
 For one dollar of income.
 
@@ -450,7 +450,7 @@ Robert’s bracket-filling plan was built around the top of the 22 percent feder
 
 What Robert did not realize is that the Medicare threshold is not measured the same way. It sits at \$218,000 of modified adjusted gross income, and modified adjusted gross income is calculated *before* the standard deduction comes out. Taxable income is calculated *after*.
 
-Put those two facts side by side and something uncomfortable falls out. A married couple, both over 65, filling the 22 percent bracket exactly to the top has \$211,400 of taxable income. Add back the standard deduction they are entitled to, about \$35,500, and their modified adjusted gross income is \$246,900.<sup>12</sup>
+Put those two facts side by side and something uncomfortable falls out. A married couple, both over 65, filling the 22 percent bracket exactly to the top has \$211,400 of taxable income. Add back the standard deduction they are entitled to, about \$35,500, and their modified adjusted gross income is \$246,900.<sup>13</sup>
 
 The Medicare line is \$218,000.
 
@@ -560,7 +560,7 @@ That number, on its own, did not seem catastrophic. Patricia could afford to tak
 
 What Patricia did not realize was that \$54,015 was the smallest RMD she would ever take.
 
-The IRS calculates RMDs by dividing your account balance by a life expectancy factor that gets smaller every year. At 73, the factor is 26.5. At 80, it is 20.2. At 85, it is 16.0.<sup>13</sup> The smaller divisor means a larger percentage of your balance comes out every year, even if the balance is shrinking.
+The IRS calculates RMDs by dividing your account balance by a life expectancy factor that gets smaller every year. At 73, the factor is 26.5. At 80, it is 20.2. At 85, it is 16.0.<sup>14</sup> The smaller divisor means a larger percentage of your balance comes out every year, even if the balance is shrinking.
 
 Combined with continued growth on the unspent balance, Patricia’s RMDs climbed steadily. By age 80, her RMD was about \$74,000. By 85, it was over \$90,000. Each year, the entire RMD amount got added to her taxable income on top of her Social Security and her late husband’s pension survivor benefit.
 
@@ -578,7 +578,7 @@ When Tom passed at age 72, Patricia became a single filer for the rest of her li
 
 This is a tax change most retirees do not see coming. While both spouses are alive, you file jointly. The tax brackets are wider. The standard deduction is doubled. The Medicare premium thresholds sit higher. After one spouse passes, the survivor files as a single filer the following year and stays that way for as long as they live.
 
-The numbers are stark. In 2026, a married couple stays in the 22 percent bracket up to about \$211,400 of taxable income. For a single filer, that same bracket runs out at \$105,700, exactly half, and the 24 percent bracket takes over from there.<sup>14</sup> The same dollar of income is taxed in a higher bracket simply because of filing status.
+The numbers are stark. In 2026, a married couple stays in the 22 percent bracket up to about \$211,400 of taxable income. For a single filer, that same bracket runs out at \$105,700, exactly half, and the 24 percent bracket takes over from there.<sup>15</sup> The same dollar of income is taxed in a higher bracket simply because of filing status.
 
 The standard deduction for a married couple where both spouses are 65 or older is about \$35,500. For a single filer at 65 or older, it drops to \$18,150. About \$17,000 of income that used to be tax-free is now fully taxable.
 
@@ -654,7 +654,7 @@ In 2019, Congress passed the SECURE Act. Inside that law was a change to the rul
 
 Every dollar that comes out of an inherited traditional IRA gets taxed as ordinary income on top of the heir’s existing income.
 
-If the parent was already taking RMDs at the time of death, the child also has to take annual distributions in years one through nine, with whatever is left coming out by the end of year ten.<sup>15</sup> The IRS does not let the heir wait until year ten to take the entire amount. The withdrawals have to happen along the way.
+If the parent was already taking RMDs at the time of death, the child also has to take annual distributions in years one through nine, with whatever is left coming out by the end of year ten.<sup>16</sup> The IRS does not let the heir wait until year ten to take the entire amount. The withdrawals have to happen along the way.
 
 For most families with adult children inheriting in their forties or fifties, this rule change quietly turned a modest tax cost into a major one.
 
@@ -764,7 +764,7 @@ Path 1 means keeping your traditional IRA, taking RMDs when the law requires, an
 
 ### You plan to give a significant portion of your IRA to charity.
 
-If you are charitably inclined and intend to leave a meaningful share of your retirement money to charity, converting first is usually the wrong move. After age 70 and a half, you can use a Qualified Charitable Distribution, or QCD, to send money directly from your traditional IRA to a qualified charity. The money never appears on your tax return as income. The charity gets the full amount. You get credit toward your RMD without the tax. In 2026, you can use this for up to \$111,000 per year per spouse.<sup>16</sup>
+If you are charitably inclined and intend to leave a meaningful share of your retirement money to charity, converting first is usually the wrong move. After age 70 and a half, you can use a Qualified Charitable Distribution, or QCD, to send money directly from your traditional IRA to a qualified charity. The money never appears on your tax return as income. The charity gets the full amount. You get credit toward your RMD without the tax. In 2026, you can use this for up to \$111,000 per year per spouse.<sup>17</sup>
 
 A Roth conversion eliminates this benefit. Once the money is in a Roth, you have already paid the tax on it. Sending it to charity from a Roth is fine, but you have given up a tax-free path that was sitting right in front of you.
 
@@ -998,7 +998,7 @@ A 45-year-old who lives through a bad market has an obvious answer: wait. The ma
 
 After 60, waiting is not free.
 
-The S&P 500 took roughly five years to regain its 2007 peak after the 2008 crash.<sup>17</sup> The decline that began in 2000 took even longer to work through. For someone in their forties, that is an inconvenience and a good buying opportunity. For someone who just paid a six-figure tax bill and expects to start drawing income within a few years, five years is a meaningful share of the runway.
+The S&P 500 took roughly five years to regain its 2007 peak after the 2008 crash.<sup>18</sup> The decline that began in 2000 took even longer to work through. For someone in their forties, that is an inconvenience and a good buying opportunity. For someone who just paid a six-figure tax bill and expects to start drawing income within a few years, five years is a meaningful share of the runway.
 
 The book's own math depends on this. Every comparison in Chapter 7 assumed the account compounds steadily. A conversion needs years of tax-free growth to earn back what it cost. A bad stretch early does not just reduce the balance. It eats the years the strategy needed to work in.
 
@@ -1224,17 +1224,17 @@ Every figure in this booklet was checked against a primary source. They are list
 5. Historical top marginal federal income tax rates, 1913 to present. Internal Revenue Service historical tables; Tax Foundation, "Historical U.S. Federal Individual Income Tax Rates and Brackets."
 6. 2026 federal income tax brackets and standard deduction. IRS Revenue Procedure 2025-32. The 16 percent figure is the arithmetic of filling the 12 and 22 percent brackets in sequence and can be reproduced from that table.
 7. Net Investment Income Tax of 3.8 percent, applying above \$250,000 of modified adjusted gross income for married filing jointly. IRS, "Questions and Answers on the Net Investment Income Tax."
-8. The 49.95 percent figure is 12 percent and 15 percent each multiplied by 1.85, reflecting a dollar of conversion income plus the 85 cents of Social Security benefit it makes taxable. Derived from the thresholds in IRS Publication 915 and the capital gains brackets in Revenue Procedure 2025-32.
-9. 2026 standard Part B premium of \$202.90 per month. Centers for Medicare and Medicaid Services, 2026 Medicare Parts A and B Premiums and Deductibles.
-10. The two-year look-back, applying the tax return from two years prior to the current year's premium. Social Security Administration, "Medicare Premiums: Rules for Higher-Income Beneficiaries."
-11. 2026 income-related monthly adjustment amounts for Parts B and D, and the income thresholds of \$218,000 married filing jointly and \$109,000 single. Centers for Medicare and Medicaid Services.
-12. 2026 standard deduction of \$32,200 for married filing jointly, plus \$1,650 for each spouse aged 65 or older. IRS Revenue Procedure 2025-32.
-13. Uniform Lifetime Table life expectancy factors. IRS Publication 590-B, Appendix B, Table III.
-14. 2026 brackets for single filers. IRS Revenue Procedure 2025-32.
-15. The ten-year rule for most non-spouse beneficiaries of accounts inherited after December 31, 2019, and the requirement to take annual distributions in years one through nine where the original owner had already begun required withdrawals. SECURE Act of 2019; IRS final regulations issued July 2024.
-16. 2026 qualified charitable distribution limit of \$111,000 per person. IRS Revenue Procedure 2025-32.
-17. S&P 500 index levels, October 2007 peak to recovery in 2013. Standard and Poor's index history.
-18. Up to 85 percent of Social Security benefits become taxable above the applicable base amounts. IRS Publication 915.
+8. Up to 85 percent of Social Security benefits become taxable above the applicable base amounts. IRS Publication 915.
+9. The 49.95 percent figure is 12 percent and 15 percent each multiplied by 1.85, reflecting a dollar of conversion income plus the 85 cents of Social Security benefit it makes taxable. Derived from the thresholds in IRS Publication 915 and the capital gains brackets in Revenue Procedure 2025-32.
+10. 2026 standard Part B premium of \$202.90 per month. Centers for Medicare and Medicaid Services, 2026 Medicare Parts A and B Premiums and Deductibles.
+11. The two-year look-back, applying the tax return from two years prior to the current year's premium. Social Security Administration, "Medicare Premiums: Rules for Higher-Income Beneficiaries."
+12. 2026 income-related monthly adjustment amounts for Parts B and D, and the income thresholds of \$218,000 married filing jointly and \$109,000 single. Centers for Medicare and Medicaid Services.
+13. 2026 standard deduction of \$32,200 for married filing jointly, plus \$1,650 for each spouse aged 65 or older. IRS Revenue Procedure 2025-32.
+14. Uniform Lifetime Table life expectancy factors. IRS Publication 590-B, Appendix B, Table III.
+15. 2026 brackets for single filers. IRS Revenue Procedure 2025-32.
+16. The ten-year rule for most non-spouse beneficiaries of accounts inherited after December 31, 2019, and the requirement to take annual distributions in years one through nine where the original owner had already begun required withdrawals. SECURE Act of 2019; IRS final regulations issued July 2024.
+17. 2026 qualified charitable distribution limit of \$111,000 per person. IRS Revenue Procedure 2025-32.
+18. S&P 500 index levels, October 2007 peak to recovery in 2013. Standard and Poor's index history.
 
 A note on the worked examples. The dollar figures attached to Patricia, Robert, Dave and Carol are not sourced, because they are not facts. They are the output of arithmetic run on the sources above, using the assumptions each chapter states out loud. Anyone with planning software and the stated assumptions should be able to reproduce them. If you cannot, we would rather hear about it than not.
 
