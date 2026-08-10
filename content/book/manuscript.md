@@ -137,7 +137,7 @@ Move any one of these and the others move. That is the whole reason three intell
 
 ## What This Book Does
 
-It gives you the machinery. How a conversion actually works, what it switches on and off, where the thresholds sit, and why the ones that matter most are not on a tax bracket chart. It walks through what goes wrong in both directions and what each costs. Chapter 6 is devoted entirely to the situations where the right answer is to change nothing at all, because for some readers it will be, and you deserve to hear that as plainly as the alternative.
+It gives you the machinery. How a conversion actually works, what it switches on and off, where the thresholds sit, and why the ones that matter most are not on a tax bracket chart. It walks through the two ways people actually lose money here, neither of which is the one most readers are worried about, and what each costs. Chapter 6 is devoted entirely to the situations where the right answer is to change nothing at all, because for some readers it will be, and you deserve to hear that as plainly as the alternative.
 
 By the end you will understand this decision better than almost anyone you know, including some of the people who have offered you advice about it.
 
@@ -167,9 +167,9 @@ Here they are, before you read another page. Each one costs real money, each one
 
 > *The check:* if you are at required-withdrawal age, ask your custodian to confirm this year’s required amount has already been distributed before any conversion is processed.
 
-**2. Stopping the moment something surprises you.** This is the most expensive mistake in the book and almost nobody names it. Somewhere in a multi-year conversion, something unexpected arrives in the mail. Usually it is a Medicare surcharge nobody warned you about, because the top of your tax bracket and the Medicare threshold are two different numbers measured two different ways, and filling the 22 percent bracket as a couple clears the Medicare line by roughly $29,000 automatically. Not sometimes. By construction.
+**2. Stopping the moment something surprises you.** This is the most expensive mistake in the book and almost nobody names it. Somewhere in a multi-year conversion, something unexpected arrives in the mail. Usually it is a Medicare surcharge nobody warned you about, because the top of your tax bracket and the Medicare threshold are two different numbers measured two different ways, and filling the 22 percent bracket as a couple clears the Medicare line by roughly \$29,000 automatically. Not sometimes. By construction.
 
-Crossing it is often the right call. Being ambushed by it, with no way to judge whether it is trivial or ruinous, is what does the damage. Chapter 3 is a man who abandoned a plan that was working, over a surcharge worth about $2,300 a year, and it cost his family roughly $2.8 million.
+Crossing it is often the right call. Being ambushed by it, with no way to judge whether it is trivial or ruinous, is what does the damage. Chapter 3 is a man who abandoned a plan that was working, over a surcharge worth about \$2,300 a year, and it cost his family roughly \$2.8 million.
 
 > *The check:* before you convert, ask what your modified adjusted gross income will be, not what bracket you will be in, and ask what the surcharge would cost if you cross. A number you have already been quoted cannot frighten you later.
 
@@ -177,7 +177,7 @@ Crossing it is often the right call. Being ambushed by it, with no way to judge 
 
 > *The check:* ask whether you have enough outside the retirement account to cover the tax bill for every year of the plan, not just the first one.
 
-**4. Planning as a couple and forgetting that one of you will file alone.** The year after one spouse dies, the survivor files as a single filer for the rest of their life. The brackets halve, the standard deduction drops by roughly $17,000, and the Medicare thresholds halve too. Income barely falls. Tax rises. Chapter 4 is what that costs.
+**4. Planning as a couple and forgetting that one of you will file alone.** The year after one spouse dies, the survivor files as a single filer for the rest of their life. The brackets halve, the standard deduction drops by roughly \$17,000, and the Medicare thresholds halve too. Income barely falls. Tax rises. Chapter 4 is what that costs.
 
 > *The check:* ask to see the plan run twice, once with both of you and once with whichever of you is likely to be left.
 
@@ -256,7 +256,7 @@ Some retirees regret converting too much, too fast. They moved decisively, paid 
 
 Other retirees regret never converting at all. They thought about it for years, talked themselves out of it, and watched their traditional IRA grow into a problem they no longer had the time or flexibility to solve. By the time they understood what they had built, they were in their late seventies or eighties, watching RMDs push them into brackets they could not escape, and knowing that whatever was left would land on their children with a tax bill attached.
 
-Some retirees regret the way they did the conversion. The decision itself was right, but the execution missed details that cost them. They paid the conversion tax from the IRA itself instead of from outside money, eroding the very benefit they were trying to create. They crossed Medicare cliffs they did not know existed. They timed the conversion poorly relative to their Social Security claim. The conversion worked, in the sense that it happened, but it was more expensive than it needed to be by tens or hundreds of thousands of dollars.
+Some retirees regret the way they did the conversion. The decision itself was right, but the execution missed details that cost them. They paid the conversion tax from the IRA itself instead of from outside money, eroding the very benefit they were trying to create. They crossed Medicare cliffs they did not know existed. They timed the conversion poorly relative to their Social Security claim. The conversion worked, in the sense that it happened, but it cost more than it needed to. Usually that is a five-figure regret rather than a life-changing one, which is worth knowing, because the fear of making it is what stops a great many people from converting at all.
 
 A few retirees regret nothing. They are the ones who took the time to look at the full picture before they decided. They saw their own numbers, considered their own family, and made a choice that fit their situation. Whether they converted or not, they made the decision with their eyes open. Those retirees do not lie awake wondering what they should have done. They already know.
 
@@ -438,7 +438,7 @@ The first is the two-year lookback. Your Medicare premiums in any given year are
 
 The second feature is the cliff structure. IRMAA does not phase in. It cliffs. One dollar below the threshold, you pay nothing extra. One dollar above it, you pay the full surcharge for that tier, for the entire year, for both spouses.
 
-In 2026, the first IRMAA threshold for a married couple sits at \$218,000 of modified adjusted gross income. A couple at \$218,001 pays about \$1,148 per spouse for the year, once the Part B and Part D surcharges are added together. That is roughly \$2,300 in extra premiums for a single dollar of income that crossed the line. Higher tiers cost more. At the top tier the two surcharges come to about \$6,900 per spouse per year.<sup>12</sup>
+In 2026, the first IRMAA threshold for a married couple sits at \$218,000 of modified adjusted gross income. A couple at \$218,001 pays about \$1,148 per spouse for the year, once the Part B and Part D surcharges are added together. That is roughly \$2,300 in extra premiums for a single dollar of income that crossed the line. Higher tiers cost more. At the very top tier the two surcharges together come to close to \$7,000 per spouse per year.<sup>12</sup>
 
 For one dollar of income.
 
