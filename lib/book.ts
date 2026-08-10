@@ -5,15 +5,17 @@ import { chartThreePaths, chartPatricia, chartRobert, chartBlock } from "./book-
 // Source of truth is content/book/manuscript.md. book-compiled.html is generated
 // from it with pandoc (gfm -> html) and committed, because the build environment
 // has no pandoc. After editing the manuscript run:
-//   pandoc content/book/manuscript.md -f gfm -t html --wrap=none -o content/book/book-compiled.html
+//   pandoc content/book/manuscript.md -f gfm-tex_math_dollars -t html --wrap=none -o content/book/book-compiled.html
+// The -tex_math_dollars is load-bearing: with plain gfm, two dollar amounts in
+// one paragraph are parsed as TeX math and the digits render as italic letters.
 
 const PULL_QUOTES: { anchor: string; quote: string }[] = [
   { anchor: "Both directions are permanent.", quote: "The decisions that haunt people are almost always the permanent ones." },
   { anchor: "The Roth decision has three answers", quote: "Three paths. You have probably been told there are two." },
-  { anchor: "The bracket said 12 percent.", quote: "In the 12 percent bracket, paying more than four times that." },
-  { anchor: "Patricia was paying $7,750 more every year", quote: "$7,750 more in tax. $18,000 less income. Every year she has left." },
-  { anchor: "She would have spent $87,000 of her own money", quote: "Spend $87,000. Save your children $471,239." },
-  { anchor: "You are going to make this decision once.", quote: "You will make it once. They have made it dozens of times this year." },
+  { anchor: "The chart on their desk said 12 percent", quote: "The chart said 12 percent. The money moved at 49.95." },
+  { anchor: "Patricia was paying nearly $7,000 more every year", quote: "Nearly $7,000 more in tax. $18,000 less income. Every year she has left." },
+  { anchor: "She would have spent $87,000 of her own money", quote: "Spend $87,000. Save your children $401,000." },
+  { anchor: "You are going to make this decision once.", quote: "You will make this decision once. They work through it every week." },
 ];
 
 export function getBookHtml(): string {
@@ -60,12 +62,12 @@ export function getBookHtml(): string {
   // NOTE: replacement functions, never replacement strings, because chart
   // titles and labels contain "$1..." which String.replace would interpret
   // as capture-group references.
-  const robertAnchor = /(<p>The full breakdown of Robert’s \$147,000[\s\S]*?<\/p>)/;
+  const robertAnchor = /(<p>The full breakdown of Robert’s \$157,000[\s\S]*?<\/p>)/;
   html = html.replace(
     robertAnchor,
-    (_m, p1) => p1 + chartBlock("Where Robert's $147,000 Went", chartRobert(), "Approximate figures from Robert's illustrative plan.")
+    (_m, p1) => p1 + chartBlock("Where Robert's $157,000 Went", chartRobert(), "Approximate figures from Robert's illustrative plan.")
   );
-  const patriciaAnchor = /(<p>A million-dollar IRA\. \$774,000[\s\S]*?<\/p>)/;
+  const patriciaAnchor = /(<p>A million-dollar IRA\. \$705,000[\s\S]*?<\/p>)/;
   html = html.replace(
     patriciaAnchor,
     (_m, p1) => p1 + chartBlock("Who Pays for the Non-Decision", chartPatricia(), "Approximate figures from Patricia's illustrative case.")
@@ -76,7 +78,7 @@ export function getBookHtml(): string {
     const insertAt = tableEnd + "</table>".length;
     html =
       html.slice(0, insertAt) +
-      chartBlock("The Three Paths, Side by Side", chartThreePaths(), "Same figures as the table above. Illustrative example, Dave and Carol, $1,000,000 IRA.") +
+      chartBlock("The Paths, Side by Side", chartThreePaths(), "Same figures as the table above. Illustrative example, Dave and Carol, $1,000,000 IRA. The third path has no bar because its size is your own number.") +
       html.slice(insertAt);
   }
 
@@ -108,7 +110,9 @@ export function getBookFrontMatter(): string[] {
 
 export const BOOK_TOC = [
   { label: "A Note Before You Begin", id: "a-note-before-you-begin" },
+  { label: "How We Work", id: "how-we-work" },
   { label: "Introduction: What This Book Is", id: "introduction" },
+  { label: "The Five Mistakes", id: "the-five-mistakes" },
   { label: "The Roth Conversion in Plain English", id: "the-roth-conversion-in-plain-english" },
   { label: "Two Retirees, Two Regrets", id: "two-retirees-two-regrets" },
   { label: "1. The Decision You Cannot Take Back", id: "the-decision-you-cannot-take-back" },
@@ -117,8 +121,9 @@ export const BOOK_TOC = [
   { label: "4. The Regret of Waiting Too Long", id: "the-regret-of-waiting-too-long" },
   { label: "5. The Regret You Leave Behind", id: "the-regret-you-leave-behind" },
   { label: "6. When Each Choice Is the Right One", id: "when-each-choice-is-the-right-one" },
-  { label: "7. Seeing Your Picture Before You Decide", id: "seeing-your-picture-before-you-decide" },
-  { label: "8. The Conversation Retirees Wish They Had Sooner", id: "the-conversation-most-retirees-wish-they-had-sooner" },
+  { label: "7. Seeing the Shape of the Math", id: "seeing-the-shape-of-the-math" },
+  { label: "8. The Tax You Already Paid", id: "the-tax-you-already-paid" },
+  { label: "9. The Conversation Retirees Wish They Had Sooner", id: "the-conversation-most-retirees-wish-they-had-sooner" },
   { label: "Closing: Your Roth Reality Check", id: "how-to-set-up-your-roth-reality-check" },
   { label: "About the Retirement Education Network", id: "about-the-retirement-education-network" },
   { label: "Important Disclosures", id: "important-disclosures" },

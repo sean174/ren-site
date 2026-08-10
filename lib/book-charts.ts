@@ -28,11 +28,11 @@ function legendRow(x: number, y: number, items: [string, string][]): string {
 export function chartThreePaths(): string {
   const W = 420;
   const rows = [
-    { name: "Path 1: Don't Convert", segs: [300300, 43200, 471239] },
-    { name: "Path 2: DIY Conversion", segs: [268112, 7800, 13440] },
-    { name: "Path 3: Structured Conversion", segs: [114300, 0, 0] },
+    { name: "Path 1: Don't Convert", segs: [324000, 17300, 406200] },
+    { name: "Path 2: Convert On Your Own", segs: [194800, 11500, 0] },
+    { name: "Path 3: Built Around Your Own Year", segs: [] },
   ];
-  const max = 814739;
+  const max = 747500;
   const barH = 26;
   const rowGap = 62;
   const x0 = 8;
@@ -40,13 +40,19 @@ export function chartThreePaths(): string {
   const top = 34;
   let svg = legendRow(x0, 14, [
     ["Retiree tax", BLUE],
-    ["Widow tax", BRICK],
+    ["Medicare surcharges", BRICK],
     ["Heirs' tax", CORAL],
   ]);
   rows.forEach((r, i) => {
     const y = top + i * rowGap + 14;
     const total = r.segs.reduce((a, b) => a + b, 0);
     svg += `<text x="${x0}" y="${y - 6}" ${FONT} font-size="13.5" font-weight="600" fill="${INK}">${r.name}</text>`;
+    // The third path has no bar on purpose: its size is the reader's own number.
+    if (r.segs.length === 0) {
+      svg += `<rect x="${x0}" y="${y}" width="${plotW}" height="${barH}" rx="4" fill="none" stroke="${INK}" stroke-opacity="0.35" stroke-dasharray="5 4"/>`;
+      svg += `<text x="${x0 + 12}" y="${y + barH / 2 + 4}" ${FONT} font-size="13" font-style="italic" fill="${INK}" fill-opacity="0.75">your numbers</text>`;
+      return;
+    }
     let cx = x0;
     const colors = [BLUE, BRICK, CORAL];
     const drawn = r.segs.filter((s) => s > 0).length;
@@ -65,7 +71,7 @@ export function chartThreePaths(): string {
     svg += `<text x="${cx + 6}" y="${y + barH / 2 + 4}" ${FONT} font-size="13.5" font-weight="700" fill="${INK}">${fmt(total)}</text>`;
   });
   const H = top + rows.length * rowGap + 4;
-  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Family lifetime tax cost by path: Path 1 $814,739, Path 2 $289,352, Path 3 $114,300" style="width:100%;height:auto;display:block">${svg}</svg>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Family lifetime tax cost by path: Path 1 approximately $747,500, Path 2 approximately $206,300, Path 3 depends on the reader's own numbers" style="width:100%;height:auto;display:block">${svg}</svg>`;
 }
 
 // Chart 2: who pays for Patricia's non-decision (Chapter 4)
@@ -74,9 +80,9 @@ export function chartPatricia(): string {
   const rows: [string, number, string][] = [
     ["Tax during her RMD years", 189000, BLUE],
     ["The widow's penalty", 114300, BRICK],
-    ["Her children's tax bill", 471239, CORAL],
+    ["Her children's tax bill", 401000, CORAL],
   ];
-  const max = 471239;
+  const max = 401000;
   const barH = 22;
   const rowGap = 56;
   const x0 = 8;
@@ -90,19 +96,19 @@ export function chartPatricia(): string {
     svg += `<text x="${x0 + w + 6}" y="${y + barH / 2 + 4}" ${FONT} font-size="13.5" font-weight="700" fill="${INK}">${fmt(v)}</text>`;
   });
   const totY = rows.length * rowGap + 18;
-  svg += `<text x="${x0}" y="${totY}" ${FONT} font-size="14" font-weight="700" fill="${INK}">Total: $774,000 on a $1,000,000 IRA</text>`;
+  svg += `<text x="${x0}" y="${totY}" ${FONT} font-size="14" font-weight="700" fill="${INK}">Total: $705,000 on a $1,000,000 IRA</text>`;
   const H = totY + 10;
-  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Patricia's family cost: $189,000 RMD-years tax, $114,300 widow's penalty, $471,239 children's tax" style="width:100%;height:auto;display:block">${svg}</svg>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Patricia's family cost: $189,000 RMD-years tax, $114,300 widow's penalty, $401,000 children's tax" style="width:100%;height:auto;display:block">${svg}</svg>`;
 }
 
-// Chart 3: where Robert's $147,000 went (Chapter 3). Breakdown of one total
+// Chart 3: where Robert's $157,000 went (Chapter 3). Breakdown of one total
 // by cause: single hue, identity carried by labels.
 export function chartRobert(): string {
   const W = 420;
   const rows: [string, number][] = [
     ["Social Security taxation cascade", 52000],
     ["RMD and conversion overlap", 42000],
-    ["IRMAA Medicare surcharges", 26712],
+    ["IRMAA Medicare surcharges", 36800],
     ["Widow tax on the unconverted balance", 26000],
   ];
   const max = 52000;
@@ -119,9 +125,9 @@ export function chartRobert(): string {
     svg += `<text x="${x0 + w + 6}" y="${y + barH / 2 + 4}" ${FONT} font-size="13.5" font-weight="700" fill="${INK}">${fmt(v)}</text>`;
   });
   const totY = rows.length * rowGap + 16;
-  svg += `<text x="${x0}" y="${totY}" ${FONT} font-size="14" font-weight="700" fill="${INK}">Total: approximately $147,000 in unanticipated costs</text>`;
+  svg += `<text x="${x0}" y="${totY}" ${FONT} font-size="14" font-weight="700" fill="${INK}">Total: approximately $157,000 in unanticipated costs</text>`;
   const H = totY + 10;
-  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Robert's $147,000 breakdown: $52,000 Social Security cascade, $42,000 RMD overlap, $26,712 IRMAA, $26,000 widow tax" style="width:100%;height:auto;display:block">${svg}</svg>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Robert's $157,000 breakdown: $52,000 Social Security cascade, $42,000 RMD overlap, $36,800 IRMAA, $26,000 widow tax" style="width:100%;height:auto;display:block">${svg}</svg>`;
 }
 
 export function chartBlock(title: string, svg: string, note?: string): string {
