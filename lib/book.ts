@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { chartThreePaths, chartPatricia, chartRobert, chartBlock } from "./book-charts";
+import { chartThreePaths, chartPatricia, chartStopping, chartBlock } from "./book-charts";
 
 // Source of truth is content/book/manuscript.md. book-compiled.html is generated
 // from it with pandoc (gfm -> html) and committed, because the build environment
@@ -11,10 +11,11 @@ import { chartThreePaths, chartPatricia, chartRobert, chartBlock } from "./book-
 
 const PULL_QUOTES: { anchor: string; quote: string }[] = [
   { anchor: "Both directions are permanent.", quote: "The decisions that haunt people are almost always the permanent ones." },
+  { anchor: "The pause became the decision.", quote: "He gave up $2.8 million to avoid something that had cost him $6,900." },
   { anchor: "The Roth decision has three answers", quote: "Three paths. You have probably been told there are two." },
   { anchor: "The chart on their desk said 12 percent", quote: "The chart said 12 percent. The money moved at 49.95." },
   { anchor: "Patricia was paying nearly $7,000 more every year", quote: "Nearly $7,000 more in tax. $18,000 less income. Every year she has left." },
-  { anchor: "She would have spent $87,000 of her own money", quote: "Spend $87,000. Save your children $401,000." },
+  { anchor: "She would have spent $87,000 of her own money", quote: "Spend $87,000. Save your children $447,000." },
   { anchor: "You are going to make this decision once.", quote: "You will make this decision once. They work through it every week." },
 ];
 
@@ -43,10 +44,10 @@ export function getBookHtml(): string {
   );
   html = html.replace(
     /<h1 id="introduction">Introduction<\/h1>/,
-    `<div class="bk-chapter-open" id="introduction" data-chapter="intro"><span class="bk-ch-kicker">Introduction</span><span class="bk-ch-title">What This Book Is, and What It Isn't</span></div>`
+    `<div class="bk-chapter-open" id="introduction" data-chapter="intro"><span class="bk-ch-kicker">Introduction</span><span class="bk-ch-title">The Most Expensive Thing Patricia Ever Did Was Nothing</span></div>`
   );
   // The intro's first h2 duplicates the opener title; drop it.
-  html = html.replace(/<h2 id="what-this-book-is-and-what-it-isnt">[^<]*<\/h2>/, "");
+  html = html.replace(/<h2 id="the-most-expensive-thing-patricia-ever-did-was-nothing">[^<]*<\/h2>/, "");
 
   // Standalone sections keep h1 but styled as section openers.
   html = html.replace(/<h1 id="([^"]+)">([^<]+)<\/h1>/g, `<div class="bk-section-open" id="$1">$2</div>`);
@@ -62,12 +63,12 @@ export function getBookHtml(): string {
   // NOTE: replacement functions, never replacement strings, because chart
   // titles and labels contain "$1..." which String.replace would interpret
   // as capture-group references.
-  const robertAnchor = /(<p>The full breakdown of Robert’s \$157,000[\s\S]*?<\/p>)/;
+  const stoppingAnchor = /(<p><strong>He gave up about \$2\.8 million[\s\S]*?<\/p>)/;
   html = html.replace(
-    robertAnchor,
-    (_m, p1) => p1 + chartBlock("Where Robert's $157,000 Went", chartRobert(), "Approximate figures from Robert's illustrative plan.")
+    stoppingAnchor,
+    (_m, p1) => p1 + chartBlock("What He Avoided, and What It Cost", chartStopping(), "Approximate figures from Robert's illustrative plan. Both bars are drawn to the same scale.")
   );
-  const patriciaAnchor = /(<p>A million-dollar IRA\. \$705,000[\s\S]*?<\/p>)/;
+  const patriciaAnchor = /(<p>A million-dollar IRA\.[\s\S]*?<\/p>)/;
   html = html.replace(
     patriciaAnchor,
     (_m, p1) => p1 + chartBlock("Who Pays for the Non-Decision", chartPatricia(), "Approximate figures from Patricia's illustrative case.")
@@ -114,10 +115,9 @@ export const BOOK_TOC = [
   { label: "Introduction: What This Book Is", id: "introduction" },
   { label: "The Five Mistakes", id: "the-five-mistakes" },
   { label: "The Roth Conversion in Plain English", id: "the-roth-conversion-in-plain-english" },
-  { label: "Two Retirees, Two Regrets", id: "two-retirees-two-regrets" },
   { label: "1. The Decision You Cannot Take Back", id: "the-decision-you-cannot-take-back" },
   { label: "2. The Three Choices In Front of You", id: "the-three-choices-in-front-of-you" },
-  { label: "3. The Regret of Acting Too Soon", id: "the-regret-of-acting-too-soon" },
+  { label: "3. The Regret of Stopping Too Soon", id: "the-regret-of-stopping-too-soon" },
   { label: "4. The Regret of Waiting Too Long", id: "the-regret-of-waiting-too-long" },
   { label: "5. The Regret You Leave Behind", id: "the-regret-you-leave-behind" },
   { label: "6. When Each Choice Is the Right One", id: "when-each-choice-is-the-right-one" },

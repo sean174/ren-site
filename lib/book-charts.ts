@@ -78,11 +78,11 @@ export function chartThreePaths(): string {
 export function chartPatricia(): string {
   const W = 420;
   const rows: [string, number, string][] = [
-    ["Tax during her RMD years", 189000, BLUE],
-    ["The widow's penalty", 114300, BRICK],
-    ["Her children's tax bill", 401000, CORAL],
+    ["Her own federal tax, 73 to 88", 379000, BLUE],
+    ["Her Medicare surcharges", 32000, BRICK],
+    ["Her children's tax bill", 447000, CORAL],
   ];
-  const max = 401000;
+  const max = 447000;
   const barH = 22;
   const rowGap = 56;
   const x0 = 8;
@@ -96,38 +96,43 @@ export function chartPatricia(): string {
     svg += `<text x="${x0 + w + 6}" y="${y + barH / 2 + 4}" ${FONT} font-size="13.5" font-weight="700" fill="${INK}">${fmt(v)}</text>`;
   });
   const totY = rows.length * rowGap + 18;
-  svg += `<text x="${x0}" y="${totY}" ${FONT} font-size="14" font-weight="700" fill="${INK}">Total: $705,000 on a $1,000,000 IRA</text>`;
+  svg += `<text x="${x0}" y="${totY}" ${FONT} font-size="14" font-weight="700" fill="${INK}">Total: $858,000 on a $1,000,000 IRA</text>`;
   const H = totY + 10;
-  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Patricia's family cost: $189,000 RMD-years tax, $114,300 widow's penalty, $401,000 children's tax" style="width:100%;height:auto;display:block">${svg}</svg>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Patricia's family cost: $379,000 her own federal tax, $32,000 Medicare surcharges, $447,000 her children's tax" style="width:100%;height:auto;display:block">${svg}</svg>`;
 }
 
-// Chart 3: where Robert's $157,000 went (Chapter 3). Breakdown of one total
-// by cause: single hue, identity carried by labels.
-export function chartRobert(): string {
+// Chart 3: what stopped Robert against what stopping cost him (Chapter 3).
+// Drawn strictly to scale. The point of the chart is that one bar is invisible.
+export function chartStopping(): string {
   const W = 420;
-  const rows: [string, number][] = [
-    ["Social Security taxation cascade", 52000],
-    ["RMD and conversion overlap", 42000],
-    ["IRMAA Medicare surcharges", 36800],
-    ["Widow tax on the unconverted balance", 26000],
+  const rows: [string, number, string][] = [
+    ["The surcharge that made him stop", 6890, BRICK],
+    ["What stopping cost his family", 2821850, BLUE],
   ];
-  const max = 52000;
-  const barH = 18;
-  const rowGap = 50;
+  const max = 2821850;
+  const barH = 26;
+  const rowGap = 62;
   const x0 = 8;
-  const plotW = W - x0 - 78;
+  const plotW = W - x0 - 96;
   let svg = "";
-  rows.forEach(([label, v], i) => {
-    const y = i * rowGap + 16;
-    const w = Math.max(4, (v / max) * plotW);
-    svg += `<text x="${x0}" y="${y - 5}" ${FONT} font-size="13.5" font-weight="600" fill="${INK}">${label}</text>`;
-    svg += `<path d="M ${x0} ${y} h ${w - 4} a 4 4 0 0 1 4 4 v ${barH - 8} a 4 4 0 0 1 -4 4 h ${-(w - 4)} z" fill="${BLUE}"/>`;
-    svg += `<text x="${x0 + w + 6}" y="${y + barH / 2 + 4}" ${FONT} font-size="13.5" font-weight="700" fill="${INK}">${fmt(v)}</text>`;
+  rows.forEach(([label, v, color], i) => {
+    const y = i * rowGap + 20;
+    const w = (v / max) * plotW;
+    svg += `<text x="${x0}" y="${y - 6}" ${FONT} font-size="13.5" font-weight="600" fill="${INK}">${label}</text>`;
+    if (w < 3) {
+      // to scale this is under a pixel; draw a hairline and lead the eye to it
+      svg += `<rect x="${x0}" y="${y}" width="2" height="${barH}" fill="${color}"/>`;
+      svg += `<line x1="${x0 + 3}" y1="${y + barH / 2}" x2="${x0 + 26}" y2="${y + barH / 2}" stroke="${INK}" stroke-opacity="0.35" stroke-width="1"/>`;
+      svg += `<text x="${x0 + 31}" y="${y + barH / 2 + 4}" ${FONT} font-size="13.5" font-weight="700" fill="${INK}">${fmt(v)}</text>`;
+    } else {
+      svg += `<path d="M ${x0} ${y} h ${w - 4} a 4 4 0 0 1 4 4 v ${barH - 8} a 4 4 0 0 1 -4 4 h ${-(w - 4)} z" fill="${color}"/>`;
+      svg += `<text x="${x0 + w + 6}" y="${y + barH / 2 + 4}" ${FONT} font-size="13.5" font-weight="700" fill="${INK}">${fmt(v)}</text>`;
+    }
   });
-  const totY = rows.length * rowGap + 16;
-  svg += `<text x="${x0}" y="${totY}" ${FONT} font-size="14" font-weight="700" fill="${INK}">Total: approximately $157,000 in unanticipated costs</text>`;
+  const totY = rows.length * rowGap + 14;
+  svg += `<text x="${x0}" y="${totY}" ${FONT} font-size="14" font-weight="700" fill="${INK}">Both bars drawn to the same scale.</text>`;
   const H = totY + 10;
-  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Robert's $157,000 breakdown: $52,000 Social Security cascade, $42,000 RMD overlap, $36,800 IRMAA, $26,000 widow tax" style="width:100%;height:auto;display:block">${svg}</svg>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="The Medicare surcharge that made Robert stop was about $6,890. Stopping cost his family about $2,821,850, roughly four hundred times as much." style="width:100%;height:auto;display:block">${svg}</svg>`;
 }
 
 export function chartBlock(title: string, svg: string, note?: string): string {
