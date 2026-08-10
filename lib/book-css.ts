@@ -126,6 +126,7 @@ html, body { height: 100%; overflow: hidden; }
   font-size: 15px; line-height: 1.6;
 }
 .bk-chart { margin: 14px 0; }
+sup { font-size: 0.62em; line-height: 0; vertical-align: super; color: #B5432F; font-weight: 700; padding-left: 1px; }
 .bk-chart-title {
   font-family: var(--font-inter), sans-serif; font-size: 12.5px; font-weight: 700;
   letter-spacing: 0.14em; text-transform: uppercase; color: #0F2A44;

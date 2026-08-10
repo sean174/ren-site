@@ -44,12 +44,12 @@ Any educational analysis referenced in this book is provided at no cost and carr
 
 # Contents
 
-- Introduction: What This Book Is, and What It Isn’t
+- Introduction: The Most Expensive Thing Patricia Ever Did Was Nothing
 - The Five Mistakes
 - The Roth Conversion in Plain English
 - Chapter 1: The Decision You Cannot Take Back
 - Chapter 2: The Three Choices In Front of You
-- Chapter 3: The Regret of Acting Too Soon
+- Chapter 3: The Regret of Stopping Too Soon
 - Chapter 4: The Regret of Waiting Too Long
 - Chapter 5: The Regret You Leave Behind
 - Chapter 6: When Each Choice Is the Right One
@@ -58,6 +58,7 @@ Any educational analysis referenced in this book is provided at no cost and carr
 - Chapter 9: The Conversation Most Retirees Wish They Had Sooner
 - Closing: How to Set Up Your Roth Reality Check
 - About the Retirement Education Network
+- Where These Numbers Come From
 - Important Disclosures
 
 ------------------------------------------------------------------------
@@ -166,9 +167,9 @@ Here they are, before you read another page. Each one costs real money, each one
 
 > *The check:* if you are at required-withdrawal age, ask your custodian to confirm this year’s required amount has already been distributed before any conversion is processed.
 
-**2. Being surprised by a threshold you did not know you had crossed.** The top of a tax bracket and the Medicare surcharge threshold are two different numbers measured two different ways. Fill the 22 percent bracket as a couple and you clear the first Medicare threshold by roughly $29,000 without ever leaving the bracket you were aiming at. Not sometimes. By construction.
+**2. Stopping the moment something surprises you.** This is the most expensive mistake in the book and almost nobody names it. Somewhere in a multi-year conversion, something unexpected arrives in the mail. Usually it is a Medicare surcharge nobody warned you about, because the top of your tax bracket and the Medicare threshold are two different numbers measured two different ways, and filling the 22 percent bracket as a couple clears the Medicare line by roughly $29,000 automatically. Not sometimes. By construction.
 
-Crossing it is often the right call. Being ambushed by it two years later, with no way to judge whether it is trivial or ruinous, is what does the damage. Chapter 3 is a man who quit a good plan over a surcharge worth about $2,300 a year.
+Crossing it is often the right call. Being ambushed by it, with no way to judge whether it is trivial or ruinous, is what does the damage. Chapter 3 is a man who abandoned a plan that was working, over a surcharge worth about $2,300 a year, and it cost his family roughly $2.8 million.
 
 > *The check:* before you convert, ask what your modified adjusted gross income will be, not what bracket you will be in, and ask what the surcharge would cost if you cross. A number you have already been quoted cannot frighten you later.
 
@@ -202,16 +203,16 @@ You do not have to convert everything, and you do not have to convert all at onc
 
 Four things, and each one matters:
 
-- **The IRS stops requiring withdrawals.** Traditional accounts force you to take Required Minimum Distributions starting at age 73 under current law. Roth IRAs have no RMDs for you or your spouse. Money you do not need can stay put and keep growing.
+- **The IRS stops requiring withdrawals.** Traditional accounts force you to take Required Minimum Distributions, starting at 73 if you were born between 1951 and 1959, and at 75 if you were born in 1960 or later.<sup>1</sup> It is worth checking which one applies to you, because a great deal in this book turns on how many years you have before that date. Roth IRAs have no required withdrawals for you or your spouse. Money you do not need can stay put and keep growing.
 - **Growth stops being taxed.** Every dollar of gain inside the Roth is yours. There is no tax bill building up alongside the balance.
 - **Withdrawals stop being taxed.** Once you are 59 and a half and your Roth has been open at least five years, everything you take out, principal and growth alike, is free of federal income tax.
 - **Your heirs inherit it tax-free.** They still have to empty the account within ten years, but every dollar they withdraw from an inherited Roth is theirs to keep.
 
 ## Two Rules Worth Knowing Before You Start
 
-**The five-year rule.** The money you convert has already been taxed, so at 59 and a half or older you can withdraw converted amounts at any time without tax or penalty. The growth is different. For earnings to come out tax-free, you must be 59 and a half or older and a Roth IRA must have been open in your name for at least five years. The clock starts on January 1 of the year of your first contribution or conversion, and one clock covers all your Roth IRAs. If you have never had a Roth before, this is a reason to start the clock sooner rather than later.
+**The five-year rule.** The money you convert has already been taxed, so at 59 and a half or older you can withdraw converted amounts at any time without tax or penalty. The growth is different. For earnings to come out tax-free, you must be 59 and a half or older and a Roth IRA must have been open in your name for at least five years. The clock starts on January 1 of the year of your first contribution or conversion, and one clock covers all your Roth IRAs.<sup>2</sup> If you have never had a Roth before, this is a reason to start the clock sooner rather than later.
 
-**The RMD comes first.** If you are already at RMD age, the IRS requires you to take that year’s full RMD before you convert anything. The RMD itself cannot be converted. It comes out, it gets taxed, and only then can you convert additional dollars on top of it. Get this wrong and nobody unwinds it for you. The converted RMD becomes an excess contribution to your Roth, and it carries a penalty for every year it sits there uncorrected. Custodians generally do not catch it, which means the mistake is silent, it compounds, and finding it is your job.
+**The RMD comes first.** If you are already at RMD age, the IRS requires you to take that year’s full RMD before you convert anything. The RMD itself cannot be converted. It comes out, it gets taxed, and only then can you convert additional dollars on top of it. Get this wrong and nobody unwinds it for you. The converted RMD becomes an excess contribution to your Roth, and it carries a penalty for every year it sits there uncorrected.<sup>3</sup> Custodians generally do not catch it, which means the mistake is silent, it compounds, and finding it is your job.
 
 That is the whole machine. Money moves across, tax gets paid once, and four permanent advantages switch on. The rest of this book is about the part the mechanics do not tell you: how much to convert, when, and whether to do it at all.
 
@@ -237,7 +238,7 @@ For most retirees with substantial IRAs, the Roth conversion question is one of 
 
 Until 2018, you could undo a Roth conversion. The technical name was a recharacterization. If you converted in March and decided by October that you had made a mistake, you could move the money back into a traditional IRA and the conversion was treated as if it had never happened. The taxes you had paid were refunded. The decision was reversible.
 
-That option no longer exists. Congress eliminated it in the Tax Cuts and Jobs Act. Since 2018, every Roth conversion is final on the day it happens. You cannot undo it next month. You cannot undo it next year. You cannot undo it ever.
+That option no longer exists. Congress eliminated it in the Tax Cuts and Jobs Act.<sup>4</sup> Since 2018, every Roth conversion is final on the day it happens. You cannot undo it next month. You cannot undo it next year. You cannot undo it ever.
 
 This change is one of the reasons getting the conversion right matters so much more now than it did a decade ago. The retirees who started thinking about Roth conversions in the early 2000s had a safety net. The ones thinking about it today do not.
 
@@ -287,13 +288,13 @@ Convert. Or don’t.
 
 Yes. Or no.
 
-That is not how the decision actually works. The yes/no framing is what most articles describe, what most advisors at most firms ask about at tax time, and what most retirees default to when someone brings the subject up at a dinner party. It is the framing that produced both Robert’s mistake and Patricia’s mistake, in opposite directions.
+That is not how the decision actually works. The yes/no framing is what most articles describe, what most advisors at most firms ask about at tax time, and what most retirees default to when someone brings the subject up at a dinner party. It is the framing that produced Patricia’s five years of not deciding, and Robert’s decision to stop after three.
 
 The Roth decision has three answers, not two.
 
 ## Path 1: Don’t Convert
 
-Keep your traditional IRA the way it is. Let it grow. At age 73 (rising to 75 in 2033 under current law), the IRS will require you to start taking annual distributions. Each one gets taxed as ordinary income at whatever rate is in effect that year. When you pass, what’s left in the account goes to your heirs. Most heirs are required by law to empty the inherited account within ten years, paying tax on every dollar they withdraw, usually during the highest-earning years of their lives.
+Keep your traditional IRA the way it is. Let it grow. At 73 or 75, depending on the year you were born, the IRS will require you to start taking annual distributions. Each one gets taxed as ordinary income at whatever rate is in effect that year. When you pass, what’s left in the account goes to your heirs. Most heirs are required by law to empty the inherited account within ten years, paying tax on every dollar they withdraw, usually during the highest-earning years of their lives.
 
 This is the default path. It is what happens if you do nothing.
 
@@ -313,7 +314,7 @@ That urgency is usually asserted rather than explained, so here is the case for 
 
 Two things are true at the same time, and they pull in opposite directions.
 
-**Tax rates are low by the standards of the last century.** The top federal rate today is 37 percent. It has been considerably higher for most of living memory: 94 percent in the last years of the Second World War, above 90 percent for the two decades after it, 70 percent until 1981, and near 40 percent through the 1990s. The current brackets are among the four lowest hundred-year stretches on record. Nobody can tell you what Congress does next, and anybody who claims to is guessing. What can be said is factual and narrow: today's rates are historically low, and the tax you pay on a conversion is calculated at today's rates, permanently.
+**Tax rates are low by the standards of the last century.** The top federal rate today is 37 percent. It has been considerably higher for most of living memory: 94 percent in the last years of the Second World War, above 90 percent for the two decades after it, 70 percent until 1981, and near 40 percent through the 1990s. The current brackets are among the four lowest hundred-year stretches on record.<sup>5</sup> Nobody can tell you what Congress does next, and anybody who claims to is guessing. What can be said is factual and narrow: today's rates are historically low, and the tax you pay on a conversion is calculated at today's rates, permanently.
 
 **Your account balance is probably near its high.** This is the part that cuts the other way. Your conversion tax is calculated on the balance the day you convert, so a larger balance means a larger tax bill for the same account. Converting a million-dollar IRA costs more than converting the same IRA did when it held six hundred thousand.
 
@@ -325,7 +326,7 @@ Path 2 is sometimes the right answer, and it is a great deal better than Path 1.
 
 This is not because Robert was careless or unintelligent. It is because doing Path 2 well requires modeling that no individual can do in their head, and that most basic spreadsheets cannot capture.
 
-> **An aside on what the tax actually costs.** Many retirees never get this far because the sticker price scares them off. They picture their tax bracket, multiply it by the conversion, and walk away. The real number is usually smaller. Tax brackets are marginal: the converted dollars fill the lower brackets first, and only the top slice gets taxed at your top rate. A married couple with \$40,000 of taxable income who convert \$100,000 stay inside the 22 percent bracket, but their actual federal tax on the converted dollars works out to just under 16 percent. The bracket chart says 22. The check they write says 16. Later chapters show how interactions can push the true cost higher when a conversion is sized carelessly. The point here is the opposite one: sized correctly, a conversion usually costs less than the bracket number you are afraid of.
+> **An aside on what the tax actually costs.** Many retirees never get this far because the sticker price scares them off. They picture their tax bracket, multiply it by the conversion, and walk away. The real number is usually smaller. Tax brackets are marginal: the converted dollars fill the lower brackets first, and only the top slice gets taxed at your top rate. A married couple with \$40,000 of taxable income who convert \$100,000 stay inside the 22 percent bracket, but their actual federal tax on the converted dollars works out to just under 16 percent.<sup>6</sup> The bracket chart says 22. The check they write says 16. Later chapters show how interactions can push the true cost higher when a conversion is sized carelessly. The point here is the opposite one: sized correctly, a conversion usually costs less than the bracket number you are afraid of.
 
 ## Path 3: Neither Yes Nor No
 
@@ -333,9 +334,9 @@ Convert, but not all at once, and not the same amount every year. Convert across
 
 That is nearly all this book is going to say about how such a plan gets built, and the reason is not coyness. The answer moves with your bracket, your Medicare tier, your spouse’s situation if one of you outlives the other, your heirs’ brackets, and whatever income events you have coming. Change any one of those and the plan changes with it. A book that handed you a schedule would be handing most of its readers the wrong one, confidently.
 
-Path 3 is what Robert was trying to build for himself but did not have the tools for. It is also what Patricia would have benefited from if anyone had shown it to her. The same idea, applied differently to each of them, would have fit both situations. Neither one knew it existed.
+Path 3 is what Patricia would have benefited from if anyone had shown it to her. It is also, roughly, what Robert had already built for himself before he abandoned it. Neither of them knew there was a name for it, or anyone to ask about it.
 
-Path 2 is a math problem. Convert this much, pay this tax, repeat. Anyone with a spreadsheet and an afternoon can run the basic version. Robert did, and it still cost him, because the spreadsheet could not see what else each converted dollar was going to touch.
+Path 2 is a math problem. Convert this much, pay this tax, repeat. Anyone with a spreadsheet and an afternoon can run the basic version, and it works. Robert did, and his spreadsheet was accurate. What it could not do was tell him what to make of the one thing it had not predicted.
 
 Path 3 is not a slower version of that. It is the same decision made with the rest of your tax return in view.
 
@@ -357,9 +358,9 @@ Each of these sources is partly right. None of them has the full picture.
 
 The point of this chapter is simpler. There are three paths. You have probably been told there are two. The third path is the one most people never see, which is the reason most people end up regretting their decision in one direction or the other.
 
-The next chapter walks through what happens when smart, careful retirees take Path 2 without enough visibility. That is Robert’s regret. After that, we look at what happens when retirees default into Path 1 by not deciding at all. That is Patricia’s regret.
+The next chapter is about Robert, who took Path 2, ran it well, and stopped. The chapter after it puts numbers on the five years Patricia spent not deciding.
 
-By the time you finish those two chapters, you will understand why neither of them got it right, and why the third answer exists at all.
+By the time you finish them both, you will have seen the two ways people actually lose money on this decision, and neither of them is the one you are probably worried about.
 
 *If you already know which of the three you have been leaning toward, that is worth testing before you act on it. Ask whoever gave you this book to show you all three run against your own numbers, including the one you were not leaning toward.*
 
@@ -397,13 +398,13 @@ Medicare premiums two years from now can climb into a higher tier.
 
 Deductions that phase out based on income can shrink or disappear entirely.
 
-A separate 3.8 percent surtax on investment income switches on once your income crosses \$250,000 as a couple. The converted dollars are not themselves subject to it, but they raise the income figure that decides whether your interest, dividends, and capital gains are.
+A separate 3.8 percent surtax on investment income switches on once your income crosses \$250,000 as a couple.<sup>7</sup> The converted dollars are not themselves subject to it, but they raise the income figure that decides whether your interest, dividends, and capital gains are.
 
 Each of these effects adds tax that does not show up on the bracket chart. Together, they form what financial planners call the tax torpedo. The shape of it is invisible until the year is over, and by then the conversion is permanent.
 
-The arithmetic of the worst case is worth walking through, because it is not a rare accident. It is a well-understood interaction with a specific number attached. A married couple sitting in the 12 percent bracket, drawing Social Security, holding appreciated investments, converts a slice of their IRA. Each converted dollar also makes 85 cents of Social Security taxable. So each dollar is taxed at 12 percent, and so is the 85 cents it dragged in with it: 12 × 1.85, or 22.2 percent. Meanwhile the same stacking pushes long-term capital gains out of the zero percent rate and into the 15 percent rate, and that also applies to the dollar and the 85 cents alike: 15 × 1.85, or 27.75 percent.
+The arithmetic of the worst case is worth walking through, because it is not a rare accident. It is a well-understood interaction with a specific number attached. A married couple sitting in the 12 percent bracket, drawing Social Security, holding appreciated investments, converts a slice of their IRA. Each converted dollar also makes 85 cents of Social Security taxable.<sup>18</sup> So each dollar is taxed at 12 percent, and so is the 85 cents it dragged in with it: 12 × 1.85, or 22.2 percent. Meanwhile the same stacking pushes long-term capital gains out of the zero percent rate and into the 15 percent rate, and that also applies to the dollar and the 85 cents alike: 15 × 1.85, or 27.75 percent.
 
-Add those together and the marginal rate on the converted dollars is **49.95 percent**. Not the effective rate on their whole return, which stays low. The rate on the money they just moved.
+Add those together and the marginal rate on the converted dollars is **49.95 percent**.<sup>8</sup> Not the effective rate on their whole return, which stays low. The rate on the money they just moved.
 
 They never changed brackets. The chart on their desk said 12 percent the entire time. The real cost of the decision was more than four times that, and if the year’s income also cleared a Medicare threshold, higher still.
 
@@ -427,17 +428,17 @@ That timing is worth sitting with. Robert’s very first conversion had already 
 
 Robert had never heard of IRMAA before the letter arrived.
 
-IRMAA is a surcharge added to Medicare Part B and Part D premiums when your income crosses certain thresholds. The standard Part B premium in 2026 is about \$202.90 per month for someone with income below the first threshold. Above each threshold, it rises in steps. At the top tier, the same Part B coverage costs about \$689.90 per month. The Part D premiums work similarly, with surcharges added on top of whatever drug plan premium you already pay.
+IRMAA is a surcharge added to Medicare Part B and Part D premiums when your income crosses certain thresholds. The standard Part B premium in 2026 is about \$202.90 per month for someone with income below the first threshold.<sup>9</sup> Above each threshold, it rises in steps. At the top tier, the same Part B coverage costs about \$689.90 per month. The Part D premiums work similarly, with surcharges added on top of whatever drug plan premium you already pay.
 
 For a married couple, the surcharges apply to both spouses individually. Each spouse pays IRMAA based on the household’s income.
 
 Two features of IRMAA make it particularly dangerous for someone running a DIY Roth conversion.
 
-The first is the two-year lookback. Your Medicare premiums in any given year are based on your tax return from two years earlier. In 2026, your premiums are based on your 2024 income. This means a conversion you do today does not affect your Medicare premium today. It affects your Medicare premium two years from now. By the time the surcharge arrives, you may have done two more conversions on top of the first one, each one queued up to trigger its own surcharge later. You cannot undo any of them.
+The first is the two-year lookback. Your Medicare premiums in any given year are based on your tax return from two years earlier. In 2026, your premiums are based on your 2024 income.<sup>10</sup> This means a conversion you do today does not affect your Medicare premium today. It affects your Medicare premium two years from now. By the time the surcharge arrives, you may have done two more conversions on top of the first one, each one queued up to trigger its own surcharge later. You cannot undo any of them.
 
 The second feature is the cliff structure. IRMAA does not phase in. It cliffs. One dollar below the threshold, you pay nothing extra. One dollar above it, you pay the full surcharge for that tier, for the entire year, for both spouses.
 
-In 2026, the first IRMAA threshold for a married couple sits at \$218,000 of modified adjusted gross income. A couple at \$218,001 pays about \$1,148 per spouse for the year, once the Part B and Part D surcharges are added together. That is roughly \$2,300 in extra premiums for a single dollar of income that crossed the line. Higher tiers cost more. At the top tier the two surcharges come to about \$6,900 per spouse per year.
+In 2026, the first IRMAA threshold for a married couple sits at \$218,000 of modified adjusted gross income. A couple at \$218,001 pays about \$1,148 per spouse for the year, once the Part B and Part D surcharges are added together. That is roughly \$2,300 in extra premiums for a single dollar of income that crossed the line. Higher tiers cost more. At the top tier the two surcharges come to about \$6,900 per spouse per year.<sup>11</sup>
 
 For one dollar of income.
 
@@ -449,7 +450,7 @@ Robert’s bracket-filling plan was built around the top of the 22 percent feder
 
 What Robert did not realize is that the Medicare threshold is not measured the same way. It sits at \$218,000 of modified adjusted gross income, and modified adjusted gross income is calculated *before* the standard deduction comes out. Taxable income is calculated *after*.
 
-Put those two facts side by side and something uncomfortable falls out. A married couple, both over 65, filling the 22 percent bracket exactly to the top has \$211,400 of taxable income. Add back the standard deduction they are entitled to, about \$35,500, and their modified adjusted gross income is \$246,900.
+Put those two facts side by side and something uncomfortable falls out. A married couple, both over 65, filling the 22 percent bracket exactly to the top has \$211,400 of taxable income. Add back the standard deduction they are entitled to, about \$35,500, and their modified adjusted gross income is \$246,900.<sup>12</sup>
 
 The Medicare line is \$218,000.
 
@@ -489,7 +490,7 @@ Had he simply carried on with the plan he was already running, unchanged, his fa
 
 The money did not vanish anywhere dramatic. The unconverted balance kept compounding, and so did the tax attached to it. Required withdrawals started at 73 on a much larger account than he would otherwise have had, taxed every year for the rest of his life. Linda inherited what was left and paid tax on it as a single filer. Their children inherited the remainder and emptied it over ten years, in their forties and fifties, on top of the salaries they already earned.
 
-None of that felt like the consequence of a decision made at 66. That is what makes it dangerous. The bill arrives decades later, in instalments, to people who were not in the room.
+None of that felt like the consequence of a decision made at 66. That is what makes it dangerous. The bill arrives decades later, in installments, to people who were not in the room.
 
 The surcharge that stopped him came to about \$2,300 a year, roughly \$6,900 across the three years he ran the plan.
 
@@ -543,11 +544,11 @@ Inside the math, something else was happening. Each year of growth made the even
 
 This is the part that the brother-in-law-versus-magazine debate misses entirely. The Roth conversion question has a deadline that nobody mentions. The deadline is not a date on the calendar. It is the closing of the window during which you have flexibility.
 
-While you are between retirement and age 73, you have the most control you will ever have over your taxable income. Your wages have stopped. Your RMDs have not started yet. You are in what financial planners call the gap years. These are the years when conversions cost the least, fit the cleanest, and have the longest runway to grow tax-free.
+While you are between retirement and your required-withdrawal age, you have the most control you will ever have over your taxable income. Your wages have stopped. Your required withdrawals have not started yet. You are in what financial planners call the gap years. These are the years when conversions cost the least, fit the cleanest, and have the longest runway to grow tax-free.
 
-After 73, the IRS starts taking money out of your traditional IRA whether you want it out or not. The RMDs become a floor of taxable income that you cannot reduce. You can still convert on top of them, but the conversions land on top of income you no longer control. The math gets harder every year.
+After that date, the IRS starts taking money out of your traditional IRA whether you want it out or not. The RMDs become a floor of taxable income that you cannot reduce. You can still convert on top of them, but the conversions land on top of income you no longer control. The math gets harder every year.
 
-By age 78, most of the flexibility is gone. By 82, the conversion math rarely works at all.
+How much room is left depends on your balance, your other income and your health, and it is one of the few things in this book that a short conversation can settle quickly.
 
 Patricia did not see this clock running. Nobody had ever told her it existed.
 
@@ -559,7 +560,7 @@ That number, on its own, did not seem catastrophic. Patricia could afford to tak
 
 What Patricia did not realize was that \$54,015 was the smallest RMD she would ever take.
 
-The IRS calculates RMDs by dividing your account balance by a life expectancy factor that gets smaller every year. At 73, the factor is 26.5. At 80, it is 20.2. At 85, it is 16.0. The smaller divisor means a larger percentage of your balance comes out every year, even if the balance is shrinking.
+The IRS calculates RMDs by dividing your account balance by a life expectancy factor that gets smaller every year. At 73, the factor is 26.5. At 80, it is 20.2. At 85, it is 16.0.<sup>13</sup> The smaller divisor means a larger percentage of your balance comes out every year, even if the balance is shrinking.
 
 Combined with continued growth on the unspent balance, Patricia’s RMDs climbed steadily. By age 80, her RMD was about \$74,000. By 85, it was over \$90,000. Each year, the entire RMD amount got added to her taxable income on top of her Social Security and her late husband’s pension survivor benefit.
 
@@ -577,7 +578,7 @@ When Tom passed at age 72, Patricia became a single filer for the rest of her li
 
 This is a tax change most retirees do not see coming. While both spouses are alive, you file jointly. The tax brackets are wider. The standard deduction is doubled. The Medicare premium thresholds sit higher. After one spouse passes, the survivor files as a single filer the following year and stays that way for as long as they live.
 
-The numbers are stark. In 2026, a married couple stays in the 22 percent bracket up to about \$211,400 of taxable income. For a single filer, that same bracket runs out at \$105,700, exactly half, and the 24 percent bracket takes over from there. The same dollar of income is taxed in a higher bracket simply because of filing status.
+The numbers are stark. In 2026, a married couple stays in the 22 percent bracket up to about \$211,400 of taxable income. For a single filer, that same bracket runs out at \$105,700, exactly half, and the 24 percent bracket takes over from there.<sup>14</sup> The same dollar of income is taxed in a higher bracket simply because of filing status.
 
 The standard deduction for a married couple where both spouses are 65 or older is about \$35,500. For a single filer at 65 or older, it drops to \$18,150. About \$17,000 of income that used to be tax-free is now fully taxable.
 
@@ -601,17 +602,15 @@ None of that money went to her. None of it bought her anything. It was the tax c
 
 ## What Her Children Will Pay
 
-The final layer of Patricia’s regret will not arrive until she is gone.
+The final layer of Patricia's regret will not arrive until she is gone, and it is the largest of the three.
 
-When Patricia passes, her two adult children will inherit what is left of the IRA. Both of her children are in their forties. Both are in their peak earning years. Both are already in the 32 percent federal bracket from their own salaries.
+When she passes, her two adult children inherit what is left of the IRA. Both are in their forties, both are working, and under a rule that changed in 2019 they have ten years to empty the account. Every dollar is taxed on top of the salaries they already earn, in the decade they earn the most.
 
-Under current law, they have ten years to empty the inherited IRA. Every dollar they pull out gets stacked on top of their existing income. The compression effect pushes a large share of those withdrawals into brackets well above the one she is in. The total federal tax her two children will pay on the money she leaves them comes to approximately \$447,000.
+Their combined federal tax on the money she leaves them comes to approximately \$447,000.
 
-That number is not Patricia’s tax bill. It is her children’s. It is the bill they will receive in the years after the funeral, every year for ten years, on money she could have moved to a Roth at her own lower bracket while she was alive.
+That number is not Patricia's tax bill. It is her children's, arriving in installments in the years after the funeral, on money she could have moved at her own lower rate while she was alive. The next chapter is entirely about that figure and where it comes from, because it is the part of this decision that most retirees never see coming and the part that is usually the biggest.
 
-We will spend the next chapter on this layer specifically. It is large enough, and emotionally important enough, to deserve its own chapter.
-
-For now, the relevant point is that Patricia’s regret is not only her own. It is the regret of leaving her children a tax bill she could have prevented.
+For now, the relevant point is that Patricia's regret is not only her own.
 
 Add it up without counting anything twice. Approximately \$379,000 in her own federal tax. About \$32,000 in Medicare surcharges. Approximately \$447,000 payable by her children.
 
@@ -621,7 +620,7 @@ A million-dollar IRA. **Approximately \$858,000** in federal tax, most of which 
 
 Patricia is not stupid. She is a thoughtful, careful woman who outlived her husband and tried to do right by her family. She just got conflicting advice at a moment when she was already grieving and overwhelmed, and she did what most people do in that situation. She put the decision off for next year. Then the year after. Then the one after that.
 
-When Patricia talks about it now, looking back, she says the same thing in different words every time. She wishes she had stopped trying to figure it out from articles and friends and sat down with someone whose entire job was to look at her specific situation. One conversation, in her late sixties, would have saved her family more than half a million dollars.
+When Patricia talks about it now, looking back, she says the same thing in different words every time. She wishes she had stopped trying to figure it out from articles and friends and sat down with someone whose entire job was to look at her specific situation. One conversation, in her late sixties, would have saved her family something close to six hundred thousand dollars.
 
 She is right about that.
 
@@ -655,7 +654,7 @@ In 2019, Congress passed the SECURE Act. Inside that law was a change to the rul
 
 Every dollar that comes out of an inherited traditional IRA gets taxed as ordinary income on top of the heir’s existing income.
 
-If the parent was already taking RMDs at the time of death, the child also has to take annual distributions in years one through nine, with whatever is left coming out by the end of year ten. The IRS does not let the heir wait until year ten to take the entire amount. The withdrawals have to happen along the way.
+If the parent was already taking RMDs at the time of death, the child also has to take annual distributions in years one through nine, with whatever is left coming out by the end of year ten.<sup>15</sup> The IRS does not let the heir wait until year ten to take the entire amount. The withdrawals have to happen along the way.
 
 For most families with adult children inheriting in their forties or fifties, this rule change quietly turned a modest tax cost into a major one.
 
@@ -701,11 +700,13 @@ The difference is that every dollar would come out tax-free.
 
 Her son’s \$190,000 in federal tax becomes zero. Her daughter’s \$257,000 becomes zero. The combined \$447,000 stays with her children instead of going to the IRS.
 
-The cost to Patricia of doing this would have been approximately \$87,000 in conversion taxes during her own lifetime, paid in manageable amounts across eight years.
+It would not have been free. Converting the whole account across the eight years from 65 to 72, while Tom was alive and they were still filing jointly, would have cost her approximately \$265,000 in federal tax. That is a real number and a large one, and she would have written those checks herself, in her sixties, out of money she could have spent on something else.
 
-She would have spent \$87,000 of her own money to save her children roughly \$447,000.
+Set it against what actually happened. She paid roughly \$379,000 in tax on withdrawals she never wanted, about \$32,000 in Medicare surcharges, and left her children a \$447,000 bill. Approximately \$858,000.
 
-That is not a return on investment. It is a different kind of math entirely. It is the math of a parent looking forward and recognizing that the most efficient thing she can do for her children is not to give them more money. It is to remove the IRS from the equation before her money ever reaches them.
+**She could have paid \$265,000 instead of \$858,000.** Not by being clever. By deciding.
+
+That is not a return on investment, and it is worth being careful about calling it one. It is a different kind of math. The tax was always going to be paid by somebody. All she was choosing was who paid it, at whose rate, and in which years.
 
 ## Not Every Family Faces This
 
@@ -763,7 +764,7 @@ Path 1 means keeping your traditional IRA, taking RMDs when the law requires, an
 
 ### You plan to give a significant portion of your IRA to charity.
 
-If you are charitably inclined and intend to leave a meaningful share of your retirement money to charity, converting first is usually the wrong move. After age 70 and a half, you can use a Qualified Charitable Distribution, or QCD, to send money directly from your traditional IRA to a qualified charity. The money never appears on your tax return as income. The charity gets the full amount. You get credit toward your RMD without the tax. In 2026, you can use this for up to \$111,000 per year per spouse.
+If you are charitably inclined and intend to leave a meaningful share of your retirement money to charity, converting first is usually the wrong move. After age 70 and a half, you can use a Qualified Charitable Distribution, or QCD, to send money directly from your traditional IRA to a qualified charity. The money never appears on your tax return as income. The charity gets the full amount. You get credit toward your RMD without the tax. In 2026, you can use this for up to \$111,000 per year per spouse.<sup>16</sup>
 
 A Roth conversion eliminates this benefit. Once the money is in a Roth, you have already paid the tax on it. Sending it to charity from a Roth is fine, but you have given up a tax-free path that was sitting right in front of you.
 
@@ -805,7 +806,7 @@ This is rarely the situation for someone reading this book.
 
 There are narrow estate-planning structures, often involving trusts or generation-skipping arrangements, where a large one-time conversion fits the broader plan. These situations are usually being handled by an estate attorney coordinating with a financial planner. If that is your situation, your team has likely already considered conversion.
 
-The do-it-yourself version Robert tried, which is essentially an attempt at Path 3 without the modeling, is also not Path 2 in the strict sense. It is the failure mode that produces the worst outcomes among careful, well-intentioned people. We covered why in chapter 3.
+The version Robert ran in chapter 3, spreading the conversion across years on his own, is not Path 2 in the strict sense either. It was closer to Path 3 than he knew, and it was working. What went wrong there was not the plan.
 
 ## When Path 3 Is Right
 
@@ -843,7 +844,7 @@ If you fit one of the Path 1 cases, especially the charitable case or the small-
 
 The next chapter shows you what the math actually looks like, side by side, for one specific couple.
 
-*If you read this chapter and recognised yourself in one of the reasons not to convert, say so out loud when you have the conversation. An honest analysis should be able to tell you that doing nothing is right for you, and you should expect to hear it plainly if it is.*
+*If you read this chapter and recognized yourself in one of the reasons not to convert, say so out loud when you have the conversation. An honest analysis should be able to tell you that doing nothing is right for you, and you should expect to hear it plainly if it is.*
 
 ------------------------------------------------------------------------
 
@@ -855,13 +856,15 @@ Up to this point we have described the three paths in words. Now we will put num
 
 Two of them, not three. That is deliberate, and it is worth explaining before you read another line.
 
-The first two paths can be modelled in a book because they are rules, not decisions. Doing nothing has a formula. So does converting on your own by filling a bracket. Both of them run the same way for anybody with the same balance, and we can show you exactly what they cost.
+The first two paths can be modeled in a book because they are rules, not decisions. Doing nothing has a formula. So does converting on your own by filling a bracket. Both of them run the same way for anybody with the same balance, and we can show you exactly what they cost.
 
-The third path cannot be modelled in a book, because it is not a formula. It is a set of decisions made year by year against a picture only you have. If we printed a schedule here, it would be the right schedule for almost nobody reading this, and you would have no way of knowing whether you were the exception. So the third row of the table below has no number in it. That absence is the honest answer, and it is the point of the chapter.
+The third path cannot be modeled in a book, because it is not a formula. It is a set of decisions made year by year against a picture only you have. If we printed a schedule here, it would be the right schedule for almost nobody reading this, and you would have no way of knowing whether you were the exception. So the third row of the table below has no number in it. That absence is the honest answer, and it is the point of the chapter.
 
 A few more things to say plainly before we begin.
 
 The numbers are simplified. Real planning involves dozens of variables a book cannot reasonably carry. We are using one couple, one set of assumptions, one tax environment, and no state tax, to keep the arithmetic readable. Your situation will differ in ways that change the specific figures. The shape of the math is what travels.
+
+One thing to notice before the figures start. Patricia, in chapter 4, also had a million-dollar IRA and also did not convert, and her family's bill came to \$858,000 rather than the \$747,500 you are about to see. Same balance, same decision, different answer. The reason is that Patricia did not need her required withdrawals and never spent them, so her account kept growing and her children inherited more, while Dave and Carol live on theirs. That single difference is worth over a hundred thousand dollars, and neither of them chose it deliberately. It is a fair warning about how much any figure in a book like this depends on assumptions you have not been asked about yet.
 
 ## Meet Dave and Carol
 
@@ -995,7 +998,7 @@ A 45-year-old who lives through a bad market has an obvious answer: wait. The ma
 
 After 60, waiting is not free.
 
-The S&P 500 took roughly five years to regain its 2007 peak after the 2008 crash. The decline that began in 2000 took even longer to work through. For someone in their forties, that is an inconvenience and a good buying opportunity. For someone who just paid a six-figure tax bill and expects to start drawing income within a few years, five years is a meaningful share of the runway.
+The S&P 500 took roughly five years to regain its 2007 peak after the 2008 crash.<sup>17</sup> The decline that began in 2000 took even longer to work through. For someone in their forties, that is an inconvenience and a good buying opportunity. For someone who just paid a six-figure tax bill and expects to start drawing income within a few years, five years is a meaningful share of the runway.
 
 The book's own math depends on this. Every comparison in Chapter 7 assumed the account compounds steadily. A conversion needs years of tax-free growth to earn back what it cost. A bad stretch early does not just reduce the balance. It eats the years the strategy needed to work in.
 
@@ -1057,7 +1060,7 @@ Robert and Patricia have one thing in common.
 
 Looking back, they both wish they had done the same thing. Not the same conversion. The same conversation.
 
-Robert wishes he had spent 60 minutes with someone who works through this decision regularly, before he started building his own plan. Patricia wishes she had stopped trying to figure it out from articles and friends and sat down with someone whose entire job was to look at her specific situation. Both of them, looking back, would tell you they did not need more information. They needed the right conversation, with the right person, before they made a decision they could not undo.
+Robert wishes he had had somebody to call the week the letter arrived, rather than three years of reading afterward. Patricia wishes she had stopped trying to figure it out from articles and friends and sat down with someone whose entire job was to look at her specific situation. Both of them, looking back, would tell you they did not need more information. They needed the right conversation, with the right person, before they made a decision they could not undo.
 
 The information has always been available. The interactions have always existed. The Medicare cliffs were on the books. The widow’s penalty was in the tax code. The ten-year rule for inherited IRAs has been law since 2019. None of this is new. None of it is hidden.
 
@@ -1117,7 +1120,7 @@ You can avoid both.
 
 If you take 60 minutes to look at your three paths with someone who can model them properly, one of two things happens. Either you confirm that what you were thinking of doing was the right move, in which case you proceed with confidence. Or you find out that something different fits your situation better, and you adjust before you make a permanent decision.
 
-Either outcome is better than the alternative. The alternative is making the decision the way Robert and Patricia made theirs. Carefully, sincerely, with the best information they could find on their own, and still wrong in the directions that mattered most.
+Either outcome is better than the alternative. The alternative is deciding the way Robert and Patricia did. Carefully, sincerely, with the best information they could find on their own, and with nobody to ask at the one moment it would have changed everything.
 
 That is the regret this chapter exists to help you avoid.
 
@@ -1184,7 +1187,7 @@ Those are all real answers, and Chapter 6 walked through every one of them. Conf
 
 Patricia and Robert both wished they had done one thing differently.
 
-Robert wished he had slowed down and asked more questions before he started his conversion plan. Patricia wished she had stopped reacting to conflicting advice and just looked at her own numbers, her own family, and her own situation.
+Robert wished he had had one person to call when something unexpected happened, instead of stopping to be safe. Patricia wished she had stopped reacting to conflicting advice and just looked at her own numbers, her own family, and her own situation.
 
 Both of them, looking back, said the same thing in different words. They wished they had taken 60 minutes to see their picture before they made a decision they could not undo.
 
@@ -1207,6 +1210,33 @@ The Roth Reality Check is one of the tools we sponsor to deliver on that mission
 If this booklet was provided to you by an independent advisor or member of our network, that advisor is your point of contact for setting up your Roth Reality Check. They are an independently licensed financial professional who works with the Retirement Education Network to make this analysis available to retirees in their state. They are responsible for their own advice, and we do not supervise their practice.
 
 For more information about the Retirement Education Network or to request additional educational materials, contact the advisor who provided you this booklet.
+
+------------------------------------------------------------------------
+
+# Where These Numbers Come From
+
+Every figure in this booklet was checked against a primary source. They are listed here so you, or anyone you show this to, can check them too. All are current as of 2026 and all of them can change.
+
+1. Required beginning ages of 73 and 75 by year of birth, under the SECURE 2.0 Act of 2022. IRS, "Retirement plan and IRA required minimum distributions FAQs," irs.gov.
+2. The five-year holding period for earnings, and the single clock covering all Roth IRAs. IRS Publication 590-B.
+3. Required withdrawals cannot be converted, and an amount converted in error is treated as an excess contribution subject to a 6 percent annual excise tax until corrected. IRS Publication 590-A and Publication 590-B.
+4. Recharacterization of a Roth conversion was repealed for conversions made after 2017 by the Tax Cuts and Jobs Act of 2017. IRS, "Retirement topics: Roth IRA conversions," irs.gov.
+5. Historical top marginal federal income tax rates, 1913 to present. Internal Revenue Service historical tables; Tax Foundation, "Historical U.S. Federal Individual Income Tax Rates and Brackets."
+6. 2026 federal income tax brackets and standard deduction. IRS Revenue Procedure 2025-32. The 16 percent figure is the arithmetic of filling the 12 and 22 percent brackets in sequence and can be reproduced from that table.
+7. Net Investment Income Tax of 3.8 percent, applying above \$250,000 of modified adjusted gross income for married filing jointly. IRS, "Questions and Answers on the Net Investment Income Tax."
+8. The 49.95 percent figure is 12 percent and 15 percent each multiplied by 1.85, reflecting a dollar of conversion income plus the 85 cents of Social Security benefit it makes taxable. Derived from the thresholds in IRS Publication 915 and the capital gains brackets in Revenue Procedure 2025-32.
+9. 2026 standard Part B premium of \$202.90 per month. Centers for Medicare and Medicaid Services, 2026 Medicare Parts A and B Premiums and Deductibles.
+10. The two-year look-back, applying the tax return from two years prior to the current year's premium. Social Security Administration, "Medicare Premiums: Rules for Higher-Income Beneficiaries."
+11. 2026 income-related monthly adjustment amounts for Parts B and D, and the income thresholds of \$218,000 married filing jointly and \$109,000 single. Centers for Medicare and Medicaid Services.
+12. 2026 standard deduction of \$32,200 for married filing jointly, plus \$1,650 for each spouse aged 65 or older. IRS Revenue Procedure 2025-32.
+13. Uniform Lifetime Table life expectancy factors. IRS Publication 590-B, Appendix B, Table III.
+14. 2026 brackets for single filers. IRS Revenue Procedure 2025-32.
+15. The ten-year rule for most non-spouse beneficiaries of accounts inherited after December 31, 2019, and the requirement to take annual distributions in years one through nine where the original owner had already begun required withdrawals. SECURE Act of 2019; IRS final regulations issued July 2024.
+16. 2026 qualified charitable distribution limit of \$111,000 per person. IRS Revenue Procedure 2025-32.
+17. S&P 500 index levels, October 2007 peak to recovery in 2013. Standard and Poor's index history.
+18. Up to 85 percent of Social Security benefits become taxable above the applicable base amounts. IRS Publication 915.
+
+A note on the worked examples. The dollar figures attached to Patricia, Robert, Dave and Carol are not sourced, because they are not facts. They are the output of arithmetic run on the sources above, using the assumptions each chapter states out loud. Anyone with planning software and the stated assumptions should be able to reproduce them. If you cannot, we would rather hear about it than not.
 
 ------------------------------------------------------------------------
 

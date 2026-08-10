@@ -15,7 +15,7 @@ const PULL_QUOTES: { anchor: string; quote: string }[] = [
   { anchor: "The Roth decision has three answers", quote: "Three paths. You have probably been told there are two." },
   { anchor: "The chart on their desk said 12 percent", quote: "The chart said 12 percent. The money moved at 49.95." },
   { anchor: "Patricia was paying nearly $7,000 more every year", quote: "Nearly $7,000 more in tax. $18,000 less income. Every year she has left." },
-  { anchor: "She would have spent $87,000 of her own money", quote: "Spend $87,000. Save your children $447,000." },
+  { anchor: "She could have paid $265,000 instead of $858,000.", quote: "$265,000 instead of $858,000. The only thing she was choosing was who paid it." },
   { anchor: "You are going to make this decision once.", quote: "You will make this decision once. They work through it every week." },
 ];
 
@@ -126,5 +126,6 @@ export const BOOK_TOC = [
   { label: "9. The Conversation Retirees Wish They Had Sooner", id: "the-conversation-most-retirees-wish-they-had-sooner" },
   { label: "Closing: Your Roth Reality Check", id: "how-to-set-up-your-roth-reality-check" },
   { label: "About the Retirement Education Network", id: "about-the-retirement-education-network" },
+  { label: "Where These Numbers Come From", id: "where-these-numbers-come-from" },
   { label: "Important Disclosures", id: "important-disclosures" },
 ];
