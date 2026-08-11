@@ -11,7 +11,7 @@ import { chartThreePaths, chartPatricia, chartStopping, chartBlock } from "./boo
 
 const PULL_QUOTES: { anchor: string; quote: string }[] = [
   { anchor: "Both directions are permanent.", quote: "The decisions that haunt people are almost always the permanent ones." },
-  { anchor: "The pause became the decision.", quote: "He gave up $2.8 million to avoid something that had cost him $6,900." },
+  { anchor: "The pause became the decision.", quote: "He gave up about $560,000 to avoid something that had cost him $4,600." },
   { anchor: "The Roth decision has three answers", quote: "Three paths. You have probably been told there are two." },
   { anchor: "The chart on their desk said 12 percent", quote: "The chart said 12 percent. The money moved at 49.95." },
   { anchor: "Patricia was paying nearly $7,000 more every year", quote: "Nearly $7,000 more in tax. $18,000 less income. Every year she has left." },
@@ -63,7 +63,7 @@ export function getBookHtml(): string {
   // NOTE: replacement functions, never replacement strings, because chart
   // titles and labels contain "$1..." which String.replace would interpret
   // as capture-group references.
-  const stoppingAnchor = /(<p><strong>He gave up about \$2\.8 million[\s\S]*?<\/p>)/;
+  const stoppingAnchor = /(<p><strong>He gave up about \$560,000[\s\S]*?<\/p>)/;
   html = html.replace(
     stoppingAnchor,
     (_m, p1) => p1 + chartBlock("What He Avoided, and What It Cost", chartStopping(), "Approximate figures from Robert's illustrative plan. Both bars are drawn to the same scale.")
@@ -79,7 +79,7 @@ export function getBookHtml(): string {
     const insertAt = tableEnd + "</table>".length;
     html =
       html.slice(0, insertAt) +
-      chartBlock("The Paths, Side by Side", chartThreePaths(), "Same figures as the table above. Illustrative example, Dave and Carol, $1,000,000 IRA. The third path has no bar because its size is your own number.") +
+      chartBlock("The Paths, Side by Side", chartThreePaths(), "Same figures as the table above. Illustrative example, Dave and Janet, $1,000,000 IRA. The third path has no bar because its size is your own number.") +
       html.slice(insertAt);
   }
 

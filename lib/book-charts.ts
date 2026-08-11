@@ -30,7 +30,7 @@ export function chartThreePaths(): string {
   const rows = [
     { name: "Path 1: Don't Convert", segs: [324000, 17300, 406200] },
     { name: "Path 2: Convert On Your Own", segs: [194800, 11500, 0] },
-    { name: "Path 3: Built Around Your Own Year", segs: [] },
+    { name: "Path 3: A Structured Conversion", segs: [] },
   ];
   const max = 747500;
   const barH = 26;
@@ -106,10 +106,10 @@ export function chartPatricia(): string {
 export function chartStopping(): string {
   const W = 420;
   const rows: [string, number, string][] = [
-    ["The surcharge that made him stop", 6890, BRICK],
-    ["What stopping cost his family", 2821850, BLUE],
+    ["The surcharge that made him stop", 4592, BRICK],
+    ["What stopping cost his family", 560000, BLUE],
   ];
-  const max = 2821850;
+  const max = 560000;
   const barH = 26;
   const rowGap = 62;
   const x0 = 8;
@@ -132,7 +132,7 @@ export function chartStopping(): string {
   const totY = rows.length * rowGap + 14;
   svg += `<text x="${x0}" y="${totY}" ${FONT} font-size="14" font-weight="700" fill="${INK}">Both bars drawn to the same scale.</text>`;
   const H = totY + 10;
-  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="The Medicare surcharge that made Robert stop was about $6,890. Stopping cost his family about $2,821,850, roughly four hundred times as much." style="width:100%;height:auto;display:block">${svg}</svg>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="The Medicare surcharge that made Robert stop was about $4,592. Stopping cost his family about $560,000 in additional federal tax, more than a hundred times as much." style="width:100%;height:auto;display:block">${svg}</svg>`;
 }
 
 export function chartBlock(title: string, svg: string, note?: string): string {
