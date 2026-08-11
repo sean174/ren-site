@@ -27,10 +27,12 @@ html, body { height: 100%; overflow: hidden; }
   font-size: 12px; color: rgba(244,239,230,0.65);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
+.bkv-tools { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
 .bkv-tool {
   background: none; border: 1px solid rgba(244,239,230,0.3); color: rgba(244,239,230,0.85);
-  font-family: var(--font-inter), sans-serif; font-size: 11.5px;
+  font-family: var(--font-inter), sans-serif; font-size: 11.5px; line-height: 1;
   padding: 6px 12px; border-radius: 3px; cursor: pointer; white-space: nowrap;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 5px;
 }
 .bkv-tool:hover { border-color: #E89A7A; color: #E89A7A; }
 

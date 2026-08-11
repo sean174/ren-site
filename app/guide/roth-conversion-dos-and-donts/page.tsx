@@ -18,7 +18,13 @@ export default function BookPage() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: BOOK_CSS }} />
-      <BookFlipbook bodyHtml={bodyHtml} frontMatter={frontMatter} toc={BOOK_TOC} />
+      <BookFlipbook
+        bodyHtml={bodyHtml}
+        frontMatter={frontMatter}
+        toc={BOOK_TOC}
+        pdfHref="/downloads/roth-conversion-dos-and-donts.pdf"
+        pdfFileName="Roth Conversion Dos and Donts - Retirement Education Network.pdf"
+      />
     </>
   );
 }

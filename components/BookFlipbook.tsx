@@ -15,6 +15,8 @@ export default function BookFlipbook({
   title = "Roth Conversion Do's & Don'ts",
   coverSrc = "/images/book-cover.png",
   coverSubtitle,
+  pdfHref,
+  pdfFileName,
 }: {
   bodyHtml: string;
   frontMatter: string[];
@@ -24,6 +26,10 @@ export default function BookFlipbook({
   /** Cover art. Pass null to render a typeset cover from title + coverSubtitle. */
   coverSrc?: string | null;
   coverSubtitle?: string;
+  /** Print PDF under public/downloads. Omit and the download button is not rendered. */
+  pdfHref?: string;
+  /** Filename the reader's browser saves it as. Defaults to the href's own name. */
+  pdfFileName?: string;
 }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const bookRef = useRef<HTMLDivElement>(null);
@@ -261,9 +267,16 @@ export default function BookFlipbook({
           <span className="bkv-brand-mark">REN</span>
           <span className="bkv-brand-title">{title}</span>
         </div>
-        <button className="bkv-tool" onClick={toggleFullscreen}>
-          <span aria-hidden="true">&#x26F6;</span> Full screen
-        </button>
+        <div className="bkv-tools">
+          {pdfHref && (
+            <a className="bkv-tool" href={pdfHref} download={pdfFileName} target="_blank" rel="noopener">
+              <span aria-hidden="true">&#x2193;</span> Download PDF
+            </a>
+          )}
+          <button className="bkv-tool" onClick={toggleFullscreen}>
+            <span aria-hidden="true">&#x26F6;</span> Full screen
+          </button>
+        </div>
       </div>
 
       <div className="bkv-stage">

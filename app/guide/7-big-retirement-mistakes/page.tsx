@@ -24,6 +24,8 @@ export default function MistakesBookPage() {
         title="The 7 1/2 Retirement Mistakes"
         coverSrc="/images/book-cover-mistakes.png"
         coverSubtitle="The quiet mistakes that can hide in the retirement you spent a lifetime building, and how to catch them in time."
+        pdfHref="/downloads/7-big-retirement-mistakes.pdf"
+        pdfFileName="The 7 and a Half Retirement Mistakes - Retirement Education Network.pdf"
       />
     </>
   );

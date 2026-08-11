@@ -1,0 +1,64 @@
+/* Print stylesheet for the REN Field Guide PDFs.
+   Deliberately mirrors elevated-advisor/books/7-big-retirement-mistakes/build/print.css
+   so the two books read as one series. The .bk-* rules are the extra part: this book's
+   HTML comes from lib/book.ts, which emits the flipbook's chapter openers, pull quotes
+   and chart figures, and those classes have no meaning in the other book's pipeline. */
+
+@page{size:6in 9in;margin:.75in .7in .82in}
+@page:first{margin:0}
+html,body{margin:0;padding:0;background:#fff;color:#1B1B1B}
+body{font:400 11.7pt/1.66 "Iowan Old Style",Georgia,"Times New Roman",serif}
+h1,h2,h3,h4,h5{font-family:"Iowan Old Style",Georgia,serif;margin:0;line-height:1.17;
+text-wrap:balance;break-after:avoid;page-break-after:avoid}
+h2{font-size:20pt;letter-spacing:-.006em;margin:0 0 6pt}
+h3{font-size:13.8pt;margin:21pt 0 7pt}
+h4{font-size:12pt;margin:16pt 0 6pt}
+h5{font-size:11.7pt;margin:13pt 0 5pt;font-style:italic;font-weight:400}
+p{margin:0 0 9.5pt;orphans:2;widows:2}
+ul,ol{margin:0 0 9pt;padding-left:15pt}li{margin-bottom:5pt}
+blockquote{margin:0 0 9pt;padding-left:11pt;border-left:1.5pt solid #C9CFD9;color:#3A4150;font-style:italic}
+table{border-collapse:collapse;width:100%;font-size:9.4pt;margin:0 0 12pt;break-inside:avoid}
+th,td{border-bottom:.5pt solid #D3D8E1;padding:5pt 6pt;text-align:left;font-variant-numeric:tabular-nums}
+th{font-size:7.2pt;letter-spacing:.07em;text-transform:uppercase;color:#5C6474}
+b,strong{font-weight:600}
+a{color:#16283F}
+
+/* ---- Cover, copyright, contents ---- */
+.cover{height:9in;width:6in;background:#0F2A44;break-after:page;
+display:flex;align-items:center;justify-content:center;overflow:hidden}
+.cover img{max-width:100%;max-height:100%;display:block}
+.copyright{break-before:page;break-after:page;padding-top:2.6in}
+.copyright p{font-size:9pt;line-height:1.6;color:#5C6474;margin:0 0 7pt}
+#contents{break-before:page}
+h2.toch{font-size:21pt;margin-bottom:6pt}
+.tnote{font-size:9.6pt;font-style:italic;color:#5C6474;margin-bottom:15pt}
+ol.toc{list-style:none;padding:0;margin:0}
+ol.toc li{border-bottom:.5pt solid #E4E7ED}
+ol.toc a{display:block;text-decoration:none;color:#16283F;padding:7pt 0;font-size:11.4pt}
+
+/* ---- Openers emitted by lib/book.ts ---- */
+/* These are the page breaks. The flipbook paginates itself, so in print these
+   divs are the only thing marking where one chapter ends and the next begins. */
+.bk-chapter-open,.bk-section-open{break-before:page;page-break-before:always;
+padding-top:.55in;margin:0 0 20pt;border-bottom:.5pt solid #E0E4EB;padding-bottom:12pt}
+.bk-ch-kicker{display:block;font-size:7.8pt;letter-spacing:.2em;text-transform:uppercase;
+color:#5C6474;margin-bottom:9pt}
+.bk-ch-title{display:block;font-size:22pt;line-height:1.12;letter-spacing:-.01em;
+text-wrap:balance}
+.bk-section-open{font-size:20pt;line-height:1.14;letter-spacing:-.008em}
+
+/* ---- Pull quotes and the aside box ---- */
+.bk-pull{margin:14pt 0;padding:11pt 0;border-top:1pt solid #C9CFD9;
+border-bottom:1pt solid #C9CFD9;font-size:13pt;line-height:1.4;font-style:italic;
+color:#16283F;text-wrap:balance;break-inside:avoid}
+.bk-box{margin:12pt 0;padding:11pt 13pt;background:#F4F6F9;border-left:2pt solid #2E6FA3;
+font-size:10.4pt;line-height:1.55;break-inside:avoid}
+.bk-box p{margin:0 0 6pt}.bk-box p:last-child{margin:0}
+
+/* ---- Charts ---- */
+.bk-chart{margin:14pt 0 16pt;padding:0;break-inside:avoid;text-align:center}
+.bk-chart svg{max-width:100%;height:auto}
+.bk-chart-title{display:block;font-size:8pt;letter-spacing:.09em;text-transform:uppercase;
+color:#5C6474;margin-bottom:8pt;text-align:left}
+.bk-chart-note{font-size:8.6pt;font-style:italic;color:#5C6474;margin-top:7pt;
+text-align:left;line-height:1.45}
