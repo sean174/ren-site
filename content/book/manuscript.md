@@ -2,7 +2,7 @@
 
 **Roth Conversion Do’s & Don’ts** Five mistakes that can cost retirees six figures, and the simple checks that catch every one of them.
 
-Published by the Retirement Education Network Copyright © 2026 by the Retirement Education Network
+Published by the Retirement Education Network [retirementeducationnetwork.com](https://retirementeducationnetwork.com) Copyright © 2026 by the Retirement Education Network
 
 All rights reserved. No part of this booklet may be reproduced, distributed, or transmitted in any form or by any means without prior written permission, except for brief quotations in reviews or as permitted by copyright law.
 
